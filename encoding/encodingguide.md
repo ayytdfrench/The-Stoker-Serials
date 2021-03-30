@@ -1,4 +1,4 @@
-<head>, <body>, <p>
+    <head>, <body>, <p>
 
 Start each chapter with a <head> that contains introductions to each version (if applicable). Follow <head> with <p> tags that hold each line information (chapter, diary name, etc.)
 
@@ -6,7 +6,7 @@ Encode by paragraph structure set in the novel, so within <body> after <head>, b
 
 Note: <p> tags have an indent of 4em in the stylesheet, so the first line of each new <p> tag will be indented. See <space> below for cases that need special spacing.
 
-<app>, <rdg>
+    <app>, <rdg>
 
 Whenever a part of the text deviates from the novel version, nest an <app> tag followed by an <rdg> tag, all within the <p>. For the <rdg> tag, specify the version(s) by doing <rdg wit=”#version_id”> and type in the deviation before the </rdg> end tag. Multiple <rdg> tags can be placed within the <app>. Make sure that all versions are included in an <rdg> tag whenever doing this, so that the different versions can be traced in that moment of the text. For example:
 
@@ -29,11 +29,11 @@ Whenever a part of the text deviates from the novel version, nest an <app> tag f
     In the above example, since the portion of text is wrapped within an <app> tag, that section of text will highlight simultaneously in all of the versions when a user hovers over a portion of that text in one of the versions.
 
 
-<del>
+    <del>
 
 For parts of text that have been removed in a version, wrap that removed text in a <del> tag. The text will display in the encoded transcription but it will have a strikethrough in red.
 
-<add>
+    <add>
 
 For parts of the text that have been added in a version, wrap that added text in an <add> tag. The text will display in the encoded transcription as green text.
 
@@ -41,25 +41,22 @@ For parts of the text that have been added in a version, wrap that added text in
 
 For parts of the text that are misspelled or appear to be typos, wrap in a <sic> tag.
 
-<emph>
+    <emph>
 
 For parts of the text that are in italics, use the <emph> tag.
 
-<hi>
+    <hi>
 
 For parts of the text with significant differences, use the <hi> tag (will have to elaborate on this and have more examples of use).
 
-
-
-
-<lb/>
+    <lb/>
 
 Use <lb/> to mark any line breaks in the text, such as with the info that precedes each chapter or parts of the text that have different paragraph breaks.
 
-<space quantity=”16” unit=”char”/>
+    <space quantity=”16” unit=”char”/>
 
 Use the <space> tag (as it is written above) for parts of the text that require an indent or that need to be in line with the start of a <p> paragraph.
 
-<pb/>
+    <pb/>
 
 Use <pb/> to indicate page breaks in front matter and for versions that have multiple installments per chapter.
