@@ -6,7 +6,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Chapter I</title>
+                <title>Dracula Chapter I</title>
                 <author>Bram Stoker</author>
                 <respStmt>
                     <resp>Text Encoding by </resp>
@@ -36,7 +36,7 @@
         <front>
             <div>
                 <listWit>
-                    <witness xml:id="novel">Novel Print</witness>
+                    <witness xml:id="novel">Random House Edition</witness>
                     <witness xml:id="ocean">The Inter Ocean</witness>
                     <witness xml:id="charlotte">The Charlotte Observer</witness>
                     <witness xml:id="buffalo">The Buffalo Courier</witness>
