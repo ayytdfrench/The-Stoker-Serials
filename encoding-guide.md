@@ -30,11 +30,11 @@ In the above example, since the portion of text is wrapped within an <app> tag, 
 
     <del>
 
-For parts of text that have been removed in a version, wrap that removed text in a `del` tag. The text will display in the encoded transcription but it will have a strikethrough in red.
+For parts of text that have been removed in a version, wrap that removed text in a `del` tag.
 
     <add>
 
-For parts of the text that have been added in a version, wrap that added text in an `add` tag. The text will display in the encoded transcription as green text.
+For parts of the text that have been added in a version, wrap that added text in an `add` tag.
 
     <sic>
 
