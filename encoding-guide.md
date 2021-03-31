@@ -26,7 +26,7 @@ Versions 2 & 3 output:
 
   This is an example of how multiple versions can display Hello, world! And that is that.
 
-In the above example, since the portion of text is wrapped within an <app> tag, that section of text will highlight simultaneously in all of the versions when a user hovers over a portion of that text in one of the versions.
+In the above example, since the portion of text is wrapped within an `app` tag, that section of text will highlight simultaneously in all of the versions when a user hovers over a portion of that text in one of the versions.
 
     <del>
 
