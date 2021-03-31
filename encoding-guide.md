@@ -1,6 +1,6 @@
     <head>, <body>, <p>
 
-Start each chapter with a `head` that contains introductions to each version (if applicable). Follow `head` with `p` tags that hold each line information (chapter, diary name, etc.)
+Start each chapter with a `head` that contains introductions to each version (if applicable). Follow `head` with `p` tags that hold each line of information (chapter, diary name, etc.)
 
 Encode by paragraph structure set in the novel, so within `body` after `head`, begin each new paragraph with a `p` and fill the content of that tag with the text of the paragraph from the novel version.
 
