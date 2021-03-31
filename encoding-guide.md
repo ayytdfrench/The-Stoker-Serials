@@ -58,4 +58,4 @@ Use the `space` tag (as it is written above) for parts of the text that require 
 
     <pb/>
 
-Use `pb/` to indicate page breaks in front matter and for versions that have multiple installments per chapter.
+Use `pb/` to indicate page breaks in front matter and for versions with multiple installments per chapter to separate each installment.
