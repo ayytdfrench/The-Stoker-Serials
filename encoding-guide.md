@@ -8,7 +8,7 @@ Note: `p` tags have an indent of 4em in the stylesheet, so the first line of eac
 
     <app>, <rdg>
 
-Whenever a part of the text deviates from the novel version, nest an `app` tag followed by an `rdg` tag, all within the `p`. For the `rdg` tag, specify the version(s) by doing `rdg wit=”#version_id”` and type in the deviation before the `/rdg` end tag. Multiple `rdg` tags can be placed within the `app`. Make sure that all versions are included in an `rdg` tag whenever doing this, so that the different versions can be traced in that moment of the text. For example:
+Whenever a part of the text deviates from the novel version, nest an `app` tag followed by an `rdg` tag, all within the `p`. For the `rdg` tag, specify the version(s) by doing `rdg wit=”#version_id”` and type the deviation within the tag. Multiple `rdg` tags can be placed within the `app`. Make sure that all versions are included in an `rdg` tag whenever doing this, so that the different versions can be traced in that moment of the text. For example:
 
     <p>
          This is an example of how multiple versions can display
