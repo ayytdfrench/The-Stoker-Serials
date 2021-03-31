@@ -1,0 +1,9384 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+   <head>
+      <title>Dracula Chapter I -- The Versioning Machine 5.0</title>
+      <meta charset="utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="../src/js/jquery-ui-1.11.3/jquery-ui.min.css"></link>
+      <link rel="stylesheet" type="text/css" href="../src/vmachine.css"></link><script type="text/javascript" src="../src/js/jquery-1.11.2.min.js"></script><script type="text/javascript" src="../src/js/jquery-ui-1.11.3/jquery-ui.min.js"></script><link rel="stylesheet" type="text/css" href="../src/panzoom/panzoom.css"></link><script type="text/javascript" src="../src/panzoom/jquery.panzoom.min.js"></script><script type="text/javascript">
+       /*NOTES PANEL: To change the VM so
+      that the notes panel page does not appear at the initial load, change the constant
+      INITIAL_DISPLAY_BIB_PANEL from "true" to "false" below */ INITIAL_DISPLAY_NOTES_PANEL =
+         false; /*BIB PANEL: To change the VM so that the
+      bibliographic information page does not appear at the initial load, change the constant
+      INITIAL_DISPLAY_BIB_PANEL from "true" to "false" below */ INITIAL_DISPLAY_BIB_PANEL =
+         true; /**The number of version/witness panels to be
+      displayed initially */ INITIAL_DISPLAY_NUM_VERSIONS = 2; /** CRIT PANEL: Critical information should be encoded as
+      tei:notesStmt/tei:note[@type='critIntro'] in the TEI files --&gt; * To change the VM so that
+      the critical information page does not * appear at the initial load, change the constant
+      INITIAL_DISPLAY_CRIT_PANEL from "true" to "false" */ INITIAL_DISPLAY_CRIT_PANEL =
+         false; /** To change the VM so that line numbers are
+      hidden by default, change the constant INITIAL_DISPLAY_LINENUMBERS from * "true" to "false" */
+      INITIAL_DISPLAY_LINENUMBERS = true; var timelinePoints = new Array();var timelineDurations = new Array();</script><script type="text/javascript" src="../src/vmachine.js"></script></head>
+   <body>
+      <div id="mainBanner">
+         <div id="brandingLogo"><a href="../samples.html"><img id="logo" alt="Powered by the Versioning Machine" src="../vm-images/LogoSilver.png"></img></a></div>
+         <div id="bannerImageContainer"><img id="logo" alt="Powered by the Versioning Machine" src="../vm-images/HeaderBackground.png"></img><div id="headline">
+               <h1>Dracula Chapter I</h1>
+            </div>
+            <nav id="mainControls">
+               <ul>
+                  <li><button id="selectVersion" class="topMenuButton dropdownButton">5 Total Versions<img class="noDisplay" src="../vm-images/arrowup.png" alt="arrow up"></img><img src="../vm-images/arrowdown.png" alt="arrow down"></img></button><ul id="versionList" class="dropdown notVisible">
+                        <li data-panelid="novel">
+                           <div class="listText">
+                              <div><a href="#" title="novel: Random House Edition">Version novel</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                        <li data-panelid="ocean">
+                           <div class="listText">
+                              <div><a href="#" title="ocean: The Inter Ocean">Version ocean</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                        <li data-panelid="charlotte">
+                           <div class="listText">
+                              <div><a href="#" title="charlotte: The Charlotte Observer">Version charlotte</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                        <li data-panelid="buffalo">
+                           <div class="listText">
+                              <div><a href="#" title="buffalo: The Buffalo Courier">Version buffalo</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                        <li data-panelid="times">
+                           <div class="listText">
+                              <div><a href="#" title="times: The Washington Times">Version times</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+                  <li data-panelid="bibPanel" title="Clicking this button triggers the bibliographic panel to appear&#xA;            or disappear."><button class="topMenuButton">Bibliographic panel</button></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div id="mssArea">
+         <div id="bibPanel" class="ui-widget-content ui-resizable panel noDisplay">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img> Bibliographic Information 
+            </div>
+            <div class="bibContent">
+               <h2>Dracula Chapter I</h2>
+               <h3> by Bram Stoker</h3>
+               <h4>Original Source</h4>
+                               
+               <p></p>
+                           
+               <h4>Witness List</h4>
+               <ul>
+                  <li><strong>Witness novel:</strong> Random House Edition
+                  </li>
+                  <li><strong>Witness ocean:</strong> The Inter Ocean
+                  </li>
+                  <li><strong>Witness charlotte:</strong> The Charlotte Observer
+                  </li>
+                  <li><strong>Witness buffalo:</strong> The Buffalo Courier
+                  </li>
+                  <li><strong>Witness times:</strong> The Washington Times
+                  </li>
+               </ul>
+               <h4>Textual Notes</h4>
+               <div class="note">
+                                  
+               </div>
+               <h4>Electronic Edition Information:</h4>
+               <h5>Responsibility Statement:</h5>
+               <ul>
+                  <li>Text Encoding by  Andrew French</li>
+               </ul>
+               <h5>Publication Details:</h5>
+                               
+               <p></p>
+                           
+               <h4>Encoding Principles</h4>
+                           
+                       
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="novel">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img><a title="Version novel: Random House Edition">Version novel: Random House Edition</a></div>
+            <div class="mssContent">
+                           
+               <div class="div">
+                                  
+                  <div class="head rend-center">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_1" data-app-id="apparatus_1">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">TO</span><div class="linebreak"></div><span class="textcontent">MY DEAR FRIEND</span><div class="linebreak"></div><span class="textcontent">HOMMY-BEG</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_2" data-app-id="apparatus_2">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">How these papers have been placed in sequence will be made manifest in the reading 
+                                                          of them. All needless matters have been eliminated, so that a history almost at variance with
+                              the 
+                                                          possibilities of later-day belief may stand forth as simple fact. There is throughout no statement
+                              
+                                                          of past things wherein memory may err, for all the records chosen are exactly contemporary, given
+                              
+                                                          from the standpoints and within the range of knowledge of those who made them.</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_3" data-app-id="apparatus_3">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">THE STRANGE STORY OF </span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">Begin Today the Fascinating Story of Mystery</span><div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo ocean times" data-reading-wits="novel charlotte buffalo ocean times">
+                           <div class="linebreak"></div><span class="textcontent">DRACULA
+                                                          </span><div class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">!</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent"> or The Vampire By Bram Stoker</span></div>
+                                                          
+                           </div>
+                                                   
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.
+                                                          </span><div class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                              
+                              <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">(Copyright, 1897, by the Author.)</span></div>
+                                                          
+                           </div>
+                                                   
+                        </div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">A STRONG STORY OF THE VAMPIRE.</span><div class="linebreak"></div><span class="textcontent">By Bram Stoker, the Dramatic Critic,</span><div class="linebreak"></div><span class="textcontent">
+                                                      Theatrical Manager and Author of "Miss</span><div class="linebreak"></div><span class="textcontent">Betty," "Under the Sunset," and Other</span><div class="linebreak"></div><span class="textcontent">Books.</span><div class="linebreak"></div><span class="textcontent">
+                                                      Copyright, 1897, by Bram Stoker.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Extraordinary Story of a Count Who Became</span><div class="linebreak"></div><span class="textcontent">A Vampire--One of the Literary Sen-</span><div class="linebreak"></div><span class="textcontent">
+                                                      sations of the Present Day.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">Copyright by Bram Stoker.</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">One of the most thrilling novels of the age--love, finance, mystery, intrigue, adventure, mingled</span><div class="linebreak"></div><span class="textcontent">
+                                                      in a gripping serial. Read it in THE TIMES Every Day.</span></div>
+                                            
+                        <hr class="pagebreak"></hr>
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_8" data-app-id="apparatus_8">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo" data-reading-wits="novel ocean charlotte buffalo"><span class="textcontent">CHAPTER I.</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">PART I.</span><div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times" data-reading-wits="novel ocean charlotte buffalo times"><span class="textcontent">
+                                                      JONATHAN 
+                                                      </span><div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                                          
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">HARPER'S</span></span></div>
+                                                          
+                              <div style="display:inline" class="reading charlotte novel ocean times" data-reading-wits="charlotte novel ocean times"><span class="textcontent">HARKER'S</span></div>
+                                                      
+                           </div><span class="textcontent">JOURNAL</span><div class="linebreak"></div>
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_11" data-app-id="apparatus_11">
+                                               
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Kept in shorthand.)</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <del><span class="textcontent">(Kept in shorthand.)</span></del>
+                           <div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_12" data-app-id="apparatus_12">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="emph"><span class="textcontent">3 May. Bistritz.</span></span></div>
+                                                
+                        <div class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">3 May. Bistritz.</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            &#8212;Left Munich at 8:35 
+                                                </span><div style="display:inline" class="apparatus apparatus_13" data-app-id="apparatus_13">
+                                                    
+                        <div class="reading ocean charlotte buffalo times" data-reading-wits="ocean charlotte buffalo times"><span class="textcontent">p.m.</span></div>
+                                                    
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">P.M.</span></div>
+                                                
+                     </div><span class="textcontent">, on 1st May, arriving at Vienna early next morning
+                                                </span><div style="display:inline" class="apparatus apparatus_14" data-app-id="apparatus_14">
+                                                    
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></div>
+                                                    
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte">
+                           <del><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></del>
+                        </div>
+                                                
+                     </div><span class="textcontent">. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the 
+                                            little I could walk through the streets. I feared to go very far from the station, as we arrived late
+                        and would start as near 
+                                            the correct time as possible. The impression I had was that we were leaving the West and entering the
+                        East; the most 
+                                                </span><div style="display:inline" class="apparatus apparatus_15" data-app-id="apparatus_15">
+                                                    
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">western</span></div>
+                                                    
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Western</span></div>
+                                                
+                     </div><span class="textcontent">
+                                            of splendid bridges over the Danube, which is here of noble width and depth, took us among the traditions
+                        of Turkish rule.
+                                           </span><div style="display:inline" class="apparatus apparatus_16" data-app-id="apparatus_16">
+                                               
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times emptyReading" data-reading-wits="novel ocean charlotte buffalo times">
+                                                   
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at
+                        the Hotel Royale. I 
+                                            had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but
+                        thirsty. 
+                                            (Mem., get recipe for Mina.) I asked the waiter, and he said it was called "paprika hendl," and that,
+                        as it was a national 
+                                            dish, I should be able to get it anywhere along the Carpathians. I found my smattering of German very
+                        useful here; indeed, 
+                                            I don't know how I should be able to get on without it.
+                                            </span><div class="apparatus apparatus_17" data-app-id="apparatus_17">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">ATTEMPTS TO LOCATE</span><div class="linebreak"></div><span class="textcontent">THE CASTLE DRACULA.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Having had some time at my disposal when in London, I had visited the British 
+                                            </span><div style="display:inline" class="apparatus apparatus_18" data-app-id="apparatus_18">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">museum</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel buffalo charlotte" data-reading-wits="times novel buffalo charlotte"><span class="textcontent">Museum</span></div>
+                                            
+                     </div><span class="textcontent">, and made search among the books and maps 
+                                            in the library regarding Transylvania; it had struck me that some foreknowledge of the country could hardly
+                        fail to have some 
+                                            importance in dealing with a
+                                            </span><div style="display:inline" class="apparatus apparatus_19" data-app-id="apparatus_19">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">noble</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">nobleman</span></div>
+                                            
+                     </div><span class="textcontent"> of that country. I find that the district he named is in the extreme east of the country, 
+                                            just on the borders of three states, Transylvania, Moldavia and Bukovina, in the midst of the Carpathian
+                        mountains ; one of the 
+                                            wildest and least known portions of Europe. I was not able to light on any map or work giving the exact
+                        locality of
+                                            </span><div style="display:inline" class="apparatus apparatus_20" data-app-id="apparatus_20">
+                                                
+                        <div style="display:inline" class="reading times novel charlotte ocean" data-reading-wits="times novel charlotte ocean"><span class="textcontent">the</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">the</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">Castle 
+                                            Dracula, as there are no maps of this country as yet to compare with our own
+                                            </span><div style="display:inline" class="apparatus apparatus_21" data-app-id="apparatus_21">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">Ordnance Survey</span></div>
+                                                
+                        <div class="reading charlotte ocean buffalo times" data-reading-wits="charlotte ocean buffalo times"><span class="textcontent">ordnance survey</span></div>
+                                            
+                     </div><span class="textcontent">maps; but I found that Bistritz, 
+                                            the post town named by Count Dracula, is a fairly well-known place. I shall enter here some of my notes,
+                        as they may refresh my 
+                                            memory when I talk over my travels with Mina.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            In the population of Transylvania there are four distinct nationalities: Saxons in the 
+                                            </span><div style="display:inline" class="apparatus apparatus_22" data-app-id="apparatus_22">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">South</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">south</span></div>
+                                            
+                     </div><span class="textcontent">, and mixed with them the Wallachs, who are the descendants of the Dacians; Magyars in the
+                                            </span><div style="display:inline" class="apparatus apparatus_23" data-app-id="apparatus_23">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">West</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">west</span></div>
+                                            
+                     </div><span class="textcontent">and Szekelys in the
+                                            </span><div style="display:inline" class="apparatus apparatus_24" data-app-id="apparatus_24">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">East</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">and
+                                            </span><div style="display:inline" class="apparatus apparatus_25" data-app-id="apparatus_25">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">North</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">north</span></div>
+                                            
+                     </div><span class="textcontent">I am going among the latter, who claim to be descended from Attila and the Huns. This may be so, 
+                                            for when the Magyars conquered the country in the eleventh century they found the Huns settled in it.
+                        I read that every known superstition 
+                                            in the world is gathered into the horseshoe of the Carpathians, as if it were the
+                                            </span><div style="display:inline" class="apparatus apparatus_26" data-app-id="apparatus_26">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                                
+                        <div class="reading ocean buffalo times" data-reading-wits="ocean buffalo times"><span class="textcontent">center</span></div>
+                                            
+                     </div><span class="textcontent">of some sort of imaginative whirlpool; if so my stay may be very interesting.
+                                            </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the 
+                                                          </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                              
+                              <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">Count</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent">count</span></div>
+                                                          
+                           </div><span class="textcontent">all about them.)</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count all about them.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_29" data-app-id="apparatus_29">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">BEGINS LONG JOURNEY</span><div class="linebreak"></div><span class="textcontent">ON A SLOW TRAIN.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I did not sleep well, though my bed was comfortable enough, for I had all sorts of queer dreams. There
+                        was a dog howling all night under my window, 
+                                            which may have had something to do with it; or it may have been the paprika, for I had to drink up all
+                        the water in my carafe, and was still thirsty.
+                                            </span><div style="display:inline" class="apparatus apparatus_30" data-app-id="apparatus_30">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">Towards</span></div>
+                                                
+                        <div class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">Toward</span></div>
+                                            
+                     </div><span class="textcontent">morning I slept and was wakened by the continuous knocking at my door, so I guess I must have been sleeping soundly then.
+                        I had for breakfast 
+                                            more paprika, and a sort of porridge of maize flour which they said was "mamaliga," and egg-plant stuffed
+                        with forcemeat, a very excellent dish, which 
+                                            they call &#8220;impletata."
+                                            </span><div style="display:inline" class="apparatus apparatus_31" data-app-id="apparatus_31">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., get recipe for this also.)</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., get recipe for this also.)</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to hurry breakfast, for the train started a little before
+                                            </span><div style="display:inline" class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">eight</span></div>
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">8
+                                                          </span><div class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo">
+                                 <ins class="add"><span class="textcontent">o'clock</span></ins>
+                              </div>
+                                                          
+                           </div>
+                        </div>
+                                            
+                     </div><span class="textcontent">, or rather it ought to have done so, for after rushing to the station at 7 : 30
+                                            </span><div class="apparatus apparatus_34" data-app-id="apparatus_34">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">o' clock</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to sit in the carriage for more than an hour before we began to move. It seems to me that the further
+                                            </span><div style="display:inline" class="apparatus apparatus_35" data-app-id="apparatus_35">
+                                                
+                        <div class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">East</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">you go the more unpunctual are the trains. What ought they to be in China?
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All day long we seemed to dawdle through a country which was full of beauty 
+                                            </span><div style="display:inline" class="apparatus apparatus_36" data-app-id="apparatus_36">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">of every kind</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">of every kind</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">. 
+                                            </span><div style="display:inline" class="apparatus apparatus_37" data-app-id="apparatus_37">
+                                                
+                        <div class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">Some times</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">Sometimes</span></div>
+                                            
+                     </div><span class="textcontent">we saw little towns or castles on the top of steep hills such as we see in old missals ; sometimes we ran by rivers and streams
+                        which seemed from 
+                                            the wide stony margin on each side of them to be subject to great floods. It takes a lot of water, and
+                        running strong, to sweep the outside edge of a 
+                                            river clear. At every station there were groups of people, sometimes crowds
+                                            </span><div style="display:inline" class="apparatus apparatus_38" data-app-id="apparatus_38">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">, and in all sorts of attire.</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">, and in all sorts of attire.</span><div class="linebreak"></div>
+                           </del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_39" data-app-id="apparatus_39">
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Some</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Some</span></div>
+                                            
+                     </div><span class="textcontent">of them were just like the peasants at home or those I saw coming through France and Germany, with short jackets and round
+                        
+                                            hats and home-made trousers; but others were very picturesque. The women looked pretty, except when you
+                        got near them, but they were very clumsy 
+                                            about the waist. They had all full white sleeves of some kind or other, and the most of them had big belts
+                        with a
+                                            </span><div style="display:inline" class="apparatus apparatus_40" data-app-id="apparatus_40">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">lit</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">lot</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            of strips of something fluttering 
+                                            from them like the dresses in a ballet, but of course
+                                            </span><div style="display:inline" class="apparatus apparatus_41" data-app-id="apparatus_41">
+                                                
+                        <div class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">there were</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">there were</span></div>
+                                            
+                     </div><span class="textcontent">petticoats under them. The strangest figures we saw were the Slovaks, who 
+                                            </span><div style="display:inline" class="apparatus apparatus_42" data-app-id="apparatus_42">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">are</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">more 
+                                            barbarian than the rest, with their big
+                                            </span><div style="display:inline" class="apparatus apparatus_43" data-app-id="apparatus_43">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">cow-boy</span></div>
+                                                
+                        <div class="reading charlotte times buffalo ocean" data-reading-wits="charlotte times buffalo ocean"><span class="textcontent">cowboy</span></div>
+                                            
+                     </div><span class="textcontent">hats, great baggy dirty-white trousers, white linen shirts, and enormous heavy leather belts, nearly a 
+                                            foot wide, all studded over with brass nails. They wore high boots, with their trousers tucked into them,
+                        and had long black hair and heavy black
+                                            </span><div style="display:inline" class="apparatus apparatus_44" data-app-id="apparatus_44">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">mustaches.</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">moustaches</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            They are very picturesque, but do not look prepossessing.
+                                            </span><div style="display:inline" class="apparatus apparatus_45" data-app-id="apparatus_45">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                          They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></div>
+                                                
+                        <div class="reading charlotte buffalo ocean" data-reading-wits="charlotte buffalo ocean">
+                           <del><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                             They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_46" data-app-id="apparatus_46">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">FINDS LETTER FROM</span><div class="linebreak"></div><span class="textcontent">COUNT AT HOTEL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            It was on the dark side of twilight when we got to Bistritz, which is a very interesting old place. Being
+                        practically on the frontier&#8212;for the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_47" data-app-id="apparatus_47">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">leads from it into Bukovina&#8212;it has had a very stormy existence, and it certainly shows marks of it. Fifty years ago a series
+                        of great fires took 
+                                            place, which made terrible havoc on five separate occasions. At the very beginning of the seven-teenth
+                        century it underwent a siege of three weeks and lost 
+                                            13,000 people, the casualties of war proper being assisted by famine and disease.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Count Dracula had directed me to go to the Golden Krone 
+                                            </span><div style="display:inline" class="apparatus apparatus_48" data-app-id="apparatus_48">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">hotel</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">Hotel</span></div>
+                                            
+                     </div><span class="textcontent">which I found, to my great delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways
+                        of the country. I was evidently 
+                                            expected, for when I got near the door I faced a cheery- looking elderly woman in the usual peasant dress&#8212;white
+                        undergarment with long double apron, front, and back, of
+                                            </span><div style="display:inline" class="apparatus apparatus_49" data-app-id="apparatus_49">
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">colored</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">coloured</span></div>
+                                            
+                     </div><span class="textcontent">stuff fitting almost too tight for modesty. When I came close she bowed and said, &#8220;The Herr 
+                                            </span><div style="display:inline" class="apparatus apparatus_50" data-app-id="apparatus_50">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">English-Man</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Englishman</span></div>
+                                            
+                     </div><span class="textcontent">?&#8221; &#8220;Yes,&#8221; I said, "Jonathan Harker." She smiled, and gave some message to an elderly man in white
+                                            </span><div style="display:inline" class="apparatus apparatus_51" data-app-id="apparatus_51">
+                                                
+                        <div style="display:inline" class="reading novel ocean charlotte times" data-reading-wits="novel ocean charlotte times"><span class="textcontent">shirtsleeves</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">shirt sleeves</span></div>
+                                            
+                     </div><span class="textcontent">, who had followed her to the door. He went, but immediately returned with a letter:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "My Friend.&#8212;Welcome to the Carpathians. I am anxiously expecting you. Sleep well
+                                            </span><div style="display:inline" class="apparatus apparatus_52" data-app-id="apparatus_52">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night.</span></div>
+                                                
+                        <div class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">tonight.</span></div>
+                                            
+                     </div><span class="textcontent">At
+                                            </span><div style="display:inline" class="apparatus apparatus_53" data-app-id="apparatus_53">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">three</span></div>
+                                                
+                        <div class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">3</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_54" data-app-id="apparatus_54">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-morrow</span></div>
+                                                
+                        <div class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">tomorrow</span></div>
+                                            
+                     </div><span class="textcontent">the diligence will start for Bukovina; a place on it is kept for you. At the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_55" data-app-id="apparatus_55">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo times" data-reading-wits="charlotte novel buffalo times"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">my carriage will await you and will bring you to me. I trust that your journey from London has been a happy one, and that
+                        you will enjoy your stay in my beautiful land. 
+                                            </span><div style="display:inline" class="apparatus apparatus_56" data-app-id="apparatus_56">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"Dracula."</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Your friend. DRACULA."</span></div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">"Your friend, DRACULA."</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_57" data-app-id="apparatus_57">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">REFUSED INFORMATION</span><div class="linebreak"></div><span class="textcontent">OF COUNT OR CASTLE.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            4 May.&#8212;l found that my landlord had got a letter from the Count, directing him to secure the best place
+                        on the coach for me; but on making inquiries as to details 
+                                            he seemed somewhat reticent, and pretended that he could not understand my German. 
+                                            </span><div style="display:inline" class="apparatus apparatus_58" data-app-id="apparatus_58">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                              he did.</span></div>
+                                                
+                        <div class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                                 he did.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">He and his wife, the old lady who had received me, looked at each other in a frightened sort of way. He mumbled out that the
+                        money had been sent in a letter, 
+                                            and that was all he knew. When I asked him if he knew Count Dracula, and could tell me anything of his
+                        castle, both he and his wife crossed themselves, and, saying that 
+                                            they knew nothing at all, simply refused to speak further. It was so near the time of starting that I
+                        had no time to ask any one else, for it was all very mysterious and 
+                                            not by any means comforting.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Just before I was leaving, the old lady came up to my room and said in a very hysterical way:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Must you go? Oh! young Herr, must you go?" She was in such an excited state that she seemed to have lost
+                        her grip of what German she knew, and mixed it all up with some 
+                                            other language which I did not know
+                                            </span><div style="display:inline" class="apparatus apparatus_59" data-app-id="apparatus_59">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">at all.</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">at all.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I was just able to follow her by asking many questions. When I told her that I must go at once, and that I was engaged on
+                        important business, she asked again:
+                                            </span><div class="apparatus apparatus_60" data-app-id="apparatus_60">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CONTINUES JOURNEY</span><div class="linebreak"></div><span class="textcontent">DESPITE WARNINGS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_61" data-app-id="apparatus_61">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">"Dou</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo novel charlotte times" data-reading-wits="buffalo novel charlotte times"><span class="textcontent">"Do</span></div>
+                                            
+                     </div><span class="textcontent">you know what day it is?" I answered that it was the 
+                                            </span><div style="display:inline" class="apparatus apparatus_62" data-app-id="apparatus_62">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">fourth</span></div>
+                                                
+                        <div class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">4th</span></div>
+                                            
+                     </div><span class="textcontent">of May. She shook her head as she said again:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Oh, yes!
+                                            </span><div style="display:inline" class="apparatus apparatus_63" data-app-id="apparatus_63">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">I know that! I know that, but</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">I know that, I know that! But</span></div>
+                                            
+                     </div><span class="textcontent">do you know what day it is?" On my saying that I did not understand, she went on:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "It is the eve of St. George's Day. Do you not know that
+                                            </span><div style="display:inline" class="apparatus apparatus_64" data-app-id="apparatus_64">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div class="reading times buffalo ocean" data-reading-wits="times buffalo ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">when the clock strikes midnight, all the evil things in the world will have full sway? Do you know where you are going, and
+                        what you are going to?"
+                                            </span><div style="display:inline" class="apparatus apparatus_65" data-app-id="apparatus_65">
+                                                
+                        <div class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">She</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">She</span></div>
+                                            
+                     </div><span class="textcontent">was in such evident distress that I tried to comfort her, but without effect. Finally she went down on her knees and implored
+                        me not to go; at least 
+                                            to wait a day or two before starting. It was all very ridiculous but I did not feel comfortable. However,
+                        there was business to be done, and I could allow nothing 
+                                            to interfere with it. I therefore tried to raise her up, and said, as gravely as I could, that I thanked
+                        her, but my duty was imperative, and that I must go. 
+                                            She then rose and dried her eyes, and taking a crucifix from her neck offered it to me. I did not know
+                        what to do, for, as an English 
+                                            </span><div style="display:inline" class="apparatus apparatus_66" data-app-id="apparatus_66">
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Churchman,</span></div>
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">churchman,</span></div>
+                                            
+                     </div><span class="textcontent">I have been taught to regard such things as in some measure idolatrous, and yet it seemed so ungracious to refuse an old lady
+                        meaning so well and in such a 
+                                            state of mind. She saw, I suppose, the doubt in my face, for she put the rosary 
+                                            </span><div style="display:inline" class="apparatus apparatus_67" data-app-id="apparatus_67">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times charlotte" data-reading-wits="novel buffalo times charlotte"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck, and said, "For your mother's sake," and went out of the room. I am writing up this part of the diary whilst I am
+                        waiting for the coach, which is, 
+                                            of course, late; and the crucifix is still 
+                                            </span><div style="display:inline" class="apparatus apparatus_68" data-app-id="apparatus_68">
+                                                
+                        <div style="display:inline" class="reading novel times buffalo" data-reading-wits="novel times buffalo"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck. Whether it is the old lady's fear, or the many ghostly traditions of this place, or the crucifix itself, I do not
+                        know, but I am not feeling nearly 
+                                            as easy in my mind as usual. If this book should ever reach Mina before I do, let it bring my
+                                            </span><div style="display:inline" class="apparatus apparatus_69" data-app-id="apparatus_69">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">good-bye.</span></div>
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">good-by.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">goodby.</span></div>
+                                            
+                     </div><span class="textcontent">Here comes the coach!
+                                            </span><div class="apparatus apparatus_70" data-app-id="apparatus_70">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PEASANT SUPERSTITIONS</span><div class="linebreak"></div><span class="textcontent">CAUSE OF WORRY.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            5 May. The Castle.&#8212;The
+                                            </span><div style="display:inline" class="apparatus apparatus_71" data-app-id="apparatus_71">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div class="reading times buffalo ocean charlotte" data-reading-wits="times buffalo ocean charlotte"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">of the morning has passed, and the sun is high over the distant horizon, which seems jagged, whether with trees or hills I
+                        know not, for it is so far off that 
+                                            big things and little are mixed. I am not sleepy, and, as I am not to be called till I awake naturally
+                        I write till sleep comes. There are many odd things to put down, 
+                                            and, lest who reads them may fancy that I dined too well before I left Bistritz, let me put down my dinner
+                        exactly. I dined on what they
+                                            </span><div style="display:inline" class="apparatus apparatus_72" data-app-id="apparatus_72">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">call</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean buffalo" data-reading-wits="times novel ocean buffalo"><span class="textcontent">called</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_73" data-app-id="apparatus_73">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">"robber steak"</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">robber steak</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;bits of bacon, onion, and beef, seasoned with red pepper, and strung on sticks and roasted over the fire, in the simple style
+                        of the London
+                                            </span><div style="display:inline" class="apparatus apparatus_74" data-app-id="apparatus_74">
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">cat's meat!</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">cats' meat.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">cat's meat.</span></div>
+                                            
+                     </div><span class="textcontent">The wine was Golden Mediasch, which produces a queer sting on the tongue, which is, however, not disagreeable. I had only
+                        a couple of glasses of this, and nothing else.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I got on the coach the driver had not taken his seat, and I saw him talking with the landlady. They
+                        were evidently talking of me, for every now and then they looked at me, 
+                                            and some of the people who were sitting on the bench outside the door&#8212;which they call by a name meaning
+                        
+                                            </span><div style="display:inline" class="apparatus apparatus_75" data-app-id="apparatus_75">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">&#8220;word-bearer"</span></div>
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">word bearer</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">word-bearer</span></div>
+                                            
+                     </div><span class="textcontent">-came and listened, and then looked at me, most of them pityingly. I could hear a lot of words often repeated, queer words,
+                        for there were many nationalities in the crowd;
+                                            so I quietly got my polyglot dictionary from my bag and looked them out. I must say they were not cheering
+                        to me, for amongst them were &#8220;Ordog&#8221;-Satan, &#8220;pokol&#8221;-hell, 
+                                            </span><div style="display:inline" class="apparatus apparatus_76" data-app-id="apparatus_76">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">"stregoica"</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"stregoico"</span></div>
+                                            
+                     </div><span class="textcontent">-witch, &#8220;vrolok&#8221; and &#8220;vlkoslak"-both of which mean the same thing, one being Slovak and the other Servian for something that
+                        is either
+                                            </span><div style="display:inline" class="apparatus apparatus_77" data-app-id="apparatus_77">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">wers-wolf</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">were-wolf</span></div>
+                                            
+                     </div><span class="textcontent">or vampire.
+                                            </span><div style="display:inline" class="apparatus apparatus_78" data-app-id="apparatus_78">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_79" data-app-id="apparatus_79">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CROWD GIVES CHARM</span><div class="linebreak"></div><span class="textcontent">AGAINST ALL EVIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When we started, the crowd round the inn door, which had by this time swelled to a considerable size,
+                        all made the sign of the cross and pointed two fingers
+                                            </span><div style="display:inline" class="apparatus apparatus_80" data-app-id="apparatus_80">
+                                                
+                        <div class="reading times charlotte ocean" data-reading-wits="times charlotte ocean"><span class="textcontent">toward</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo novel" data-reading-wits="buffalo novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">me. With some difficulty I got a
+                                            </span><div style="display:inline" class="apparatus apparatus_81" data-app-id="apparatus_81">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">fellow-passenger</span></div>
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">fellow passenger</span></div>
+                                            
+                     </div><span class="textcontent">to tell me what they meant; he would not answer at first, but on learning that I was English, he explained that it was a charm
+                        or guard against the evil eye. 
+                                            This was not very pleasant for me, just starting for an unknown place to meet an unknown man; but every
+                        one seemed so kind-hearted, and so sorrowful, and so sympathetic 
+                                            that I could not
+                                            </span><div style="display:inline" class="apparatus apparatus_82" data-app-id="apparatus_82">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">but</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">but</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_83" data-app-id="apparatus_83">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">be</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo novel" data-reading-wits="charlotte times buffalo novel"><span class="textcontent">be</span></div>
+                                            
+                     </div><span class="textcontent">touched. I shall never forget the last glimpse which I had of the
+                                            </span><div style="display:inline" class="apparatus apparatus_84" data-app-id="apparatus_84">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">innyard</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel buffalo" data-reading-wits="charlotte times novel buffalo"><span class="textcontent">inn-yard</span></div>
+                                            
+                     </div><span class="textcontent">and its crowd of picturesque figures, all crossing themselves, as they stood round the wide archway, with its background of
+                        rich foliage of oleander and orange 
+                                            trees in green tubs clustered in the
+                                            </span><div style="display:inline" class="apparatus apparatus_85" data-app-id="apparatus_85">
+                                                
+                        <div class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">center</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                            
+                     </div><span class="textcontent">of the yard. Then our driver, whose wide linen drawers covered the whole front of the
+                                            </span><div style="display:inline" class="apparatus apparatus_86" data-app-id="apparatus_86">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">box seat</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo" data-reading-wits="charlotte novel buffalo"><span class="textcontent">box-seat</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;&#8221;gotza" they call them&#8212;cracked his big whip over his four small horses, which ran abreast, and we set off on our journey.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I soon lost sight and recollection of ghostly fears in the beauty of the scene as we drove along, although
+                        had I known the language, or rather languages, which my
+                                            </span><div style="display:inline" class="apparatus apparatus_87" data-app-id="apparatus_87">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">fellow passengers</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">fellow-passengers</span></div>
+                                            
+                     </div><span class="textcontent">were speaking, I might not have been able to throw them off so easily. Before us lay a green sloping land full of forests
+                        and woods, with here and there steep 
+                                            hills, crowned with clumps of trees or with
+                                            </span><div style="display:inline" class="apparatus apparatus_88" data-app-id="apparatus_88">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">farm houses,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">farmhouses,</span></div>
+                                            
+                     </div><span class="textcontent">the blank gable end
+                                            </span><div style="display:inline" class="apparatus apparatus_89" data-app-id="apparatus_89">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">of</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel buffalo" data-reading-wits="ocean charlotte novel buffalo"><span class="textcontent">to</span></div>
+                                            
+                     </div><span class="textcontent">the road. There was everywhere a bewildering mass of fruit blossom&#8212;apple, plum, pear, cherry; and as we drove by I could see
+                        the green grass under the trees 
+                                            spangled with the fallen petals. In and out
+                                            </span><div style="display:inline" class="apparatus apparatus_90" data-app-id="apparatus_90">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">among</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">these green hills of what they call here the &#8220;Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_91" data-app-id="apparatus_91">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel buffalo" data-reading-wits="times charlotte novel buffalo"><span class="textcontent">Land"</span></div>
+                                            
+                     </div><span class="textcontent">ran the road, losing itself as it swept round the grassy curve, or was shut out by the straggling ends of pine woods, which
+                        here and there ran down the hillsides 
+                                            like tongues of flame. The road was rugged, but still we seemed to fly over it with a feverish haste.
+                        I could not understand then what the haste meant, but the driver 
+                                            was evidently bent on losing no time in reaching Borgo Prund. I was told that this road is in
+                                            </span><div style="display:inline" class="apparatus apparatus_92" data-app-id="apparatus_92">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">summertime</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">summer time</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">summer-time</span></div>
+                                            
+                     </div><span class="textcontent">excellent, but that it had not yet been put in order after the winter snows. In this respect it is different from the general
+                        run of roads in the Carpathians, for 
+                                            it is an old tradition that they are not to be kept in too good order. Of old the Hospadars would not
+                        repair them, lest the Turk should think that they were preparing to 
+                                            bring in foreign troops, and so hasten the war which was always really at loading point.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Beyond the green swelling hills of the Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_93" data-app-id="apparatus_93">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Land</span></div>
+                                            
+                     </div><span class="textcontent">rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves. Right and left of us they towered, with
+                        the afternoon sun falling full upon them 
+                                            and bringing out all the glorious
+                                            </span><div style="display:inline" class="apparatus apparatus_94" data-app-id="apparatus_94">
+                                                
+                        <div style="display:inline" class="reading novel buffalo" data-reading-wits="novel buffalo"><span class="textcontent">colours</span></div>
+                                                
+                        <div class="reading charlotte times ocean" data-reading-wits="charlotte times ocean"><span class="textcontent">colors</span></div>
+                                            
+                     </div><span class="textcontent">of this beautiful range, deep blue and purple in the shadows of the peaks, green and brown where grass and rock mingled, and
+                        an endless perspective of jagged rock 
+                                            and pointed crags, till these were themselves lost in the distance, where the snowy peaks rose grandly.
+                        Here and there seemed mighty rifts in the mountains, through which, 
+                                            as the sun began to sink, we saw now and again the white gleam of falling water. One of my companions
+                        touched my arm
+                                            </span><div style="display:inline" class="apparatus apparatus_95" data-app-id="apparatus_95">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo novel" data-reading-wits="ocean charlotte buffalo novel"><span class="textcontent">as</span></div>
+                                            
+                     </div><span class="textcontent">we swept round the base of a hill and opened up the lofty, snow-covered peak of
+                                            </span><div style="display:inline" class="apparatus apparatus_96" data-app-id="apparatus_96">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">a</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel buffalo charlotte ocean" data-reading-wits="novel buffalo charlotte ocean"><span class="textcontent">a</span></div>
+                                            
+                     </div><span class="textcontent">mountain, which seemed, as we wound on our serpentine way, to be right before us:
+                                            </span><div class="apparatus apparatus_97" data-app-id="apparatus_97">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">MEN AND WOMEN</span><div class="linebreak"></div><span class="textcontent">KNEEL BEFORE SHRINE.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            &#8220;Look! Isten szek!"&#8212;"God's seat!"&#8212;and he crossed himself reverently.
+                                            </span><div style="display:inline" class="apparatus apparatus_98" data-app-id="apparatus_98">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">we wound on our endless way, and the sun sank lower and lower behind us, the shadows of the evening began to creep round us.
+                        This was emphasised by the fact that 
+                                            the snowy
+                                            </span><div style="display:inline" class="apparatus apparatus_99" data-app-id="apparatus_99">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">mountain-top</span></div>
+                                                
+                        <div class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean"><span class="textcontent">mountain top</span></div>
+                                            
+                     </div><span class="textcontent">still held the sunset, and seemed to glow out with a delicate cool pink. Here and there we passed Cszeks and Slovaks, all
+                        in picturesque attire, but I noticed that 
+                                            goitre was painfully prevalent. By the roadside were many crosses, and as we swept by,
+                                            </span><div style="display:inline" class="apparatus apparatus_100" data-app-id="apparatus_100">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">all my companions</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo times novel" data-reading-wits="charlotte buffalo times novel"><span class="textcontent">my companions all</span></div>
+                                            
+                     </div><span class="textcontent">crossed themselves. Here and there was a peasant man or woman kneeling before a shrine, who did not even turn
+                                            </span><div style="display:inline" class="apparatus apparatus_101" data-app-id="apparatus_101">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times buffalo charlotte" data-reading-wits="novel times buffalo charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">as we approached, but seemed in the self-surrender of devotion to have neither eyes nor ears for the outer world. There were
+                        many things new to me: for instance,
+                                            </span><div style="display:inline" class="apparatus apparatus_102" data-app-id="apparatus_102">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">hay ricks</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">hay </span><span class="sic"><span class="textcontent">racks</span></span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">hay-ricks</span></div>
+                                            
+                     </div><span class="textcontent">in the trees, and here and there very beautiful masses of weeping birch, their white stems shining like silver through the
+                        delicate green of the leaves. Now and 
+                                            again we passed a
+                                            </span><div style="display:inline" class="apparatus apparatus_103" data-app-id="apparatus_103">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">leiter wagon</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times charlotte novel" data-reading-wits="buffalo times charlotte novel"><span class="textcontent">leiter-wagon</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;the ordinary peasant's cart&#8212;with its long, snake-like vertebra, calculated to suit the inequalities of the road. On this
+                                            </span><div style="display:inline" class="apparatus apparatus_104" data-app-id="apparatus_104">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">sure to be seated quite a group of home-coming peasants, the Cszeks with their white, and the Slovaks with their
+                                            </span><div style="display:inline" class="apparatus apparatus_105" data-app-id="apparatus_105">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">coloured,</span></div>
+                                                
+                        <div class="reading ocean charlotte times buffalo" data-reading-wits="ocean charlotte times buffalo"><span class="textcontent">colored,</span></div>
+                                            
+                     </div><span class="textcontent">sheepskins, the latter carrying
+                                            </span><div style="display:inline" class="apparatus apparatus_106" data-app-id="apparatus_106">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">lance fashion</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">lance-fashion</span></div>
+                                            
+                     </div><span class="textcontent">their long staves,
+                                            </span><div style="display:inline" class="apparatus apparatus_107" data-app-id="apparatus_107">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">with axe</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">with ax</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and axes</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">at end. As the evening fell it began to get very cold, and the growing twilight seemed to merge into one dark mistiness the
+                        gloom of the trees, oak, beech, and pine, 
+                                            though in the valleys which ran deep between the spurs of the
+                                            </span><div style="display:inline" class="apparatus apparatus_108" data-app-id="apparatus_108">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">hill. As</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean buffalo novel" data-reading-wits="times ocean buffalo novel"><span class="textcontent">hills, as</span></div>
+                                            
+                     </div><span class="textcontent">we ascended through the
+                                            </span><div style="display:inline" class="apparatus apparatus_109" data-app-id="apparatus_109">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">the dark firs stood out here and there against the background of late-lying snow. Sometimes, as the road was cut through the
+                        pine woods that seemed in the darkness 
+                                            to be closing down upon us, great masses of
+                                            </span><div style="display:inline" class="apparatus apparatus_110" data-app-id="apparatus_110">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">greyness,</span></div>
+                                                
+                        <div class="reading charlotte times ocean buffalo" data-reading-wits="charlotte times ocean buffalo"><span class="textcontent">grayness,</span></div>
+                                            
+                     </div><span class="textcontent">which here and there bestrewed the trees, produced a peculiarly weird and solemn effect, which carried on the thoughts and
+                        grim fancies engendered earlier in the evening, when the falling sunset threw into strange relief 
+                                            </span><div class="apparatus apparatus_111" data-app-id="apparatus_111">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <div class="linebreak"></div>
+                           <div class="stanzabreak"></div>
+                           <ins class="add"><span class="textcontent">(To be continued tomorrow.)</span></ins>
+                           <div class="linebreak"></div>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div><span class="textcontent">the ghost-like clouds which
+                                            </span><div style="display:inline" class="apparatus apparatus_112" data-app-id="apparatus_112">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the Carpathians seem to wind ceaselessly through the valleys. Sometimes the hills were so steep that, despite our driver's
+                        haste, the horses could only go slowly. I wished 
+                                            to get down and walk up them, as we do at home, but the driver would not hear of it. "No, no," he said;
+                        "you must not walk here; the dogs are too fierce"; and then he added, 
+                                            with what he evidently meant
+                                            </span><div style="display:inline" class="apparatus apparatus_113" data-app-id="apparatus_113">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">for</span></del>
+                           <ins class="add"><span class="textcontent">to be</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">for</span></div>
+                                            
+                     </div><span class="textcontent">grim pleasantry&#8212;for he looked
+                                            </span><div style="display:inline" class="apparatus apparatus_114" data-app-id="apparatus_114">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">to catch the approving smile of the rest&#8212;"and you may have enough of such matters before you go to sleep." The only stop he
+                        would make was a moment's pause to light his lamps.
+                                            </span><div class="apparatus apparatus_115" data-app-id="apparatus_115">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PASSENGERS' EXCITEMENT</span><div class="linebreak"></div><span class="textcontent">CAUSE FOR SPEED.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When it grew dark there seemed to be some excitement
+                                            </span><div style="display:inline" class="apparatus apparatus_116" data-app-id="apparatus_116">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">amongst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the passengers, and they kept speaking to him, one after the other, as though urging him to further speed. He lashed the
+                                            </span><div style="display:inline" class="apparatus apparatus_117" data-app-id="apparatus_117">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">horse</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">horses</span></div>
+                                            
+                     </div><span class="textcontent">unmercifully with his long whip, and with wild cries of encouragement urged them on to further exertions. Then through the
+                        darkness I could see a sort of patch of
+                                            </span><div style="display:inline" class="apparatus apparatus_118" data-app-id="apparatus_118">
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div class="reading charlotte ocean times" data-reading-wits="charlotte ocean times"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">light ahead of us, as though there were a cleft in the hills. The excitement of the passengers grew greater; the crazy coach
+                        rocked on its great leather springs, and swayed like a boat 
+                                            tossed on a stormy sea. I had to hold on. The road grew more level, and we appeared to fly along. Then
+                        the mountains seemed to come nearer to us on each side and to frown down upon us; we were 
+                                            entering on the
+                                            </span><div style="display:inline" class="apparatus apparatus_119" data-app-id="apparatus_119">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">Bergo</span></span><span class="textcontent"> pass.</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Borgo Pass.</span></div>
+                                            
+                     </div><span class="textcontent">One by one several of the passengers offered me gifts, which they pressed upon me with an
+                                            </span><div style="display:inline" class="apparatus apparatus_120" data-app-id="apparatus_120">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">earnestness</span></del>
+                           <ins class="add"><span class="textcontent">eagerness</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">earnestness</span></div>
+                                            
+                     </div><span class="textcontent">which would take no denial; these were certainly of an odd and varied kind, but each was given in simple good faith, with
+                        a kindly word, and a blessing, and that strange mixture of 
+                                            fear-meaning movements which I had seen outside the hotel at Bistritz&#8212;the sign of the cross and the guard
+                        against the evil eye. Then, as we flew along, the driver leaned forward, and on each 
+                                            side the passengers, craning over the edge of the coach, peered eagerly into the darkness. It was evident
+                        that something very exciting was either happening or expected, but though I asked 
+                                            each passenger, no one would give me the slightest explanation. This state of excitement kept on for some
+                        little time; and at last we saw before us the 
+                                            </span><div style="display:inline" class="apparatus apparatus_121" data-app-id="apparatus_121">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">opening out on the eastern side.
+                                            </span><div style="display:inline" class="apparatus apparatus_122" data-app-id="apparatus_122">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">There</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">There</span></div>
+                                            
+                     </div><span class="textcontent">were dark, rolling clouds overhead, and in the air the heavy, oppressive sense of thunder. It seemed as though the mountain
+                        range had separated 
+                                            two atmospheres, and that now we had got into the thunderous one. I was now myself looking out for the
+                        conveyance which was to take me to the Count. Each moment I expected to see the glare 
+                                            of lamps through the blackness; but all was dark. The only light was the flickering rays of our own lamps,
+                        in which the steam from our
+                                            </span><div style="display:inline" class="apparatus apparatus_123" data-app-id="apparatus_123">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">hard-driven</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">hard driven</span></div>
+                                            
+                     </div><span class="textcontent">horses rose in a white cloud.
+                                            </span><div class="apparatus apparatus_124" data-app-id="apparatus_124">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Don't miss the second installment which will appear in tomorrow's Times.</span></ins>
+                           <hr class="pagebreak"></hr>
+                                                   
+                           <ins class="add"><span class="textcontent">DRACULA</span><div class="linebreak"></div><span class="textcontent">OR</span><div class="linebreak"></div><span class="textcontent">THE VAMPIRE</span><div class="linebreak"></div><span class="textcontent">By BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">One of the most thrilling novels of the age, with love, intrigue, and adventure mingled in a gripping serial.</span><div class="linebreak"></div>
+                                                      <span class="emph"><span class="textcontent">Read It In THE TIMES Every Day</span></span><div class="linebreak"></div><span class="textcontent">PART I.-Continued.</span></ins>
+                           <div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_125" data-app-id="apparatus_125">
+                                                
+                        <div class="reading times" data-reading-wits="times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">We</span></div>
+                                                
+                        <div style="display:inline" class="reading novel" data-reading-wits="novel"><span class="textcontent">We</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_126" data-app-id="apparatus_126">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">We could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_127" data-app-id="apparatus_127">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">The</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">The</span></div>
+                                            
+                     </div><span class="textcontent">passengers drew back with a sigh of gladness, which seemed to mock my own disappointment. I was already thinking what I had
+                        best do, when the driver, looking at his watch, 
+                                            said to the others something which I could hardly hear, it was spoken so quietly and in so low a tone;
+                        I thought it was
+                                            </span><div style="display:inline" class="apparatus apparatus_128" data-app-id="apparatus_128">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"an</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">"An</span></div>
+                                            
+                     </div><span class="textcontent">hour less than the time." Then turning to me he said in German worse than my own:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "There is no
+                                            </span><div style="display:inline" class="apparatus apparatus_129" data-app-id="apparatus_129">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">carriages</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">carriage</span></div>
+                                            
+                     </div><span class="textcontent">here. The Herr is not expected after all. He will now come on to Bukovina, and return tomorrow or the next day
+                                            </span><div style="display:inline" class="apparatus apparatus_130" data-app-id="apparatus_130">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">; better the next day.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">; better the next day.</span></div>
+                                            
+                     </div><span class="textcontent">"
+                                            </span><div style="display:inline" class="apparatus apparatus_131" data-app-id="apparatus_131">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Whilst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">While</span></div>
+                                            
+                     </div><span class="textcontent">he was speaking
+                                            </span><div style="display:inline" class="apparatus apparatus_132" data-app-id="apparatus_132">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">the</span></del>
+                           <ins class="add"><span class="textcontent">his</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel" data-reading-wits="charlotte times novel"><span class="textcontent">the</span></div>
+                                            
+                     </div><span class="textcontent">horses began to neigh and snort and plunge wildly, so that the driver had to hold them up. Then,
+                                            </span><div style="display:inline" class="apparatus apparatus_133" data-app-id="apparatus_133">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">among</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">a chorus of screams from the peasants and a universal crossing of themselves, a caleche, with four horses,
+                                            </span><div style="display:inline" class="apparatus apparatus_134" data-app-id="apparatus_134">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">drove up behind us,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">drove up behind us,</span></div>
+                                            
+                     </div><span class="textcontent">overtook us, and drew up beside the coach. I could see from the flash of our lamps, as the rays fell on them, that the horses
+                        were
+                                            </span><div style="display:inline" class="apparatus apparatus_135" data-app-id="apparatus_135">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">coal black</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">coal-black</span></div>
+                                            
+                     </div><span class="textcontent">and splendid animals. They were driven by a tall man, with a long brown beard and a great black hat, which seemed to hide
+                        his face from us. I could only see the gleam 
+                                            of a pair of very bright eyes, which seemed red in the lamplight, as he turned to us. He said to the driver:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "You are early
+                                            </span><div style="display:inline" class="apparatus apparatus_136" data-app-id="apparatus_136">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">my friend." The man stammered in reply:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The English Herr was in a hurry," to which the stranger replied:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "That is why, I suppose, you wished him to go on to Bukovina. You cannot deceive me, my friend ; I know
+                        too much, and my horses are swift." As he spoke he smiled, 
+                                            and the lamplight fell on a hard-looking mouth, with very red lips and sharp-looking teeth, as white as
+                        ivory. One of my companions whispered to another the line from Burger's
+                                            </span><div style="display:inline" class="apparatus apparatus_137" data-app-id="apparatus_137">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"Lenoro:"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">"Lenore:"</span></div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_138" data-app-id="apparatus_138">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">"Denn die Todten reiten schnell"&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">("For the dead travel fast.")</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Denn die Todten reiten schnell&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">(For the dead travel fast.)</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_139" data-app-id="apparatus_139">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE STRANGE JOURNEY</span><div class="linebreak"></div><span class="textcontent">INTO</span><span class="sic"><span class="textcontent"> BUKOWINA </span></span><span class="textcontent">BEGINS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            The strange driver evidently heard the words, for he looked up with a gleaming smile. The passenger turned
+                        his face away, at the same time putting out his two fingers and 
+                                            crossing himself. "Give me the Herr's luggage," said the driver; and with
+                                            </span><div style="display:inline" class="apparatus apparatus_140" data-app-id="apparatus_140">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">exceedingly</span></span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">exceeding</span></div>
+                                            
+                     </div><span class="textcontent">alacrity my bags were handed out and put in the caleche. Then I descended from the side of the coach, as the caleche was close
+                        alongside, the driver helping me with a 
+                                            hand which caught my arm in a grip of steel; his strength must have been prodigious. Without a word he
+                        shook his reins, the horses turned, and we swept into the darkness of the 
+                                            </span><div style="display:inline" class="apparatus apparatus_141" data-app-id="apparatus_141">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass.</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">Pass.</span></div>
+                                            
+                     </div><span class="textcontent">As I looked back I saw the steam from the horses of the coach by the light of the lamps, and projected against it the figures
+                        of my late companions crossing themselves. 
+                                            Then the driver cracked his whip and called to
+                                            </span><div style="display:inline" class="apparatus apparatus_142" data-app-id="apparatus_142">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">his</span></del>
+                           <ins class="add"><span class="textcontent">the</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">his</span></div>
+                                            
+                     </div><span class="textcontent">horses, and off they swept on their way to Bukovina.
+                                            </span><div style="display:inline" class="apparatus apparatus_143" data-app-id="apparatus_143">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">they sank into the darkness I felt a strange chill, and a lonely feeling came over me; but a cloak was thrown over my shoulders,
+                        and a rug
+                                            </span><div style="display:inline" class="apparatus apparatus_144" data-app-id="apparatus_144">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">across</span></del>
+                           <ins class="add"><span class="textcontent">over</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">across</span></div>
+                                            
+                     </div><span class="textcontent">my knees, and the driver said in excellent German:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The night is chill,
+                                            </span><div style="display:inline" class="apparatus apparatus_145" data-app-id="apparatus_145">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">Mein</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">mein</span></div>
+                                            
+                     </div><span class="textcontent">Herr, and my master the Count bade me take all care of you. There is a flask of slivovitz (the plum brandy of the country)
+                        underneath the seat, if you should 
+                                            require it." I did not take any, but it was a comfort to know it was there all the same. I felt a little
+                        strangely, and not a little frightened. I think had there been 
+                                            any alternative I should have taken it, instead of prosecuting that unknown night journey. The carriage
+                        went at a hard pace straight along, then we made a complete turn 
+                                            and went along another straight road. It seemed to me that we were simply going over and over the same
+                        ground again; and so I took note of some salient point, and found 
+                                            that this was so. I would have liked to have asked the driver what this all meant, but I really feared
+                        to do so, for I thought that, placed as I was, any protest would 
+                                            have had no effect in case there had been an intention to delay.
+                                            </span><div style="display:inline" class="apparatus apparatus_146" data-app-id="apparatus_146">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">By and by,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">By-and-by,</span></div>
+                                            
+                     </div><span class="textcontent">however, as I was curious to know how time was passing, I struck a match, and by its flame looked at my watch; it was
+                                            </span><div style="display:inline" class="apparatus apparatus_147" data-app-id="apparatus_147">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">within</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">within</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes of midnight.
+                                            </span><div style="display:inline" class="apparatus apparatus_148" data-app-id="apparatus_148">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                                 
+                                                             I waited with a sick feeling of suspense.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                              
+                                                          I waited with a sick feeling of suspense.</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_149" data-app-id="apparatus_149">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">HOWLING WOLVES ADD</span><div class="linebreak"></div><span class="textcontent">TO THE TRAVELER'S PERIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Then a dog began to howl somewhere in a
+                                            </span><div style="display:inline" class="apparatus apparatus_150" data-app-id="apparatus_150">
+                                                
+                        <div style="display:inline" class="reading novel ocean" data-reading-wits="novel ocean"><span class="textcontent">farmhouse</span></div>
+                                                
+                        <div class="reading times charlotte" data-reading-wits="times charlotte"><span class="textcontent">farm house</span></div>
+                                            
+                     </div><span class="textcontent">far down the road&#8212;a long, agonised wailing, as if from fear. The sound was taken up by
+                                            </span><div style="display:inline" class="apparatus apparatus_151" data-app-id="apparatus_151">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">another dog, and then</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times ocean novel" data-reading-wits="times ocean novel"><span class="textcontent">another dog, and then</span></div>
+                                            
+                     </div><span class="textcontent">another and another, till, borne on the wind which now sighed softly through the
+                                            </span><div style="display:inline" class="apparatus apparatus_152" data-app-id="apparatus_152">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">a wild howling began, which seemed to come from all over the country, 
+                                            </span><div style="display:inline" class="apparatus apparatus_153" data-app-id="apparatus_153">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                                 rear, but 
+                                                             the driver spoke to them soothingly, and they quieted down, but shivered and sweated as though
+                                 after a run-away from sudden fright.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                              rear, but the driver 
+                                                          spoke to them soothingly, and they quieted down, but shivered and sweated as though after a run-away
+                              from sudden fright.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_154" data-app-id="apparatus_154">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Then,</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">Then,</span></div>
+                                            
+                     </div><span class="textcontent">far off in the distance, from the mountains on each side of us began a louder and a sharper howling-that of wolves-which affected
+                        both the horses and myself in the 
+                                            same way-for I was minded to jump from the caleche and run,
+                                            </span><div style="display:inline" class="apparatus apparatus_155" data-app-id="apparatus_155">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">whilst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">while</span></div>
+                                            
+                     </div><span class="textcontent">they reared
+                                            </span><div style="display:inline" class="apparatus apparatus_156" data-app-id="apparatus_156">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">again</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">again</span></div>
+                                            
+                     </div><span class="textcontent">and plunged madly, so that the driver had to use all his great strength to keep them from bolting.
+                                            </span><div style="display:inline" class="apparatus apparatus_157" data-app-id="apparatus_157">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">In</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">In</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes
+                                            </span><div style="display:inline" class="apparatus apparatus_158" data-app-id="apparatus_158">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">, however,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">, however,</span></div>
+                                            
+                     </div><span class="textcontent">my
+                                            </span><div style="display:inline" class="apparatus apparatus_159" data-app-id="apparatus_159">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">own</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">own</span></div>
+                                            
+                     </div><span class="textcontent">ears got accustomed to the sound, and the horses so far became quiet that the driver was able to descend and to stand before
+                        them. He
+                                            </span><div style="display:inline" class="apparatus apparatus_160" data-app-id="apparatus_160">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">patted</span></span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">petted</span></div>
+                                            
+                     </div><span class="textcontent">and soothed them,
+                                            </span><div style="display:inline" class="apparatus apparatus_161" data-app-id="apparatus_161">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean" data-reading-wits="times novel ocean"><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></div>
+                                            
+                     </div><span class="textcontent">and with extraordinary effect, for under his caresses they became quite manageable again, though they still trembled. The
+                        driver again took his seat, and shaking his 
+                                            reins, started off at a great pace. This time, after going to the far side of the
+                                            </span><div style="display:inline" class="apparatus apparatus_162" data-app-id="apparatus_162">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">he suddenly turned down a narrow roadway which ran sharply to the right.
+                                            </span><div class="apparatus apparatus_163" data-app-id="apparatus_163">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">(To Be Continued.)</span></ins>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_164" data-app-id="apparatus_164">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <ins class="add"><span class="textcontent">THE STRANGE STORY OF DRACULA</span><div class="linebreak"></div><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">
+                                                             (Copyright, 1897, by the Author.)</span><div class="linebreak"></div><span class="textcontent">CHAPTER I.-(Continued.)</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Soon we were hemmed in with trees, which in places arched right over the roadway till we passed as through
+                        a tunnel; and again great frowning rocks guarded us boldly on 
+                                            either side. Though we were in shelter, we could hear the rising wind, for it moaned and whistled through
+                        the rocks, and the branches of the trees crashed together as we 
+                                            swept along. It grew colder and colder still, and fine powdery snow began to fall, so that soon we and
+                        all around us were covered with a white blanket. The keen wind still 
+                                            carried the howling of the dogs, though this grew fainter as we went on our way. The baying of the wolves
+                        sounded nearer and nearer, as though they were closing round on us 
+                                            from every side. I grew dreadfully afraid, and the horses shared my
+                                            </span><div style="display:inline" class="apparatus apparatus_165" data-app-id="apparatus_165">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <ins class="add"><span class="textcontent">; but the</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">. The</span></div>
+                                            
+                     </div><span class="textcontent">driver
+                                            </span><div style="display:inline" class="apparatus apparatus_166" data-app-id="apparatus_166">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">however</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">however</span></div>
+                                            
+                     </div><span class="textcontent">was not in the least
+                                            </span><div style="display:inline" class="apparatus apparatus_167" data-app-id="apparatus_167">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">disturbed. He</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">disturbed; he</span></div>
+                                            
+                     </div><span class="textcontent">kept turning his head to left and right, but I could not see anything through the darkness.
+                                            </span><div class="apparatus apparatus_168" data-app-id="apparatus_168">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE DRIVES FIGURES</span><div class="linebreak"></div><span class="textcontent">IN A WEIRD DREAM.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Suddenly, away on our left, I saw a faint flickering blue flame. The driver saw it at the same moment;
+                        he at once checked the horses, and, jumping to the ground, disappeared 
+                                            into the darkness. I did not know what to do, the less as the howling of the wolves grew closer ; but
+                        while I wondered the driver suddenly appeared again, and without a word 
+                                            took his seat, and we resumed our journey. I think I must have fallen asleep and kept dreaming of the
+                        incident, for it seemed to be repeated endlessly, and now looking back, 
+                                            it is like a sort of awful nightmare. Once the flame appeared so near the road, that even in the darkness
+                        around us I could watch the driver's motions. He went rapidly to where 
+                                            the blue flame arose&#8212;it must have been very faint, for it did not seem to illumine the place around it
+                        at all&#8212;and gathering a few stones, formed them into some device. Once there 
+                                            appeared a strange optical effect: when he stood between me and the flame he did not obstruct it, for
+                        I could see its ghostly flicker all the same. This startled me, but as the 
+                                            effect was only momentary, I took it that my eyes deceived me straining through the darkness. Then for
+                        a time there
+                                            </span><div style="display:inline" class="apparatus apparatus_169" data-app-id="apparatus_169">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">were</span></del>
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">no blue flames, and we sped
+                                            </span><div style="display:inline" class="apparatus apparatus_170" data-app-id="apparatus_170">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">onward</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">onwards</span></div>
+                                            
+                     </div><span class="textcontent">onwards through the gloom, with the howling of the wolves around us, as though they were following in a moving circle.
+                                            </span><div class="apparatus apparatus_171" data-app-id="apparatus_171">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">RING OF WOLVES</span><div class="linebreak"></div><span class="textcontent">SURROUND THE CARRIAGE</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            At last there came a time when the driver went further afield than he had yet gone, and during his absence,
+                        the horses began to tremble worse than ever and to snort and scream 
+                                            with fright. I could not see any cause for it, for the howling of the wolves had ceased altogether; but
+                        just then the moon, sailing through the black clouds, appeared behind the 
+                                            jagged crest of a beetling, pine-clad rock, and by its light I saw around us a ring of wolves, with white
+                        teeth and lolling red tongues, with long, sinewy limbs and shaggy hair. 
+                                            They were a hundred times more terrible in the grim silence which held them than even when they howled.
+                        For myself, I felt a sort of paralysis of fear. It is only when a man 
+                                            feels himself face to face with such horrors that he can understand their true import.
+                                            </span><div class="apparatus apparatus_172" data-app-id="apparatus_172">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <ins class="add"><span class="textcontent">Don't miss the third installment which will appear in tomorrow's Times.</span><hr class="pagebreak"></hr><span class="textcontent">DRACULA or The Vampire
+                                                         By Bram Stoker</span><div class="linebreak"></div><span class="textcontent">One of the Most Thrilling Novels of the Age-Love, Mystery, Intrigue, Adventure, Mingled in a</span><div class="linebreak"></div><span class="textcontent">Gripping Serial. Read It In THE TIMES Every Day.</span><div class="linebreak"></div><span class="textcontent">
+                                                         PART I-Continued.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All at once the wolves began to howl as though the moonlight had had some peculiar effect on them. The
+                        horses jumped about and reared, and looked helplessly round with eyes 
+                                            that rolled in a way painful to see; but the living ring of terror encompassed them on every side; and
+                        they had perforce to remain within it. I called to the coachman to come, 
+                                            for it seemed to me that our only chance was to try to break out through the ring and to aid his approach.
+                        I shouted and beat the side of the cal&egrave;che, hoping by the noise to 
+                                            scare the wolves from that side, so as to give him a chance of reaching the trap. How he came there, I
+                        know not, but I heard his voice raised in a tone of imperious command, 
+                                            and looking
+                                            </span><div style="display:inline" class="apparatus apparatus_173" data-app-id="apparatus_173">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">toward</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">the sound, saw him stand in the roadway. As he swept his long arms, as though brushing
+                                            </span><div style="display:inline" class="apparatus apparatus_174" data-app-id="apparatus_174">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">aside</span></del>
+                           <ins class="add"><span class="textcontent">away</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">aside</span></div>
+                                            
+                     </div><span class="textcontent">some impalpable obstacle, the wolves fell back and back further still. Just then a heavy cloud passed across the face of the
+                        moon, so that we were again in darkness.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I could see again the driver was climbing into the caleche, and the wolves had disappeared. This
+                        was all so strange and uncanny that a dreadful fear came upon me, and I was 
+                                            afraid to speak or move. The time seemed interminable as we swept on our way, now in almost complete darkness,
+                        for the rolling clouds obscured the moon. We kept on ascending, 
+                                            with occasional periods of quick descent, but in the main always ascending. Suddenly, I became conscious
+                        of the fact that the driver was in the act of pulling up the horses in 
+                                            the courtyard of a vast ruined castle, from whose tall black windows came no ray of light, and whose broken
+                        battlements showed a jagged line against the moonlit sky.
+                                            </span><div class="apparatus apparatus_175" data-app-id="apparatus_175">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">[TO BE CONTINUED.]</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                              
+               </div>
+                       
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="ocean">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img><a title="Version ocean: The Inter Ocean">Version ocean: The Inter Ocean</a></div>
+            <div class="mssContent">
+                           
+               <div class="div">
+                                  
+                  <div class="head rend-center">
+                                         
+                     <div class="apparatus apparatus_1" data-app-id="apparatus_1">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">TO</span><div class="linebreak"></div><span class="textcontent">MY DEAR FRIEND</span><div class="linebreak"></div><span class="textcontent">HOMMY-BEG</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_2" data-app-id="apparatus_2">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">How these papers have been placed in sequence will be made manifest in the reading 
+                                                          of them. All needless matters have been eliminated, so that a history almost at variance with
+                              the 
+                                                          possibilities of later-day belief may stand forth as simple fact. There is throughout no statement
+                              
+                                                          of past things wherein memory may err, for all the records chosen are exactly contemporary, given
+                              
+                                                          from the standpoints and within the range of knowledge of those who made them.</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_3" data-app-id="apparatus_3">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">THE STRANGE STORY OF </span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">Begin Today the Fascinating Story of Mystery</span><div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo ocean times" data-reading-wits="novel charlotte buffalo ocean times">
+                           <div class="linebreak"></div><span class="textcontent">DRACULA
+                                                          </span><div class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">!</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent"> or The Vampire By Bram Stoker</span></div>
+                                                          
+                           </div>
+                                                   
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.
+                                                          </span><div style="display:inline" class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                              
+                              <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">(Copyright, 1897, by the Author.)</span></div>
+                                                          
+                           </div>
+                                                   
+                        </div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">A STRONG STORY OF THE VAMPIRE.</span><div class="linebreak"></div><span class="textcontent">By Bram Stoker, the Dramatic Critic,</span><div class="linebreak"></div><span class="textcontent">
+                                                      Theatrical Manager and Author of "Miss</span><div class="linebreak"></div><span class="textcontent">Betty," "Under the Sunset," and Other</span><div class="linebreak"></div><span class="textcontent">Books.</span><div class="linebreak"></div><span class="textcontent">
+                                                      Copyright, 1897, by Bram Stoker.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Extraordinary Story of a Count Who Became</span><div class="linebreak"></div><span class="textcontent">A Vampire--One of the Literary Sen-</span><div class="linebreak"></div><span class="textcontent">
+                                                      sations of the Present Day.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">Copyright by Bram Stoker.</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">One of the most thrilling novels of the age--love, finance, mystery, intrigue, adventure, mingled</span><div class="linebreak"></div><span class="textcontent">
+                                                      in a gripping serial. Read it in THE TIMES Every Day.</span></div>
+                                            
+                        <hr class="pagebreak"></hr>
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_8" data-app-id="apparatus_8">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo" data-reading-wits="novel ocean charlotte buffalo"><span class="textcontent">CHAPTER I.</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">PART I.</span><div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times" data-reading-wits="novel ocean charlotte buffalo times"><span class="textcontent">
+                                                      JONATHAN 
+                                                      </span><div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                                          
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">HARPER'S</span></span></div>
+                                                          
+                              <div style="display:inline" class="reading charlotte novel ocean times" data-reading-wits="charlotte novel ocean times"><span class="textcontent">HARKER'S</span></div>
+                                                      
+                           </div><span class="textcontent">JOURNAL</span><div class="linebreak"></div>
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_11" data-app-id="apparatus_11">
+                                               
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Kept in shorthand.)</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div style="display:inline" class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <del><span class="textcontent">(Kept in shorthand.)</span></del>
+                           <div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_12" data-app-id="apparatus_12">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="emph"><span class="textcontent">3 May. Bistritz.</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">3 May. Bistritz.</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            &#8212;Left Munich at 8:35 
+                                                </span><div style="display:inline" class="apparatus apparatus_13" data-app-id="apparatus_13">
+                                                    
+                        <div style="display:inline" class="reading ocean charlotte buffalo times" data-reading-wits="ocean charlotte buffalo times"><span class="textcontent">p.m.</span></div>
+                                                    
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">P.M.</span></div>
+                                                
+                     </div><span class="textcontent">, on 1st May, arriving at Vienna early next morning
+                                                </span><div style="display:inline" class="apparatus apparatus_14" data-app-id="apparatus_14">
+                                                    
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></div>
+                                                    
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte">
+                           <del><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></del>
+                        </div>
+                                                
+                     </div><span class="textcontent">. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the 
+                                            little I could walk through the streets. I feared to go very far from the station, as we arrived late
+                        and would start as near 
+                                            the correct time as possible. The impression I had was that we were leaving the West and entering the
+                        East; the most 
+                                                </span><div style="display:inline" class="apparatus apparatus_15" data-app-id="apparatus_15">
+                                                    
+                        <div class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">western</span></div>
+                                                    
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Western</span></div>
+                                                
+                     </div><span class="textcontent">
+                                            of splendid bridges over the Danube, which is here of noble width and depth, took us among the traditions
+                        of Turkish rule.
+                                           </span><div style="display:inline" class="apparatus apparatus_16" data-app-id="apparatus_16">
+                                               
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times emptyReading" data-reading-wits="novel ocean charlotte buffalo times">
+                                                   
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at
+                        the Hotel Royale. I 
+                                            had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but
+                        thirsty. 
+                                            (Mem., get recipe for Mina.) I asked the waiter, and he said it was called "paprika hendl," and that,
+                        as it was a national 
+                                            dish, I should be able to get it anywhere along the Carpathians. I found my smattering of German very
+                        useful here; indeed, 
+                                            I don't know how I should be able to get on without it.
+                                            </span><div class="apparatus apparatus_17" data-app-id="apparatus_17">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">ATTEMPTS TO LOCATE</span><div class="linebreak"></div><span class="textcontent">THE CASTLE DRACULA.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Having had some time at my disposal when in London, I had visited the British 
+                                            </span><div style="display:inline" class="apparatus apparatus_18" data-app-id="apparatus_18">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">museum</span></div>
+                                                
+                        <div class="reading times novel buffalo charlotte" data-reading-wits="times novel buffalo charlotte"><span class="textcontent">Museum</span></div>
+                                            
+                     </div><span class="textcontent">, and made search among the books and maps 
+                                            in the library regarding Transylvania; it had struck me that some foreknowledge of the country could hardly
+                        fail to have some 
+                                            importance in dealing with a
+                                            </span><div style="display:inline" class="apparatus apparatus_19" data-app-id="apparatus_19">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">noble</span></div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">nobleman</span></div>
+                                            
+                     </div><span class="textcontent"> of that country. I find that the district he named is in the extreme east of the country, 
+                                            just on the borders of three states, Transylvania, Moldavia and Bukovina, in the midst of the Carpathian
+                        mountains ; one of the 
+                                            wildest and least known portions of Europe. I was not able to light on any map or work giving the exact
+                        locality of
+                                            </span><div style="display:inline" class="apparatus apparatus_20" data-app-id="apparatus_20">
+                                                
+                        <div style="display:inline" class="reading times novel charlotte ocean" data-reading-wits="times novel charlotte ocean"><span class="textcontent">the</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">the</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">Castle 
+                                            Dracula, as there are no maps of this country as yet to compare with our own
+                                            </span><div style="display:inline" class="apparatus apparatus_21" data-app-id="apparatus_21">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Ordnance Survey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean buffalo times" data-reading-wits="charlotte ocean buffalo times"><span class="textcontent">ordnance survey</span></div>
+                                            
+                     </div><span class="textcontent">maps; but I found that Bistritz, 
+                                            the post town named by Count Dracula, is a fairly well-known place. I shall enter here some of my notes,
+                        as they may refresh my 
+                                            memory when I talk over my travels with Mina.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            In the population of Transylvania there are four distinct nationalities: Saxons in the 
+                                            </span><div style="display:inline" class="apparatus apparatus_22" data-app-id="apparatus_22">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">South</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">south</span></div>
+                                            
+                     </div><span class="textcontent">, and mixed with them the Wallachs, who are the descendants of the Dacians; Magyars in the
+                                            </span><div style="display:inline" class="apparatus apparatus_23" data-app-id="apparatus_23">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">West</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">west</span></div>
+                                            
+                     </div><span class="textcontent">and Szekelys in the
+                                            </span><div style="display:inline" class="apparatus apparatus_24" data-app-id="apparatus_24">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">East</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">and
+                                            </span><div style="display:inline" class="apparatus apparatus_25" data-app-id="apparatus_25">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">North</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">north</span></div>
+                                            
+                     </div><span class="textcontent">I am going among the latter, who claim to be descended from Attila and the Huns. This may be so, 
+                                            for when the Magyars conquered the country in the eleventh century they found the Huns settled in it.
+                        I read that every known superstition 
+                                            in the world is gathered into the horseshoe of the Carpathians, as if it were the
+                                            </span><div style="display:inline" class="apparatus apparatus_26" data-app-id="apparatus_26">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean buffalo times" data-reading-wits="ocean buffalo times"><span class="textcontent">center</span></div>
+                                            
+                     </div><span class="textcontent">of some sort of imaginative whirlpool; if so my stay may be very interesting.
+                                            </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the 
+                                                          </span><div class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                              
+                              <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Count</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent">count</span></div>
+                                                          
+                           </div><span class="textcontent">all about them.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count all about them.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_29" data-app-id="apparatus_29">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">BEGINS LONG JOURNEY</span><div class="linebreak"></div><span class="textcontent">ON A SLOW TRAIN.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I did not sleep well, though my bed was comfortable enough, for I had all sorts of queer dreams. There
+                        was a dog howling all night under my window, 
+                                            which may have had something to do with it; or it may have been the paprika, for I had to drink up all
+                        the water in my carafe, and was still thirsty.
+                                            </span><div style="display:inline" class="apparatus apparatus_30" data-app-id="apparatus_30">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Towards</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">Toward</span></div>
+                                            
+                     </div><span class="textcontent">morning I slept and was wakened by the continuous knocking at my door, so I guess I must have been sleeping soundly then.
+                        I had for breakfast 
+                                            more paprika, and a sort of porridge of maize flour which they said was "mamaliga," and egg-plant stuffed
+                        with forcemeat, a very excellent dish, which 
+                                            they call &#8220;impletata."
+                                            </span><div style="display:inline" class="apparatus apparatus_31" data-app-id="apparatus_31">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., get recipe for this also.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., get recipe for this also.)</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to hurry breakfast, for the train started a little before
+                                            </span><div style="display:inline" class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">eight</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">8
+                                                          </span><div class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo">
+                                 <ins class="add"><span class="textcontent">o'clock</span></ins>
+                              </div>
+                                                          
+                           </div>
+                        </div>
+                                            
+                     </div><span class="textcontent">, or rather it ought to have done so, for after rushing to the station at 7 : 30
+                                            </span><div class="apparatus apparatus_34" data-app-id="apparatus_34">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">o' clock</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to sit in the carriage for more than an hour before we began to move. It seems to me that the further
+                                            </span><div style="display:inline" class="apparatus apparatus_35" data-app-id="apparatus_35">
+                                                
+                        <div class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">East</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">you go the more unpunctual are the trains. What ought they to be in China?
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All day long we seemed to dawdle through a country which was full of beauty 
+                                            </span><div style="display:inline" class="apparatus apparatus_36" data-app-id="apparatus_36">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">of every kind</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">of every kind</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">. 
+                                            </span><div style="display:inline" class="apparatus apparatus_37" data-app-id="apparatus_37">
+                                                
+                        <div class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">Some times</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">Sometimes</span></div>
+                                            
+                     </div><span class="textcontent">we saw little towns or castles on the top of steep hills such as we see in old missals ; sometimes we ran by rivers and streams
+                        which seemed from 
+                                            the wide stony margin on each side of them to be subject to great floods. It takes a lot of water, and
+                        running strong, to sweep the outside edge of a 
+                                            river clear. At every station there were groups of people, sometimes crowds
+                                            </span><div style="display:inline" class="apparatus apparatus_38" data-app-id="apparatus_38">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">, and in all sorts of attire.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">, and in all sorts of attire.</span><div class="linebreak"></div>
+                           </del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_39" data-app-id="apparatus_39">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Some</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Some</span></div>
+                                            
+                     </div><span class="textcontent">of them were just like the peasants at home or those I saw coming through France and Germany, with short jackets and round
+                        
+                                            hats and home-made trousers; but others were very picturesque. The women looked pretty, except when you
+                        got near them, but they were very clumsy 
+                                            about the waist. They had all full white sleeves of some kind or other, and the most of them had big belts
+                        with a
+                                            </span><div style="display:inline" class="apparatus apparatus_40" data-app-id="apparatus_40">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">lit</span></span></div>
+                                                
+                        <div class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">lot</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            of strips of something fluttering 
+                                            from them like the dresses in a ballet, but of course
+                                            </span><div style="display:inline" class="apparatus apparatus_41" data-app-id="apparatus_41">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">there were</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">there were</span></div>
+                                            
+                     </div><span class="textcontent">petticoats under them. The strangest figures we saw were the Slovaks, who 
+                                            </span><div style="display:inline" class="apparatus apparatus_42" data-app-id="apparatus_42">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">are</span></div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">more 
+                                            barbarian than the rest, with their big
+                                            </span><div style="display:inline" class="apparatus apparatus_43" data-app-id="apparatus_43">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">cow-boy</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo ocean" data-reading-wits="charlotte times buffalo ocean"><span class="textcontent">cowboy</span></div>
+                                            
+                     </div><span class="textcontent">hats, great baggy dirty-white trousers, white linen shirts, and enormous heavy leather belts, nearly a 
+                                            foot wide, all studded over with brass nails. They wore high boots, with their trousers tucked into them,
+                        and had long black hair and heavy black
+                                            </span><div style="display:inline" class="apparatus apparatus_44" data-app-id="apparatus_44">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">mustaches.</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">moustaches</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            They are very picturesque, but do not look prepossessing.
+                                            </span><div style="display:inline" class="apparatus apparatus_45" data-app-id="apparatus_45">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                          They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo ocean" data-reading-wits="charlotte buffalo ocean">
+                           <del><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                             They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_46" data-app-id="apparatus_46">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">FINDS LETTER FROM</span><div class="linebreak"></div><span class="textcontent">COUNT AT HOTEL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            It was on the dark side of twilight when we got to Bistritz, which is a very interesting old place. Being
+                        practically on the frontier&#8212;for the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_47" data-app-id="apparatus_47">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">leads from it into Bukovina&#8212;it has had a very stormy existence, and it certainly shows marks of it. Fifty years ago a series
+                        of great fires took 
+                                            place, which made terrible havoc on five separate occasions. At the very beginning of the seven-teenth
+                        century it underwent a siege of three weeks and lost 
+                                            13,000 people, the casualties of war proper being assisted by famine and disease.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Count Dracula had directed me to go to the Golden Krone 
+                                            </span><div style="display:inline" class="apparatus apparatus_48" data-app-id="apparatus_48">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">hotel</span></div>
+                                                
+                        <div class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">Hotel</span></div>
+                                            
+                     </div><span class="textcontent">which I found, to my great delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways
+                        of the country. I was evidently 
+                                            expected, for when I got near the door I faced a cheery- looking elderly woman in the usual peasant dress&#8212;white
+                        undergarment with long double apron, front, and back, of
+                                            </span><div style="display:inline" class="apparatus apparatus_49" data-app-id="apparatus_49">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">colored</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">coloured</span></div>
+                                            
+                     </div><span class="textcontent">stuff fitting almost too tight for modesty. When I came close she bowed and said, &#8220;The Herr 
+                                            </span><div style="display:inline" class="apparatus apparatus_50" data-app-id="apparatus_50">
+                                                
+                        <div class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">English-Man</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Englishman</span></div>
+                                            
+                     </div><span class="textcontent">?&#8221; &#8220;Yes,&#8221; I said, "Jonathan Harker." She smiled, and gave some message to an elderly man in white
+                                            </span><div style="display:inline" class="apparatus apparatus_51" data-app-id="apparatus_51">
+                                                
+                        <div style="display:inline" class="reading novel ocean charlotte times" data-reading-wits="novel ocean charlotte times"><span class="textcontent">shirtsleeves</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">shirt sleeves</span></div>
+                                            
+                     </div><span class="textcontent">, who had followed her to the door. He went, but immediately returned with a letter:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "My Friend.&#8212;Welcome to the Carpathians. I am anxiously expecting you. Sleep well
+                                            </span><div style="display:inline" class="apparatus apparatus_52" data-app-id="apparatus_52">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">tonight.</span></div>
+                                            
+                     </div><span class="textcontent">At
+                                            </span><div style="display:inline" class="apparatus apparatus_53" data-app-id="apparatus_53">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">three</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">3</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_54" data-app-id="apparatus_54">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-morrow</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">tomorrow</span></div>
+                                            
+                     </div><span class="textcontent">the diligence will start for Bukovina; a place on it is kept for you. At the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_55" data-app-id="apparatus_55">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div class="reading charlotte novel buffalo times" data-reading-wits="charlotte novel buffalo times"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">my carriage will await you and will bring you to me. I trust that your journey from London has been a happy one, and that
+                        you will enjoy your stay in my beautiful land. 
+                                            </span><div style="display:inline" class="apparatus apparatus_56" data-app-id="apparatus_56">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"Dracula."</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Your friend. DRACULA."</span></div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">"Your friend, DRACULA."</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_57" data-app-id="apparatus_57">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">REFUSED INFORMATION</span><div class="linebreak"></div><span class="textcontent">OF COUNT OR CASTLE.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            4 May.&#8212;l found that my landlord had got a letter from the Count, directing him to secure the best place
+                        on the coach for me; but on making inquiries as to details 
+                                            he seemed somewhat reticent, and pretended that he could not understand my German. 
+                                            </span><div style="display:inline" class="apparatus apparatus_58" data-app-id="apparatus_58">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                              he did.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                                 he did.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">He and his wife, the old lady who had received me, looked at each other in a frightened sort of way. He mumbled out that the
+                        money had been sent in a letter, 
+                                            and that was all he knew. When I asked him if he knew Count Dracula, and could tell me anything of his
+                        castle, both he and his wife crossed themselves, and, saying that 
+                                            they knew nothing at all, simply refused to speak further. It was so near the time of starting that I
+                        had no time to ask any one else, for it was all very mysterious and 
+                                            not by any means comforting.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Just before I was leaving, the old lady came up to my room and said in a very hysterical way:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Must you go? Oh! young Herr, must you go?" She was in such an excited state that she seemed to have lost
+                        her grip of what German she knew, and mixed it all up with some 
+                                            other language which I did not know
+                                            </span><div style="display:inline" class="apparatus apparatus_59" data-app-id="apparatus_59">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">at all.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">at all.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I was just able to follow her by asking many questions. When I told her that I must go at once, and that I was engaged on
+                        important business, she asked again:
+                                            </span><div class="apparatus apparatus_60" data-app-id="apparatus_60">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CONTINUES JOURNEY</span><div class="linebreak"></div><span class="textcontent">DESPITE WARNINGS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_61" data-app-id="apparatus_61">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">"Dou</span></span></div>
+                                                
+                        <div class="reading buffalo novel charlotte times" data-reading-wits="buffalo novel charlotte times"><span class="textcontent">"Do</span></div>
+                                            
+                     </div><span class="textcontent">you know what day it is?" I answered that it was the 
+                                            </span><div style="display:inline" class="apparatus apparatus_62" data-app-id="apparatus_62">
+                                                
+                        <div class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">fourth</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">4th</span></div>
+                                            
+                     </div><span class="textcontent">of May. She shook her head as she said again:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Oh, yes!
+                                            </span><div style="display:inline" class="apparatus apparatus_63" data-app-id="apparatus_63">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">I know that! I know that, but</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">I know that, I know that! But</span></div>
+                                            
+                     </div><span class="textcontent">do you know what day it is?" On my saying that I did not understand, she went on:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "It is the eve of St. George's Day. Do you not know that
+                                            </span><div style="display:inline" class="apparatus apparatus_64" data-app-id="apparatus_64">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean" data-reading-wits="times buffalo ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">when the clock strikes midnight, all the evil things in the world will have full sway? Do you know where you are going, and
+                        what you are going to?"
+                                            </span><div style="display:inline" class="apparatus apparatus_65" data-app-id="apparatus_65">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">She</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">She</span></div>
+                                            
+                     </div><span class="textcontent">was in such evident distress that I tried to comfort her, but without effect. Finally she went down on her knees and implored
+                        me not to go; at least 
+                                            to wait a day or two before starting. It was all very ridiculous but I did not feel comfortable. However,
+                        there was business to be done, and I could allow nothing 
+                                            to interfere with it. I therefore tried to raise her up, and said, as gravely as I could, that I thanked
+                        her, but my duty was imperative, and that I must go. 
+                                            She then rose and dried her eyes, and taking a crucifix from her neck offered it to me. I did not know
+                        what to do, for, as an English 
+                                            </span><div style="display:inline" class="apparatus apparatus_66" data-app-id="apparatus_66">
+                                                
+                        <div class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Churchman,</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">churchman,</span></div>
+                                            
+                     </div><span class="textcontent">I have been taught to regard such things as in some measure idolatrous, and yet it seemed so ungracious to refuse an old lady
+                        meaning so well and in such a 
+                                            state of mind. She saw, I suppose, the doubt in my face, for she put the rosary 
+                                            </span><div style="display:inline" class="apparatus apparatus_67" data-app-id="apparatus_67">
+                                                
+                        <div class="reading novel buffalo times charlotte" data-reading-wits="novel buffalo times charlotte"><span class="textcontent">round</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck, and said, "For your mother's sake," and went out of the room. I am writing up this part of the diary whilst I am
+                        waiting for the coach, which is, 
+                                            of course, late; and the crucifix is still 
+                                            </span><div style="display:inline" class="apparatus apparatus_68" data-app-id="apparatus_68">
+                                                
+                        <div class="reading novel times buffalo" data-reading-wits="novel times buffalo"><span class="textcontent">round</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck. Whether it is the old lady's fear, or the many ghostly traditions of this place, or the crucifix itself, I do not
+                        know, but I am not feeling nearly 
+                                            as easy in my mind as usual. If this book should ever reach Mina before I do, let it bring my
+                                            </span><div style="display:inline" class="apparatus apparatus_69" data-app-id="apparatus_69">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">good-bye.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">good-by.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">goodby.</span></div>
+                                            
+                     </div><span class="textcontent">Here comes the coach!
+                                            </span><div class="apparatus apparatus_70" data-app-id="apparatus_70">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PEASANT SUPERSTITIONS</span><div class="linebreak"></div><span class="textcontent">CAUSE OF WORRY.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            5 May. The Castle.&#8212;The
+                                            </span><div style="display:inline" class="apparatus apparatus_71" data-app-id="apparatus_71">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean charlotte" data-reading-wits="times buffalo ocean charlotte"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">of the morning has passed, and the sun is high over the distant horizon, which seems jagged, whether with trees or hills I
+                        know not, for it is so far off that 
+                                            big things and little are mixed. I am not sleepy, and, as I am not to be called till I awake naturally
+                        I write till sleep comes. There are many odd things to put down, 
+                                            and, lest who reads them may fancy that I dined too well before I left Bistritz, let me put down my dinner
+                        exactly. I dined on what they
+                                            </span><div style="display:inline" class="apparatus apparatus_72" data-app-id="apparatus_72">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">call</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean buffalo" data-reading-wits="times novel ocean buffalo"><span class="textcontent">called</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_73" data-app-id="apparatus_73">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">"robber steak"</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">robber steak</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;bits of bacon, onion, and beef, seasoned with red pepper, and strung on sticks and roasted over the fire, in the simple style
+                        of the London
+                                            </span><div style="display:inline" class="apparatus apparatus_74" data-app-id="apparatus_74">
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">cat's meat!</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">cats' meat.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">cat's meat.</span></div>
+                                            
+                     </div><span class="textcontent">The wine was Golden Mediasch, which produces a queer sting on the tongue, which is, however, not disagreeable. I had only
+                        a couple of glasses of this, and nothing else.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I got on the coach the driver had not taken his seat, and I saw him talking with the landlady. They
+                        were evidently talking of me, for every now and then they looked at me, 
+                                            and some of the people who were sitting on the bench outside the door&#8212;which they call by a name meaning
+                        
+                                            </span><div style="display:inline" class="apparatus apparatus_75" data-app-id="apparatus_75">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">&#8220;word-bearer"</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">word bearer</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">word-bearer</span></div>
+                                            
+                     </div><span class="textcontent">-came and listened, and then looked at me, most of them pityingly. I could hear a lot of words often repeated, queer words,
+                        for there were many nationalities in the crowd;
+                                            so I quietly got my polyglot dictionary from my bag and looked them out. I must say they were not cheering
+                        to me, for amongst them were &#8220;Ordog&#8221;-Satan, &#8220;pokol&#8221;-hell, 
+                                            </span><div style="display:inline" class="apparatus apparatus_76" data-app-id="apparatus_76">
+                                                
+                        <div class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">"stregoica"</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"stregoico"</span></div>
+                                            
+                     </div><span class="textcontent">-witch, &#8220;vrolok&#8221; and &#8220;vlkoslak"-both of which mean the same thing, one being Slovak and the other Servian for something that
+                        is either
+                                            </span><div style="display:inline" class="apparatus apparatus_77" data-app-id="apparatus_77">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">wers-wolf</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">were-wolf</span></div>
+                                            
+                     </div><span class="textcontent">or vampire.
+                                            </span><div style="display:inline" class="apparatus apparatus_78" data-app-id="apparatus_78">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_79" data-app-id="apparatus_79">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CROWD GIVES CHARM</span><div class="linebreak"></div><span class="textcontent">AGAINST ALL EVIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When we started, the crowd round the inn door, which had by this time swelled to a considerable size,
+                        all made the sign of the cross and pointed two fingers
+                                            </span><div style="display:inline" class="apparatus apparatus_80" data-app-id="apparatus_80">
+                                                
+                        <div style="display:inline" class="reading times charlotte ocean" data-reading-wits="times charlotte ocean"><span class="textcontent">toward</span></div>
+                                                
+                        <div class="reading buffalo novel" data-reading-wits="buffalo novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">me. With some difficulty I got a
+                                            </span><div style="display:inline" class="apparatus apparatus_81" data-app-id="apparatus_81">
+                                                
+                        <div class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">fellow-passenger</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">fellow passenger</span></div>
+                                            
+                     </div><span class="textcontent">to tell me what they meant; he would not answer at first, but on learning that I was English, he explained that it was a charm
+                        or guard against the evil eye. 
+                                            This was not very pleasant for me, just starting for an unknown place to meet an unknown man; but every
+                        one seemed so kind-hearted, and so sorrowful, and so sympathetic 
+                                            that I could not
+                                            </span><div style="display:inline" class="apparatus apparatus_82" data-app-id="apparatus_82">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">but</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">but</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_83" data-app-id="apparatus_83">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">be</span></del>
+                        </div>
+                                                
+                        <div class="reading charlotte times buffalo novel" data-reading-wits="charlotte times buffalo novel"><span class="textcontent">be</span></div>
+                                            
+                     </div><span class="textcontent">touched. I shall never forget the last glimpse which I had of the
+                                            </span><div style="display:inline" class="apparatus apparatus_84" data-app-id="apparatus_84">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">innyard</span></div>
+                                                
+                        <div class="reading charlotte times novel buffalo" data-reading-wits="charlotte times novel buffalo"><span class="textcontent">inn-yard</span></div>
+                                            
+                     </div><span class="textcontent">and its crowd of picturesque figures, all crossing themselves, as they stood round the wide archway, with its background of
+                        rich foliage of oleander and orange 
+                                            trees in green tubs clustered in the
+                                            </span><div style="display:inline" class="apparatus apparatus_85" data-app-id="apparatus_85">
+                                                
+                        <div style="display:inline" class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">center</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                            
+                     </div><span class="textcontent">of the yard. Then our driver, whose wide linen drawers covered the whole front of the
+                                            </span><div style="display:inline" class="apparatus apparatus_86" data-app-id="apparatus_86">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">box seat</span></div>
+                                                
+                        <div class="reading charlotte novel buffalo" data-reading-wits="charlotte novel buffalo"><span class="textcontent">box-seat</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;&#8221;gotza" they call them&#8212;cracked his big whip over his four small horses, which ran abreast, and we set off on our journey.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I soon lost sight and recollection of ghostly fears in the beauty of the scene as we drove along, although
+                        had I known the language, or rather languages, which my
+                                            </span><div style="display:inline" class="apparatus apparatus_87" data-app-id="apparatus_87">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">fellow passengers</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">fellow-passengers</span></div>
+                                            
+                     </div><span class="textcontent">were speaking, I might not have been able to throw them off so easily. Before us lay a green sloping land full of forests
+                        and woods, with here and there steep 
+                                            hills, crowned with clumps of trees or with
+                                            </span><div style="display:inline" class="apparatus apparatus_88" data-app-id="apparatus_88">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">farm houses,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">farmhouses,</span></div>
+                                            
+                     </div><span class="textcontent">the blank gable end
+                                            </span><div style="display:inline" class="apparatus apparatus_89" data-app-id="apparatus_89">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">of</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel buffalo" data-reading-wits="ocean charlotte novel buffalo"><span class="textcontent">to</span></div>
+                                            
+                     </div><span class="textcontent">the road. There was everywhere a bewildering mass of fruit blossom&#8212;apple, plum, pear, cherry; and as we drove by I could see
+                        the green grass under the trees 
+                                            spangled with the fallen petals. In and out
+                                            </span><div style="display:inline" class="apparatus apparatus_90" data-app-id="apparatus_90">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">among</span></div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">these green hills of what they call here the &#8220;Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_91" data-app-id="apparatus_91">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land"</span></div>
+                                                
+                        <div class="reading times charlotte novel buffalo" data-reading-wits="times charlotte novel buffalo"><span class="textcontent">Land"</span></div>
+                                            
+                     </div><span class="textcontent">ran the road, losing itself as it swept round the grassy curve, or was shut out by the straggling ends of pine woods, which
+                        here and there ran down the hillsides 
+                                            like tongues of flame. The road was rugged, but still we seemed to fly over it with a feverish haste.
+                        I could not understand then what the haste meant, but the driver 
+                                            was evidently bent on losing no time in reaching Borgo Prund. I was told that this road is in
+                                            </span><div style="display:inline" class="apparatus apparatus_92" data-app-id="apparatus_92">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">summertime</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">summer time</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">summer-time</span></div>
+                                            
+                     </div><span class="textcontent">excellent, but that it had not yet been put in order after the winter snows. In this respect it is different from the general
+                        run of roads in the Carpathians, for 
+                                            it is an old tradition that they are not to be kept in too good order. Of old the Hospadars would not
+                        repair them, lest the Turk should think that they were preparing to 
+                                            bring in foreign troops, and so hasten the war which was always really at loading point.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Beyond the green swelling hills of the Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_93" data-app-id="apparatus_93">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land</span></div>
+                                                
+                        <div class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Land</span></div>
+                                            
+                     </div><span class="textcontent">rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves. Right and left of us they towered, with
+                        the afternoon sun falling full upon them 
+                                            and bringing out all the glorious
+                                            </span><div style="display:inline" class="apparatus apparatus_94" data-app-id="apparatus_94">
+                                                
+                        <div class="reading novel buffalo" data-reading-wits="novel buffalo"><span class="textcontent">colours</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean" data-reading-wits="charlotte times ocean"><span class="textcontent">colors</span></div>
+                                            
+                     </div><span class="textcontent">of this beautiful range, deep blue and purple in the shadows of the peaks, green and brown where grass and rock mingled, and
+                        an endless perspective of jagged rock 
+                                            and pointed crags, till these were themselves lost in the distance, where the snowy peaks rose grandly.
+                        Here and there seemed mighty rifts in the mountains, through which, 
+                                            as the sun began to sink, we saw now and again the white gleam of falling water. One of my companions
+                        touched my arm
+                                            </span><div style="display:inline" class="apparatus apparatus_95" data-app-id="apparatus_95">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo novel" data-reading-wits="ocean charlotte buffalo novel"><span class="textcontent">as</span></div>
+                                            
+                     </div><span class="textcontent">we swept round the base of a hill and opened up the lofty, snow-covered peak of
+                                            </span><div style="display:inline" class="apparatus apparatus_96" data-app-id="apparatus_96">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">a</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel buffalo charlotte ocean" data-reading-wits="novel buffalo charlotte ocean"><span class="textcontent">a</span></div>
+                                            
+                     </div><span class="textcontent">mountain, which seemed, as we wound on our serpentine way, to be right before us:
+                                            </span><div class="apparatus apparatus_97" data-app-id="apparatus_97">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">MEN AND WOMEN</span><div class="linebreak"></div><span class="textcontent">KNEEL BEFORE SHRINE.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            &#8220;Look! Isten szek!"&#8212;"God's seat!"&#8212;and he crossed himself reverently.
+                                            </span><div style="display:inline" class="apparatus apparatus_98" data-app-id="apparatus_98">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">we wound on our endless way, and the sun sank lower and lower behind us, the shadows of the evening began to creep round us.
+                        This was emphasised by the fact that 
+                                            the snowy
+                                            </span><div style="display:inline" class="apparatus apparatus_99" data-app-id="apparatus_99">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">mountain-top</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean"><span class="textcontent">mountain top</span></div>
+                                            
+                     </div><span class="textcontent">still held the sunset, and seemed to glow out with a delicate cool pink. Here and there we passed Cszeks and Slovaks, all
+                        in picturesque attire, but I noticed that 
+                                            goitre was painfully prevalent. By the roadside were many crosses, and as we swept by,
+                                            </span><div style="display:inline" class="apparatus apparatus_100" data-app-id="apparatus_100">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">all my companions</span></div>
+                                                
+                        <div class="reading charlotte buffalo times novel" data-reading-wits="charlotte buffalo times novel"><span class="textcontent">my companions all</span></div>
+                                            
+                     </div><span class="textcontent">crossed themselves. Here and there was a peasant man or woman kneeling before a shrine, who did not even turn
+                                            </span><div style="display:inline" class="apparatus apparatus_101" data-app-id="apparatus_101">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div class="reading novel times buffalo charlotte" data-reading-wits="novel times buffalo charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">as we approached, but seemed in the self-surrender of devotion to have neither eyes nor ears for the outer world. There were
+                        many things new to me: for instance,
+                                            </span><div style="display:inline" class="apparatus apparatus_102" data-app-id="apparatus_102">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">hay ricks</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">hay </span><span class="sic"><span class="textcontent">racks</span></span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">hay-ricks</span></div>
+                                            
+                     </div><span class="textcontent">in the trees, and here and there very beautiful masses of weeping birch, their white stems shining like silver through the
+                        delicate green of the leaves. Now and 
+                                            again we passed a
+                                            </span><div style="display:inline" class="apparatus apparatus_103" data-app-id="apparatus_103">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">leiter wagon</span></div>
+                                                
+                        <div class="reading buffalo times charlotte novel" data-reading-wits="buffalo times charlotte novel"><span class="textcontent">leiter-wagon</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;the ordinary peasant's cart&#8212;with its long, snake-like vertebra, calculated to suit the inequalities of the road. On this
+                                            </span><div style="display:inline" class="apparatus apparatus_104" data-app-id="apparatus_104">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">sure to be seated quite a group of home-coming peasants, the Cszeks with their white, and the Slovaks with their
+                                            </span><div style="display:inline" class="apparatus apparatus_105" data-app-id="apparatus_105">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">coloured,</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte times buffalo" data-reading-wits="ocean charlotte times buffalo"><span class="textcontent">colored,</span></div>
+                                            
+                     </div><span class="textcontent">sheepskins, the latter carrying
+                                            </span><div style="display:inline" class="apparatus apparatus_106" data-app-id="apparatus_106">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">lance fashion</span></div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">lance-fashion</span></div>
+                                            
+                     </div><span class="textcontent">their long staves,
+                                            </span><div style="display:inline" class="apparatus apparatus_107" data-app-id="apparatus_107">
+                                                
+                        <div class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">with axe</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">with ax</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and axes</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">at end. As the evening fell it began to get very cold, and the growing twilight seemed to merge into one dark mistiness the
+                        gloom of the trees, oak, beech, and pine, 
+                                            though in the valleys which ran deep between the spurs of the
+                                            </span><div style="display:inline" class="apparatus apparatus_108" data-app-id="apparatus_108">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">hill. As</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean buffalo novel" data-reading-wits="times ocean buffalo novel"><span class="textcontent">hills, as</span></div>
+                                            
+                     </div><span class="textcontent">we ascended through the
+                                            </span><div style="display:inline" class="apparatus apparatus_109" data-app-id="apparatus_109">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">the dark firs stood out here and there against the background of late-lying snow. Sometimes, as the road was cut through the
+                        pine woods that seemed in the darkness 
+                                            to be closing down upon us, great masses of
+                                            </span><div style="display:inline" class="apparatus apparatus_110" data-app-id="apparatus_110">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">greyness,</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean buffalo" data-reading-wits="charlotte times ocean buffalo"><span class="textcontent">grayness,</span></div>
+                                            
+                     </div><span class="textcontent">which here and there bestrewed the trees, produced a peculiarly weird and solemn effect, which carried on the thoughts and
+                        grim fancies engendered earlier in the evening, when the falling sunset threw into strange relief 
+                                            </span><div class="apparatus apparatus_111" data-app-id="apparatus_111">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <div class="linebreak"></div>
+                           <div class="stanzabreak"></div>
+                           <ins class="add"><span class="textcontent">(To be continued tomorrow.)</span></ins>
+                           <div class="linebreak"></div>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div><span class="textcontent">the ghost-like clouds which
+                                            </span><div style="display:inline" class="apparatus apparatus_112" data-app-id="apparatus_112">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the Carpathians seem to wind ceaselessly through the valleys. Sometimes the hills were so steep that, despite our driver's
+                        haste, the horses could only go slowly. I wished 
+                                            to get down and walk up them, as we do at home, but the driver would not hear of it. "No, no," he said;
+                        "you must not walk here; the dogs are too fierce"; and then he added, 
+                                            with what he evidently meant
+                                            </span><div style="display:inline" class="apparatus apparatus_113" data-app-id="apparatus_113">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">for</span></del>
+                           <ins class="add"><span class="textcontent">to be</span></ins>
+                        </div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">for</span></div>
+                                            
+                     </div><span class="textcontent">grim pleasantry&#8212;for he looked
+                                            </span><div style="display:inline" class="apparatus apparatus_114" data-app-id="apparatus_114">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">to catch the approving smile of the rest&#8212;"and you may have enough of such matters before you go to sleep." The only stop he
+                        would make was a moment's pause to light his lamps.
+                                            </span><div class="apparatus apparatus_115" data-app-id="apparatus_115">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PASSENGERS' EXCITEMENT</span><div class="linebreak"></div><span class="textcontent">CAUSE FOR SPEED.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When it grew dark there seemed to be some excitement
+                                            </span><div style="display:inline" class="apparatus apparatus_116" data-app-id="apparatus_116">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">amongst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the passengers, and they kept speaking to him, one after the other, as though urging him to further speed. He lashed the
+                                            </span><div style="display:inline" class="apparatus apparatus_117" data-app-id="apparatus_117">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">horse</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">horses</span></div>
+                                            
+                     </div><span class="textcontent">unmercifully with his long whip, and with wild cries of encouragement urged them on to further exertions. Then through the
+                        darkness I could see a sort of patch of
+                                            </span><div style="display:inline" class="apparatus apparatus_118" data-app-id="apparatus_118">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean times" data-reading-wits="charlotte ocean times"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">light ahead of us, as though there were a cleft in the hills. The excitement of the passengers grew greater; the crazy coach
+                        rocked on its great leather springs, and swayed like a boat 
+                                            tossed on a stormy sea. I had to hold on. The road grew more level, and we appeared to fly along. Then
+                        the mountains seemed to come nearer to us on each side and to frown down upon us; we were 
+                                            entering on the
+                                            </span><div style="display:inline" class="apparatus apparatus_119" data-app-id="apparatus_119">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">Bergo</span></span><span class="textcontent"> pass.</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Borgo Pass.</span></div>
+                                            
+                     </div><span class="textcontent">One by one several of the passengers offered me gifts, which they pressed upon me with an
+                                            </span><div style="display:inline" class="apparatus apparatus_120" data-app-id="apparatus_120">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">earnestness</span></del>
+                           <ins class="add"><span class="textcontent">eagerness</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">earnestness</span></div>
+                                            
+                     </div><span class="textcontent">which would take no denial; these were certainly of an odd and varied kind, but each was given in simple good faith, with
+                        a kindly word, and a blessing, and that strange mixture of 
+                                            fear-meaning movements which I had seen outside the hotel at Bistritz&#8212;the sign of the cross and the guard
+                        against the evil eye. Then, as we flew along, the driver leaned forward, and on each 
+                                            side the passengers, craning over the edge of the coach, peered eagerly into the darkness. It was evident
+                        that something very exciting was either happening or expected, but though I asked 
+                                            each passenger, no one would give me the slightest explanation. This state of excitement kept on for some
+                        little time; and at last we saw before us the 
+                                            </span><div style="display:inline" class="apparatus apparatus_121" data-app-id="apparatus_121">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">opening out on the eastern side.
+                                            </span><div style="display:inline" class="apparatus apparatus_122" data-app-id="apparatus_122">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">There</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">There</span></div>
+                                            
+                     </div><span class="textcontent">were dark, rolling clouds overhead, and in the air the heavy, oppressive sense of thunder. It seemed as though the mountain
+                        range had separated 
+                                            two atmospheres, and that now we had got into the thunderous one. I was now myself looking out for the
+                        conveyance which was to take me to the Count. Each moment I expected to see the glare 
+                                            of lamps through the blackness; but all was dark. The only light was the flickering rays of our own lamps,
+                        in which the steam from our
+                                            </span><div style="display:inline" class="apparatus apparatus_123" data-app-id="apparatus_123">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">hard-driven</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">hard driven</span></div>
+                                            
+                     </div><span class="textcontent">horses rose in a white cloud.
+                                            </span><div class="apparatus apparatus_124" data-app-id="apparatus_124">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Don't miss the second installment which will appear in tomorrow's Times.</span></ins>
+                           <hr class="pagebreak"></hr>
+                                                   
+                           <ins class="add"><span class="textcontent">DRACULA</span><div class="linebreak"></div><span class="textcontent">OR</span><div class="linebreak"></div><span class="textcontent">THE VAMPIRE</span><div class="linebreak"></div><span class="textcontent">By BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">One of the most thrilling novels of the age, with love, intrigue, and adventure mingled in a gripping serial.</span><div class="linebreak"></div>
+                                                      <span class="emph"><span class="textcontent">Read It In THE TIMES Every Day</span></span><div class="linebreak"></div><span class="textcontent">PART I.-Continued.</span></ins>
+                           <div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_125" data-app-id="apparatus_125">
+                                                
+                        <div class="reading times" data-reading-wits="times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">We</span></div>
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">We</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_126" data-app-id="apparatus_126">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">We could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_127" data-app-id="apparatus_127">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">The</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">The</span></div>
+                                            
+                     </div><span class="textcontent">passengers drew back with a sigh of gladness, which seemed to mock my own disappointment. I was already thinking what I had
+                        best do, when the driver, looking at his watch, 
+                                            said to the others something which I could hardly hear, it was spoken so quietly and in so low a tone;
+                        I thought it was
+                                            </span><div style="display:inline" class="apparatus apparatus_128" data-app-id="apparatus_128">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"an</span></div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">"An</span></div>
+                                            
+                     </div><span class="textcontent">hour less than the time." Then turning to me he said in German worse than my own:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "There is no
+                                            </span><div style="display:inline" class="apparatus apparatus_129" data-app-id="apparatus_129">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">carriages</span></div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">carriage</span></div>
+                                            
+                     </div><span class="textcontent">here. The Herr is not expected after all. He will now come on to Bukovina, and return tomorrow or the next day
+                                            </span><div style="display:inline" class="apparatus apparatus_130" data-app-id="apparatus_130">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">; better the next day.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">; better the next day.</span></div>
+                                            
+                     </div><span class="textcontent">"
+                                            </span><div style="display:inline" class="apparatus apparatus_131" data-app-id="apparatus_131">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Whilst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">While</span></div>
+                                            
+                     </div><span class="textcontent">he was speaking
+                                            </span><div style="display:inline" class="apparatus apparatus_132" data-app-id="apparatus_132">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">the</span></del>
+                           <ins class="add"><span class="textcontent">his</span></ins>
+                        </div>
+                                                
+                        <div class="reading charlotte times novel" data-reading-wits="charlotte times novel"><span class="textcontent">the</span></div>
+                                            
+                     </div><span class="textcontent">horses began to neigh and snort and plunge wildly, so that the driver had to hold them up. Then,
+                                            </span><div style="display:inline" class="apparatus apparatus_133" data-app-id="apparatus_133">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">among</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">a chorus of screams from the peasants and a universal crossing of themselves, a caleche, with four horses,
+                                            </span><div style="display:inline" class="apparatus apparatus_134" data-app-id="apparatus_134">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">drove up behind us,</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">drove up behind us,</span></div>
+                                            
+                     </div><span class="textcontent">overtook us, and drew up beside the coach. I could see from the flash of our lamps, as the rays fell on them, that the horses
+                        were
+                                            </span><div style="display:inline" class="apparatus apparatus_135" data-app-id="apparatus_135">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">coal black</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">coal-black</span></div>
+                                            
+                     </div><span class="textcontent">and splendid animals. They were driven by a tall man, with a long brown beard and a great black hat, which seemed to hide
+                        his face from us. I could only see the gleam 
+                                            of a pair of very bright eyes, which seemed red in the lamplight, as he turned to us. He said to the driver:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "You are early
+                                            </span><div style="display:inline" class="apparatus apparatus_136" data-app-id="apparatus_136">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">my friend." The man stammered in reply:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The English Herr was in a hurry," to which the stranger replied:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "That is why, I suppose, you wished him to go on to Bukovina. You cannot deceive me, my friend ; I know
+                        too much, and my horses are swift." As he spoke he smiled, 
+                                            and the lamplight fell on a hard-looking mouth, with very red lips and sharp-looking teeth, as white as
+                        ivory. One of my companions whispered to another the line from Burger's
+                                            </span><div style="display:inline" class="apparatus apparatus_137" data-app-id="apparatus_137">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"Lenoro:"</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">"Lenore:"</span></div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_138" data-app-id="apparatus_138">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">"Denn die Todten reiten schnell"&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">("For the dead travel fast.")</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Denn die Todten reiten schnell&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">(For the dead travel fast.)</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_139" data-app-id="apparatus_139">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE STRANGE JOURNEY</span><div class="linebreak"></div><span class="textcontent">INTO</span><span class="sic"><span class="textcontent"> BUKOWINA </span></span><span class="textcontent">BEGINS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            The strange driver evidently heard the words, for he looked up with a gleaming smile. The passenger turned
+                        his face away, at the same time putting out his two fingers and 
+                                            crossing himself. "Give me the Herr's luggage," said the driver; and with
+                                            </span><div style="display:inline" class="apparatus apparatus_140" data-app-id="apparatus_140">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">exceedingly</span></span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">exceeding</span></div>
+                                            
+                     </div><span class="textcontent">alacrity my bags were handed out and put in the caleche. Then I descended from the side of the coach, as the caleche was close
+                        alongside, the driver helping me with a 
+                                            hand which caught my arm in a grip of steel; his strength must have been prodigious. Without a word he
+                        shook his reins, the horses turned, and we swept into the darkness of the 
+                                            </span><div style="display:inline" class="apparatus apparatus_141" data-app-id="apparatus_141">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass.</span></div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">Pass.</span></div>
+                                            
+                     </div><span class="textcontent">As I looked back I saw the steam from the horses of the coach by the light of the lamps, and projected against it the figures
+                        of my late companions crossing themselves. 
+                                            Then the driver cracked his whip and called to
+                                            </span><div style="display:inline" class="apparatus apparatus_142" data-app-id="apparatus_142">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">his</span></del>
+                           <ins class="add"><span class="textcontent">the</span></ins>
+                        </div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">his</span></div>
+                                            
+                     </div><span class="textcontent">horses, and off they swept on their way to Bukovina.
+                                            </span><div style="display:inline" class="apparatus apparatus_143" data-app-id="apparatus_143">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">they sank into the darkness I felt a strange chill, and a lonely feeling came over me; but a cloak was thrown over my shoulders,
+                        and a rug
+                                            </span><div style="display:inline" class="apparatus apparatus_144" data-app-id="apparatus_144">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">across</span></del>
+                           <ins class="add"><span class="textcontent">over</span></ins>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">across</span></div>
+                                            
+                     </div><span class="textcontent">my knees, and the driver said in excellent German:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The night is chill,
+                                            </span><div style="display:inline" class="apparatus apparatus_145" data-app-id="apparatus_145">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">Mein</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">mein</span></div>
+                                            
+                     </div><span class="textcontent">Herr, and my master the Count bade me take all care of you. There is a flask of slivovitz (the plum brandy of the country)
+                        underneath the seat, if you should 
+                                            require it." I did not take any, but it was a comfort to know it was there all the same. I felt a little
+                        strangely, and not a little frightened. I think had there been 
+                                            any alternative I should have taken it, instead of prosecuting that unknown night journey. The carriage
+                        went at a hard pace straight along, then we made a complete turn 
+                                            and went along another straight road. It seemed to me that we were simply going over and over the same
+                        ground again; and so I took note of some salient point, and found 
+                                            that this was so. I would have liked to have asked the driver what this all meant, but I really feared
+                        to do so, for I thought that, placed as I was, any protest would 
+                                            have had no effect in case there had been an intention to delay.
+                                            </span><div style="display:inline" class="apparatus apparatus_146" data-app-id="apparatus_146">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">By and by,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">By-and-by,</span></div>
+                                            
+                     </div><span class="textcontent">however, as I was curious to know how time was passing, I struck a match, and by its flame looked at my watch; it was
+                                            </span><div style="display:inline" class="apparatus apparatus_147" data-app-id="apparatus_147">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">within</span></del>
+                        </div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">within</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes of midnight.
+                                            </span><div style="display:inline" class="apparatus apparatus_148" data-app-id="apparatus_148">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                                 
+                                                             I waited with a sick feeling of suspense.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                              
+                                                          I waited with a sick feeling of suspense.</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_149" data-app-id="apparatus_149">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">HOWLING WOLVES ADD</span><div class="linebreak"></div><span class="textcontent">TO THE TRAVELER'S PERIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Then a dog began to howl somewhere in a
+                                            </span><div style="display:inline" class="apparatus apparatus_150" data-app-id="apparatus_150">
+                                                
+                        <div style="display:inline" class="reading novel ocean" data-reading-wits="novel ocean"><span class="textcontent">farmhouse</span></div>
+                                                
+                        <div class="reading times charlotte" data-reading-wits="times charlotte"><span class="textcontent">farm house</span></div>
+                                            
+                     </div><span class="textcontent">far down the road&#8212;a long, agonised wailing, as if from fear. The sound was taken up by
+                                            </span><div style="display:inline" class="apparatus apparatus_151" data-app-id="apparatus_151">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">another dog, and then</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times ocean novel" data-reading-wits="times ocean novel"><span class="textcontent">another dog, and then</span></div>
+                                            
+                     </div><span class="textcontent">another and another, till, borne on the wind which now sighed softly through the
+                                            </span><div style="display:inline" class="apparatus apparatus_152" data-app-id="apparatus_152">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">a wild howling began, which seemed to come from all over the country, 
+                                            </span><div style="display:inline" class="apparatus apparatus_153" data-app-id="apparatus_153">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                                 rear, but 
+                                                             the driver spoke to them soothingly, and they quieted down, but shivered and sweated as though
+                                 after a run-away from sudden fright.</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                              rear, but the driver 
+                                                          spoke to them soothingly, and they quieted down, but shivered and sweated as though after a run-away
+                              from sudden fright.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_154" data-app-id="apparatus_154">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Then,</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">Then,</span></div>
+                                            
+                     </div><span class="textcontent">far off in the distance, from the mountains on each side of us began a louder and a sharper howling-that of wolves-which affected
+                        both the horses and myself in the 
+                                            same way-for I was minded to jump from the caleche and run,
+                                            </span><div style="display:inline" class="apparatus apparatus_155" data-app-id="apparatus_155">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">whilst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">while</span></div>
+                                            
+                     </div><span class="textcontent">they reared
+                                            </span><div style="display:inline" class="apparatus apparatus_156" data-app-id="apparatus_156">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">again</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">again</span></div>
+                                            
+                     </div><span class="textcontent">and plunged madly, so that the driver had to use all his great strength to keep them from bolting.
+                                            </span><div style="display:inline" class="apparatus apparatus_157" data-app-id="apparatus_157">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">In</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">In</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes
+                                            </span><div style="display:inline" class="apparatus apparatus_158" data-app-id="apparatus_158">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">, however,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">, however,</span></div>
+                                            
+                     </div><span class="textcontent">my
+                                            </span><div style="display:inline" class="apparatus apparatus_159" data-app-id="apparatus_159">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">own</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">own</span></div>
+                                            
+                     </div><span class="textcontent">ears got accustomed to the sound, and the horses so far became quiet that the driver was able to descend and to stand before
+                        them. He
+                                            </span><div style="display:inline" class="apparatus apparatus_160" data-app-id="apparatus_160">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">patted</span></span></div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">petted</span></div>
+                                            
+                     </div><span class="textcontent">and soothed them,
+                                            </span><div style="display:inline" class="apparatus apparatus_161" data-app-id="apparatus_161">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean" data-reading-wits="times novel ocean"><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></div>
+                                            
+                     </div><span class="textcontent">and with extraordinary effect, for under his caresses they became quite manageable again, though they still trembled. The
+                        driver again took his seat, and shaking his 
+                                            reins, started off at a great pace. This time, after going to the far side of the
+                                            </span><div style="display:inline" class="apparatus apparatus_162" data-app-id="apparatus_162">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">he suddenly turned down a narrow roadway which ran sharply to the right.
+                                            </span><div style="display:inline" class="apparatus apparatus_163" data-app-id="apparatus_163">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">(To Be Continued.)</span></ins>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_164" data-app-id="apparatus_164">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <ins class="add"><span class="textcontent">THE STRANGE STORY OF DRACULA</span><div class="linebreak"></div><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">
+                                                             (Copyright, 1897, by the Author.)</span><div class="linebreak"></div><span class="textcontent">CHAPTER I.-(Continued.)</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Soon we were hemmed in with trees, which in places arched right over the roadway till we passed as through
+                        a tunnel; and again great frowning rocks guarded us boldly on 
+                                            either side. Though we were in shelter, we could hear the rising wind, for it moaned and whistled through
+                        the rocks, and the branches of the trees crashed together as we 
+                                            swept along. It grew colder and colder still, and fine powdery snow began to fall, so that soon we and
+                        all around us were covered with a white blanket. The keen wind still 
+                                            carried the howling of the dogs, though this grew fainter as we went on our way. The baying of the wolves
+                        sounded nearer and nearer, as though they were closing round on us 
+                                            from every side. I grew dreadfully afraid, and the horses shared my
+                                            </span><div style="display:inline" class="apparatus apparatus_165" data-app-id="apparatus_165">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <ins class="add"><span class="textcontent">; but the</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">. The</span></div>
+                                            
+                     </div><span class="textcontent">driver
+                                            </span><div style="display:inline" class="apparatus apparatus_166" data-app-id="apparatus_166">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">however</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">however</span></div>
+                                            
+                     </div><span class="textcontent">was not in the least
+                                            </span><div style="display:inline" class="apparatus apparatus_167" data-app-id="apparatus_167">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">disturbed. He</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">disturbed; he</span></div>
+                                            
+                     </div><span class="textcontent">kept turning his head to left and right, but I could not see anything through the darkness.
+                                            </span><div class="apparatus apparatus_168" data-app-id="apparatus_168">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE DRIVES FIGURES</span><div class="linebreak"></div><span class="textcontent">IN A WEIRD DREAM.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Suddenly, away on our left, I saw a faint flickering blue flame. The driver saw it at the same moment;
+                        he at once checked the horses, and, jumping to the ground, disappeared 
+                                            into the darkness. I did not know what to do, the less as the howling of the wolves grew closer ; but
+                        while I wondered the driver suddenly appeared again, and without a word 
+                                            took his seat, and we resumed our journey. I think I must have fallen asleep and kept dreaming of the
+                        incident, for it seemed to be repeated endlessly, and now looking back, 
+                                            it is like a sort of awful nightmare. Once the flame appeared so near the road, that even in the darkness
+                        around us I could watch the driver's motions. He went rapidly to where 
+                                            the blue flame arose&#8212;it must have been very faint, for it did not seem to illumine the place around it
+                        at all&#8212;and gathering a few stones, formed them into some device. Once there 
+                                            appeared a strange optical effect: when he stood between me and the flame he did not obstruct it, for
+                        I could see its ghostly flicker all the same. This startled me, but as the 
+                                            effect was only momentary, I took it that my eyes deceived me straining through the darkness. Then for
+                        a time there
+                                            </span><div style="display:inline" class="apparatus apparatus_169" data-app-id="apparatus_169">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">were</span></del>
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">no blue flames, and we sped
+                                            </span><div style="display:inline" class="apparatus apparatus_170" data-app-id="apparatus_170">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">onward</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">onwards</span></div>
+                                            
+                     </div><span class="textcontent">onwards through the gloom, with the howling of the wolves around us, as though they were following in a moving circle.
+                                            </span><div class="apparatus apparatus_171" data-app-id="apparatus_171">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">RING OF WOLVES</span><div class="linebreak"></div><span class="textcontent">SURROUND THE CARRIAGE</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            At last there came a time when the driver went further afield than he had yet gone, and during his absence,
+                        the horses began to tremble worse than ever and to snort and scream 
+                                            with fright. I could not see any cause for it, for the howling of the wolves had ceased altogether; but
+                        just then the moon, sailing through the black clouds, appeared behind the 
+                                            jagged crest of a beetling, pine-clad rock, and by its light I saw around us a ring of wolves, with white
+                        teeth and lolling red tongues, with long, sinewy limbs and shaggy hair. 
+                                            They were a hundred times more terrible in the grim silence which held them than even when they howled.
+                        For myself, I felt a sort of paralysis of fear. It is only when a man 
+                                            feels himself face to face with such horrors that he can understand their true import.
+                                            </span><div class="apparatus apparatus_172" data-app-id="apparatus_172">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <ins class="add"><span class="textcontent">Don't miss the third installment which will appear in tomorrow's Times.</span><hr class="pagebreak"></hr><span class="textcontent">DRACULA or The Vampire
+                                                         By Bram Stoker</span><div class="linebreak"></div><span class="textcontent">One of the Most Thrilling Novels of the Age-Love, Mystery, Intrigue, Adventure, Mingled in a</span><div class="linebreak"></div><span class="textcontent">Gripping Serial. Read It In THE TIMES Every Day.</span><div class="linebreak"></div><span class="textcontent">
+                                                         PART I-Continued.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All at once the wolves began to howl as though the moonlight had had some peculiar effect on them. The
+                        horses jumped about and reared, and looked helplessly round with eyes 
+                                            that rolled in a way painful to see; but the living ring of terror encompassed them on every side; and
+                        they had perforce to remain within it. I called to the coachman to come, 
+                                            for it seemed to me that our only chance was to try to break out through the ring and to aid his approach.
+                        I shouted and beat the side of the cal&egrave;che, hoping by the noise to 
+                                            scare the wolves from that side, so as to give him a chance of reaching the trap. How he came there, I
+                        know not, but I heard his voice raised in a tone of imperious command, 
+                                            and looking
+                                            </span><div style="display:inline" class="apparatus apparatus_173" data-app-id="apparatus_173">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">toward</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">the sound, saw him stand in the roadway. As he swept his long arms, as though brushing
+                                            </span><div style="display:inline" class="apparatus apparatus_174" data-app-id="apparatus_174">
+                                                
+                        <div style="display:inline" class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">aside</span></del>
+                           <ins class="add"><span class="textcontent">away</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">aside</span></div>
+                                            
+                     </div><span class="textcontent">some impalpable obstacle, the wolves fell back and back further still. Just then a heavy cloud passed across the face of the
+                        moon, so that we were again in darkness.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I could see again the driver was climbing into the caleche, and the wolves had disappeared. This
+                        was all so strange and uncanny that a dreadful fear came upon me, and I was 
+                                            afraid to speak or move. The time seemed interminable as we swept on our way, now in almost complete darkness,
+                        for the rolling clouds obscured the moon. We kept on ascending, 
+                                            with occasional periods of quick descent, but in the main always ascending. Suddenly, I became conscious
+                        of the fact that the driver was in the act of pulling up the horses in 
+                                            the courtyard of a vast ruined castle, from whose tall black windows came no ray of light, and whose broken
+                        battlements showed a jagged line against the moonlit sky.
+                                            </span><div class="apparatus apparatus_175" data-app-id="apparatus_175">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">[TO BE CONTINUED.]</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                              
+               </div>
+                       
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="charlotte">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img><a title="Version charlotte: The Charlotte Observer">Version charlotte: The Charlotte Observer</a></div>
+            <div class="mssContent">
+                           
+               <div class="div">
+                                  
+                  <div class="head rend-center">
+                                         
+                     <div class="apparatus apparatus_1" data-app-id="apparatus_1">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">TO</span><div class="linebreak"></div><span class="textcontent">MY DEAR FRIEND</span><div class="linebreak"></div><span class="textcontent">HOMMY-BEG</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_2" data-app-id="apparatus_2">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">How these papers have been placed in sequence will be made manifest in the reading 
+                                                          of them. All needless matters have been eliminated, so that a history almost at variance with
+                              the 
+                                                          possibilities of later-day belief may stand forth as simple fact. There is throughout no statement
+                              
+                                                          of past things wherein memory may err, for all the records chosen are exactly contemporary, given
+                              
+                                                          from the standpoints and within the range of knowledge of those who made them.</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_3" data-app-id="apparatus_3">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">THE STRANGE STORY OF </span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">Begin Today the Fascinating Story of Mystery</span><div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo ocean times" data-reading-wits="novel charlotte buffalo ocean times">
+                           <div class="linebreak"></div><span class="textcontent">DRACULA
+                                                          </span><div class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">!</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent"> or The Vampire By Bram Stoker</span></div>
+                                                          
+                           </div>
+                                                   
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.
+                                                          </span><div class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                              
+                              <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">(Copyright, 1897, by the Author.)</span></div>
+                                                          
+                           </div>
+                                                   
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">A STRONG STORY OF THE VAMPIRE.</span><div class="linebreak"></div><span class="textcontent">By Bram Stoker, the Dramatic Critic,</span><div class="linebreak"></div><span class="textcontent">
+                                                      Theatrical Manager and Author of "Miss</span><div class="linebreak"></div><span class="textcontent">Betty," "Under the Sunset," and Other</span><div class="linebreak"></div><span class="textcontent">Books.</span><div class="linebreak"></div><span class="textcontent">
+                                                      Copyright, 1897, by Bram Stoker.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Extraordinary Story of a Count Who Became</span><div class="linebreak"></div><span class="textcontent">A Vampire--One of the Literary Sen-</span><div class="linebreak"></div><span class="textcontent">
+                                                      sations of the Present Day.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">Copyright by Bram Stoker.</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">One of the most thrilling novels of the age--love, finance, mystery, intrigue, adventure, mingled</span><div class="linebreak"></div><span class="textcontent">
+                                                      in a gripping serial. Read it in THE TIMES Every Day.</span></div>
+                                            
+                        <hr class="pagebreak"></hr>
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_8" data-app-id="apparatus_8">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo" data-reading-wits="novel ocean charlotte buffalo"><span class="textcontent">CHAPTER I.</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">PART I.</span><div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times" data-reading-wits="novel ocean charlotte buffalo times"><span class="textcontent">
+                                                      JONATHAN 
+                                                      </span><div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                                          
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">HARPER'S</span></span></div>
+                                                          
+                              <div style="display:inline" class="reading charlotte novel ocean times" data-reading-wits="charlotte novel ocean times"><span class="textcontent">HARKER'S</span></div>
+                                                      
+                           </div><span class="textcontent">JOURNAL</span><div class="linebreak"></div>
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_11" data-app-id="apparatus_11">
+                                               
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Kept in shorthand.)</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div style="display:inline" class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <del><span class="textcontent">(Kept in shorthand.)</span></del>
+                           <div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_12" data-app-id="apparatus_12">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="emph"><span class="textcontent">3 May. Bistritz.</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">3 May. Bistritz.</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            &#8212;Left Munich at 8:35 
+                                                </span><div style="display:inline" class="apparatus apparatus_13" data-app-id="apparatus_13">
+                                                    
+                        <div style="display:inline" class="reading ocean charlotte buffalo times" data-reading-wits="ocean charlotte buffalo times"><span class="textcontent">p.m.</span></div>
+                                                    
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">P.M.</span></div>
+                                                
+                     </div><span class="textcontent">, on 1st May, arriving at Vienna early next morning
+                                                </span><div style="display:inline" class="apparatus apparatus_14" data-app-id="apparatus_14">
+                                                    
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></div>
+                                                    
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte">
+                           <del><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></del>
+                        </div>
+                                                
+                     </div><span class="textcontent">. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the 
+                                            little I could walk through the streets. I feared to go very far from the station, as we arrived late
+                        and would start as near 
+                                            the correct time as possible. The impression I had was that we were leaving the West and entering the
+                        East; the most 
+                                                </span><div style="display:inline" class="apparatus apparatus_15" data-app-id="apparatus_15">
+                                                    
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">western</span></div>
+                                                    
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Western</span></div>
+                                                
+                     </div><span class="textcontent">
+                                            of splendid bridges over the Danube, which is here of noble width and depth, took us among the traditions
+                        of Turkish rule.
+                                           </span><div style="display:inline" class="apparatus apparatus_16" data-app-id="apparatus_16">
+                                               
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times emptyReading" data-reading-wits="novel ocean charlotte buffalo times">
+                                                   
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at
+                        the Hotel Royale. I 
+                                            had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but
+                        thirsty. 
+                                            (Mem., get recipe for Mina.) I asked the waiter, and he said it was called "paprika hendl," and that,
+                        as it was a national 
+                                            dish, I should be able to get it anywhere along the Carpathians. I found my smattering of German very
+                        useful here; indeed, 
+                                            I don't know how I should be able to get on without it.
+                                            </span><div class="apparatus apparatus_17" data-app-id="apparatus_17">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">ATTEMPTS TO LOCATE</span><div class="linebreak"></div><span class="textcontent">THE CASTLE DRACULA.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Having had some time at my disposal when in London, I had visited the British 
+                                            </span><div style="display:inline" class="apparatus apparatus_18" data-app-id="apparatus_18">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">museum</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel buffalo charlotte" data-reading-wits="times novel buffalo charlotte"><span class="textcontent">Museum</span></div>
+                                            
+                     </div><span class="textcontent">, and made search among the books and maps 
+                                            in the library regarding Transylvania; it had struck me that some foreknowledge of the country could hardly
+                        fail to have some 
+                                            importance in dealing with a
+                                            </span><div style="display:inline" class="apparatus apparatus_19" data-app-id="apparatus_19">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">noble</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">nobleman</span></div>
+                                            
+                     </div><span class="textcontent"> of that country. I find that the district he named is in the extreme east of the country, 
+                                            just on the borders of three states, Transylvania, Moldavia and Bukovina, in the midst of the Carpathian
+                        mountains ; one of the 
+                                            wildest and least known portions of Europe. I was not able to light on any map or work giving the exact
+                        locality of
+                                            </span><div style="display:inline" class="apparatus apparatus_20" data-app-id="apparatus_20">
+                                                
+                        <div style="display:inline" class="reading times novel charlotte ocean" data-reading-wits="times novel charlotte ocean"><span class="textcontent">the</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">the</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">Castle 
+                                            Dracula, as there are no maps of this country as yet to compare with our own
+                                            </span><div style="display:inline" class="apparatus apparatus_21" data-app-id="apparatus_21">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Ordnance Survey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean buffalo times" data-reading-wits="charlotte ocean buffalo times"><span class="textcontent">ordnance survey</span></div>
+                                            
+                     </div><span class="textcontent">maps; but I found that Bistritz, 
+                                            the post town named by Count Dracula, is a fairly well-known place. I shall enter here some of my notes,
+                        as they may refresh my 
+                                            memory when I talk over my travels with Mina.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            In the population of Transylvania there are four distinct nationalities: Saxons in the 
+                                            </span><div style="display:inline" class="apparatus apparatus_22" data-app-id="apparatus_22">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">South</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">south</span></div>
+                                            
+                     </div><span class="textcontent">, and mixed with them the Wallachs, who are the descendants of the Dacians; Magyars in the
+                                            </span><div style="display:inline" class="apparatus apparatus_23" data-app-id="apparatus_23">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">West</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">west</span></div>
+                                            
+                     </div><span class="textcontent">and Szekelys in the
+                                            </span><div style="display:inline" class="apparatus apparatus_24" data-app-id="apparatus_24">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">East</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">and
+                                            </span><div style="display:inline" class="apparatus apparatus_25" data-app-id="apparatus_25">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">North</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">north</span></div>
+                                            
+                     </div><span class="textcontent">I am going among the latter, who claim to be descended from Attila and the Huns. This may be so, 
+                                            for when the Magyars conquered the country in the eleventh century they found the Huns settled in it.
+                        I read that every known superstition 
+                                            in the world is gathered into the horseshoe of the Carpathians, as if it were the
+                                            </span><div style="display:inline" class="apparatus apparatus_26" data-app-id="apparatus_26">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                                
+                        <div class="reading ocean buffalo times" data-reading-wits="ocean buffalo times"><span class="textcontent">center</span></div>
+                                            
+                     </div><span class="textcontent">of some sort of imaginative whirlpool; if so my stay may be very interesting.
+                                            </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the 
+                                                          </span><div class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                              
+                              <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Count</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent">count</span></div>
+                                                          
+                           </div><span class="textcontent">all about them.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count all about them.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_29" data-app-id="apparatus_29">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">BEGINS LONG JOURNEY</span><div class="linebreak"></div><span class="textcontent">ON A SLOW TRAIN.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I did not sleep well, though my bed was comfortable enough, for I had all sorts of queer dreams. There
+                        was a dog howling all night under my window, 
+                                            which may have had something to do with it; or it may have been the paprika, for I had to drink up all
+                        the water in my carafe, and was still thirsty.
+                                            </span><div style="display:inline" class="apparatus apparatus_30" data-app-id="apparatus_30">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Towards</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">Toward</span></div>
+                                            
+                     </div><span class="textcontent">morning I slept and was wakened by the continuous knocking at my door, so I guess I must have been sleeping soundly then.
+                        I had for breakfast 
+                                            more paprika, and a sort of porridge of maize flour which they said was "mamaliga," and egg-plant stuffed
+                        with forcemeat, a very excellent dish, which 
+                                            they call &#8220;impletata."
+                                            </span><div style="display:inline" class="apparatus apparatus_31" data-app-id="apparatus_31">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., get recipe for this also.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., get recipe for this also.)</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to hurry breakfast, for the train started a little before
+                                            </span><div style="display:inline" class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">eight</span></div>
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">8
+                                                          </span><div class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo">
+                                 <ins class="add"><span class="textcontent">o'clock</span></ins>
+                              </div>
+                                                          
+                           </div>
+                        </div>
+                                            
+                     </div><span class="textcontent">, or rather it ought to have done so, for after rushing to the station at 7 : 30
+                                            </span><div class="apparatus apparatus_34" data-app-id="apparatus_34">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">o' clock</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to sit in the carriage for more than an hour before we began to move. It seems to me that the further
+                                            </span><div style="display:inline" class="apparatus apparatus_35" data-app-id="apparatus_35">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">East</span></div>
+                                                
+                        <div class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">you go the more unpunctual are the trains. What ought they to be in China?
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All day long we seemed to dawdle through a country which was full of beauty 
+                                            </span><div style="display:inline" class="apparatus apparatus_36" data-app-id="apparatus_36">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">of every kind</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">of every kind</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">. 
+                                            </span><div style="display:inline" class="apparatus apparatus_37" data-app-id="apparatus_37">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">Some times</span></div>
+                                                
+                        <div class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">Sometimes</span></div>
+                                            
+                     </div><span class="textcontent">we saw little towns or castles on the top of steep hills such as we see in old missals ; sometimes we ran by rivers and streams
+                        which seemed from 
+                                            the wide stony margin on each side of them to be subject to great floods. It takes a lot of water, and
+                        running strong, to sweep the outside edge of a 
+                                            river clear. At every station there were groups of people, sometimes crowds
+                                            </span><div style="display:inline" class="apparatus apparatus_38" data-app-id="apparatus_38">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">, and in all sorts of attire.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">, and in all sorts of attire.</span><div class="linebreak"></div>
+                           </del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_39" data-app-id="apparatus_39">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Some</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Some</span></div>
+                                            
+                     </div><span class="textcontent">of them were just like the peasants at home or those I saw coming through France and Germany, with short jackets and round
+                        
+                                            hats and home-made trousers; but others were very picturesque. The women looked pretty, except when you
+                        got near them, but they were very clumsy 
+                                            about the waist. They had all full white sleeves of some kind or other, and the most of them had big belts
+                        with a
+                                            </span><div style="display:inline" class="apparatus apparatus_40" data-app-id="apparatus_40">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">lit</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">lot</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            of strips of something fluttering 
+                                            from them like the dresses in a ballet, but of course
+                                            </span><div style="display:inline" class="apparatus apparatus_41" data-app-id="apparatus_41">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">there were</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">there were</span></div>
+                                            
+                     </div><span class="textcontent">petticoats under them. The strangest figures we saw were the Slovaks, who 
+                                            </span><div style="display:inline" class="apparatus apparatus_42" data-app-id="apparatus_42">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">are</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">more 
+                                            barbarian than the rest, with their big
+                                            </span><div style="display:inline" class="apparatus apparatus_43" data-app-id="apparatus_43">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">cow-boy</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo ocean" data-reading-wits="charlotte times buffalo ocean"><span class="textcontent">cowboy</span></div>
+                                            
+                     </div><span class="textcontent">hats, great baggy dirty-white trousers, white linen shirts, and enormous heavy leather belts, nearly a 
+                                            foot wide, all studded over with brass nails. They wore high boots, with their trousers tucked into them,
+                        and had long black hair and heavy black
+                                            </span><div style="display:inline" class="apparatus apparatus_44" data-app-id="apparatus_44">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">mustaches.</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">moustaches</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            They are very picturesque, but do not look prepossessing.
+                                            </span><div style="display:inline" class="apparatus apparatus_45" data-app-id="apparatus_45">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                          They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo ocean" data-reading-wits="charlotte buffalo ocean">
+                           <del><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                             They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_46" data-app-id="apparatus_46">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">FINDS LETTER FROM</span><div class="linebreak"></div><span class="textcontent">COUNT AT HOTEL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            It was on the dark side of twilight when we got to Bistritz, which is a very interesting old place. Being
+                        practically on the frontier&#8212;for the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_47" data-app-id="apparatus_47">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">leads from it into Bukovina&#8212;it has had a very stormy existence, and it certainly shows marks of it. Fifty years ago a series
+                        of great fires took 
+                                            place, which made terrible havoc on five separate occasions. At the very beginning of the seven-teenth
+                        century it underwent a siege of three weeks and lost 
+                                            13,000 people, the casualties of war proper being assisted by famine and disease.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Count Dracula had directed me to go to the Golden Krone 
+                                            </span><div style="display:inline" class="apparatus apparatus_48" data-app-id="apparatus_48">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">hotel</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">Hotel</span></div>
+                                            
+                     </div><span class="textcontent">which I found, to my great delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways
+                        of the country. I was evidently 
+                                            expected, for when I got near the door I faced a cheery- looking elderly woman in the usual peasant dress&#8212;white
+                        undergarment with long double apron, front, and back, of
+                                            </span><div style="display:inline" class="apparatus apparatus_49" data-app-id="apparatus_49">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">colored</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">coloured</span></div>
+                                            
+                     </div><span class="textcontent">stuff fitting almost too tight for modesty. When I came close she bowed and said, &#8220;The Herr 
+                                            </span><div style="display:inline" class="apparatus apparatus_50" data-app-id="apparatus_50">
+                                                
+                        <div class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">English-Man</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Englishman</span></div>
+                                            
+                     </div><span class="textcontent">?&#8221; &#8220;Yes,&#8221; I said, "Jonathan Harker." She smiled, and gave some message to an elderly man in white
+                                            </span><div style="display:inline" class="apparatus apparatus_51" data-app-id="apparatus_51">
+                                                
+                        <div style="display:inline" class="reading novel ocean charlotte times" data-reading-wits="novel ocean charlotte times"><span class="textcontent">shirtsleeves</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">shirt sleeves</span></div>
+                                            
+                     </div><span class="textcontent">, who had followed her to the door. He went, but immediately returned with a letter:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "My Friend.&#8212;Welcome to the Carpathians. I am anxiously expecting you. Sleep well
+                                            </span><div style="display:inline" class="apparatus apparatus_52" data-app-id="apparatus_52">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night.</span></div>
+                                                
+                        <div class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">tonight.</span></div>
+                                            
+                     </div><span class="textcontent">At
+                                            </span><div style="display:inline" class="apparatus apparatus_53" data-app-id="apparatus_53">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">three</span></div>
+                                                
+                        <div class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">3</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_54" data-app-id="apparatus_54">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-morrow</span></div>
+                                                
+                        <div class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">tomorrow</span></div>
+                                            
+                     </div><span class="textcontent">the diligence will start for Bukovina; a place on it is kept for you. At the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_55" data-app-id="apparatus_55">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo times" data-reading-wits="charlotte novel buffalo times"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">my carriage will await you and will bring you to me. I trust that your journey from London has been a happy one, and that
+                        you will enjoy your stay in my beautiful land. 
+                                            </span><div style="display:inline" class="apparatus apparatus_56" data-app-id="apparatus_56">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"Dracula."</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Your friend. DRACULA."</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">"Your friend, DRACULA."</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_57" data-app-id="apparatus_57">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">REFUSED INFORMATION</span><div class="linebreak"></div><span class="textcontent">OF COUNT OR CASTLE.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            4 May.&#8212;l found that my landlord had got a letter from the Count, directing him to secure the best place
+                        on the coach for me; but on making inquiries as to details 
+                                            he seemed somewhat reticent, and pretended that he could not understand my German. 
+                                            </span><div style="display:inline" class="apparatus apparatus_58" data-app-id="apparatus_58">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                              he did.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                                 he did.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">He and his wife, the old lady who had received me, looked at each other in a frightened sort of way. He mumbled out that the
+                        money had been sent in a letter, 
+                                            and that was all he knew. When I asked him if he knew Count Dracula, and could tell me anything of his
+                        castle, both he and his wife crossed themselves, and, saying that 
+                                            they knew nothing at all, simply refused to speak further. It was so near the time of starting that I
+                        had no time to ask any one else, for it was all very mysterious and 
+                                            not by any means comforting.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Just before I was leaving, the old lady came up to my room and said in a very hysterical way:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Must you go? Oh! young Herr, must you go?" She was in such an excited state that she seemed to have lost
+                        her grip of what German she knew, and mixed it all up with some 
+                                            other language which I did not know
+                                            </span><div style="display:inline" class="apparatus apparatus_59" data-app-id="apparatus_59">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">at all.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">at all.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I was just able to follow her by asking many questions. When I told her that I must go at once, and that I was engaged on
+                        important business, she asked again:
+                                            </span><div class="apparatus apparatus_60" data-app-id="apparatus_60">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CONTINUES JOURNEY</span><div class="linebreak"></div><span class="textcontent">DESPITE WARNINGS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_61" data-app-id="apparatus_61">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">"Dou</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo novel charlotte times" data-reading-wits="buffalo novel charlotte times"><span class="textcontent">"Do</span></div>
+                                            
+                     </div><span class="textcontent">you know what day it is?" I answered that it was the 
+                                            </span><div style="display:inline" class="apparatus apparatus_62" data-app-id="apparatus_62">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">fourth</span></div>
+                                                
+                        <div class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">4th</span></div>
+                                            
+                     </div><span class="textcontent">of May. She shook her head as she said again:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Oh, yes!
+                                            </span><div style="display:inline" class="apparatus apparatus_63" data-app-id="apparatus_63">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">I know that! I know that, but</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">I know that, I know that! But</span></div>
+                                            
+                     </div><span class="textcontent">do you know what day it is?" On my saying that I did not understand, she went on:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "It is the eve of St. George's Day. Do you not know that
+                                            </span><div style="display:inline" class="apparatus apparatus_64" data-app-id="apparatus_64">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div class="reading times buffalo ocean" data-reading-wits="times buffalo ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">when the clock strikes midnight, all the evil things in the world will have full sway? Do you know where you are going, and
+                        what you are going to?"
+                                            </span><div style="display:inline" class="apparatus apparatus_65" data-app-id="apparatus_65">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">She</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">She</span></div>
+                                            
+                     </div><span class="textcontent">was in such evident distress that I tried to comfort her, but without effect. Finally she went down on her knees and implored
+                        me not to go; at least 
+                                            to wait a day or two before starting. It was all very ridiculous but I did not feel comfortable. However,
+                        there was business to be done, and I could allow nothing 
+                                            to interfere with it. I therefore tried to raise her up, and said, as gravely as I could, that I thanked
+                        her, but my duty was imperative, and that I must go. 
+                                            She then rose and dried her eyes, and taking a crucifix from her neck offered it to me. I did not know
+                        what to do, for, as an English 
+                                            </span><div style="display:inline" class="apparatus apparatus_66" data-app-id="apparatus_66">
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Churchman,</span></div>
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">churchman,</span></div>
+                                            
+                     </div><span class="textcontent">I have been taught to regard such things as in some measure idolatrous, and yet it seemed so ungracious to refuse an old lady
+                        meaning so well and in such a 
+                                            state of mind. She saw, I suppose, the doubt in my face, for she put the rosary 
+                                            </span><div style="display:inline" class="apparatus apparatus_67" data-app-id="apparatus_67">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times charlotte" data-reading-wits="novel buffalo times charlotte"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck, and said, "For your mother's sake," and went out of the room. I am writing up this part of the diary whilst I am
+                        waiting for the coach, which is, 
+                                            of course, late; and the crucifix is still 
+                                            </span><div style="display:inline" class="apparatus apparatus_68" data-app-id="apparatus_68">
+                                                
+                        <div class="reading novel times buffalo" data-reading-wits="novel times buffalo"><span class="textcontent">round</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck. Whether it is the old lady's fear, or the many ghostly traditions of this place, or the crucifix itself, I do not
+                        know, but I am not feeling nearly 
+                                            as easy in my mind as usual. If this book should ever reach Mina before I do, let it bring my
+                                            </span><div style="display:inline" class="apparatus apparatus_69" data-app-id="apparatus_69">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">good-bye.</span></div>
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">good-by.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">goodby.</span></div>
+                                            
+                     </div><span class="textcontent">Here comes the coach!
+                                            </span><div class="apparatus apparatus_70" data-app-id="apparatus_70">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PEASANT SUPERSTITIONS</span><div class="linebreak"></div><span class="textcontent">CAUSE OF WORRY.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            5 May. The Castle.&#8212;The
+                                            </span><div style="display:inline" class="apparatus apparatus_71" data-app-id="apparatus_71">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean charlotte" data-reading-wits="times buffalo ocean charlotte"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">of the morning has passed, and the sun is high over the distant horizon, which seems jagged, whether with trees or hills I
+                        know not, for it is so far off that 
+                                            big things and little are mixed. I am not sleepy, and, as I am not to be called till I awake naturally
+                        I write till sleep comes. There are many odd things to put down, 
+                                            and, lest who reads them may fancy that I dined too well before I left Bistritz, let me put down my dinner
+                        exactly. I dined on what they
+                                            </span><div style="display:inline" class="apparatus apparatus_72" data-app-id="apparatus_72">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">call</span></div>
+                                                
+                        <div class="reading times novel ocean buffalo" data-reading-wits="times novel ocean buffalo"><span class="textcontent">called</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_73" data-app-id="apparatus_73">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">"robber steak"</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">robber steak</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;bits of bacon, onion, and beef, seasoned with red pepper, and strung on sticks and roasted over the fire, in the simple style
+                        of the London
+                                            </span><div style="display:inline" class="apparatus apparatus_74" data-app-id="apparatus_74">
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">cat's meat!</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">cats' meat.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">cat's meat.</span></div>
+                                            
+                     </div><span class="textcontent">The wine was Golden Mediasch, which produces a queer sting on the tongue, which is, however, not disagreeable. I had only
+                        a couple of glasses of this, and nothing else.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I got on the coach the driver had not taken his seat, and I saw him talking with the landlady. They
+                        were evidently talking of me, for every now and then they looked at me, 
+                                            and some of the people who were sitting on the bench outside the door&#8212;which they call by a name meaning
+                        
+                                            </span><div style="display:inline" class="apparatus apparatus_75" data-app-id="apparatus_75">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">&#8220;word-bearer"</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">word bearer</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">word-bearer</span></div>
+                                            
+                     </div><span class="textcontent">-came and listened, and then looked at me, most of them pityingly. I could hear a lot of words often repeated, queer words,
+                        for there were many nationalities in the crowd;
+                                            so I quietly got my polyglot dictionary from my bag and looked them out. I must say they were not cheering
+                        to me, for amongst them were &#8220;Ordog&#8221;-Satan, &#8220;pokol&#8221;-hell, 
+                                            </span><div style="display:inline" class="apparatus apparatus_76" data-app-id="apparatus_76">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">"stregoica"</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"stregoico"</span></div>
+                                            
+                     </div><span class="textcontent">-witch, &#8220;vrolok&#8221; and &#8220;vlkoslak"-both of which mean the same thing, one being Slovak and the other Servian for something that
+                        is either
+                                            </span><div style="display:inline" class="apparatus apparatus_77" data-app-id="apparatus_77">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">wers-wolf</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">were-wolf</span></div>
+                                            
+                     </div><span class="textcontent">or vampire.
+                                            </span><div style="display:inline" class="apparatus apparatus_78" data-app-id="apparatus_78">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_79" data-app-id="apparatus_79">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CROWD GIVES CHARM</span><div class="linebreak"></div><span class="textcontent">AGAINST ALL EVIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When we started, the crowd round the inn door, which had by this time swelled to a considerable size,
+                        all made the sign of the cross and pointed two fingers
+                                            </span><div style="display:inline" class="apparatus apparatus_80" data-app-id="apparatus_80">
+                                                
+                        <div style="display:inline" class="reading times charlotte ocean" data-reading-wits="times charlotte ocean"><span class="textcontent">toward</span></div>
+                                                
+                        <div class="reading buffalo novel" data-reading-wits="buffalo novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">me. With some difficulty I got a
+                                            </span><div style="display:inline" class="apparatus apparatus_81" data-app-id="apparatus_81">
+                                                
+                        <div class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">fellow-passenger</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">fellow passenger</span></div>
+                                            
+                     </div><span class="textcontent">to tell me what they meant; he would not answer at first, but on learning that I was English, he explained that it was a charm
+                        or guard against the evil eye. 
+                                            This was not very pleasant for me, just starting for an unknown place to meet an unknown man; but every
+                        one seemed so kind-hearted, and so sorrowful, and so sympathetic 
+                                            that I could not
+                                            </span><div style="display:inline" class="apparatus apparatus_82" data-app-id="apparatus_82">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">but</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">but</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_83" data-app-id="apparatus_83">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">be</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo novel" data-reading-wits="charlotte times buffalo novel"><span class="textcontent">be</span></div>
+                                            
+                     </div><span class="textcontent">touched. I shall never forget the last glimpse which I had of the
+                                            </span><div style="display:inline" class="apparatus apparatus_84" data-app-id="apparatus_84">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">innyard</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel buffalo" data-reading-wits="charlotte times novel buffalo"><span class="textcontent">inn-yard</span></div>
+                                            
+                     </div><span class="textcontent">and its crowd of picturesque figures, all crossing themselves, as they stood round the wide archway, with its background of
+                        rich foliage of oleander and orange 
+                                            trees in green tubs clustered in the
+                                            </span><div style="display:inline" class="apparatus apparatus_85" data-app-id="apparatus_85">
+                                                
+                        <div class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">center</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                            
+                     </div><span class="textcontent">of the yard. Then our driver, whose wide linen drawers covered the whole front of the
+                                            </span><div style="display:inline" class="apparatus apparatus_86" data-app-id="apparatus_86">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">box seat</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo" data-reading-wits="charlotte novel buffalo"><span class="textcontent">box-seat</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;&#8221;gotza" they call them&#8212;cracked his big whip over his four small horses, which ran abreast, and we set off on our journey.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I soon lost sight and recollection of ghostly fears in the beauty of the scene as we drove along, although
+                        had I known the language, or rather languages, which my
+                                            </span><div style="display:inline" class="apparatus apparatus_87" data-app-id="apparatus_87">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">fellow passengers</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">fellow-passengers</span></div>
+                                            
+                     </div><span class="textcontent">were speaking, I might not have been able to throw them off so easily. Before us lay a green sloping land full of forests
+                        and woods, with here and there steep 
+                                            hills, crowned with clumps of trees or with
+                                            </span><div style="display:inline" class="apparatus apparatus_88" data-app-id="apparatus_88">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">farm houses,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">farmhouses,</span></div>
+                                            
+                     </div><span class="textcontent">the blank gable end
+                                            </span><div style="display:inline" class="apparatus apparatus_89" data-app-id="apparatus_89">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">of</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel buffalo" data-reading-wits="ocean charlotte novel buffalo"><span class="textcontent">to</span></div>
+                                            
+                     </div><span class="textcontent">the road. There was everywhere a bewildering mass of fruit blossom&#8212;apple, plum, pear, cherry; and as we drove by I could see
+                        the green grass under the trees 
+                                            spangled with the fallen petals. In and out
+                                            </span><div style="display:inline" class="apparatus apparatus_90" data-app-id="apparatus_90">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">among</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">these green hills of what they call here the &#8220;Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_91" data-app-id="apparatus_91">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel buffalo" data-reading-wits="times charlotte novel buffalo"><span class="textcontent">Land"</span></div>
+                                            
+                     </div><span class="textcontent">ran the road, losing itself as it swept round the grassy curve, or was shut out by the straggling ends of pine woods, which
+                        here and there ran down the hillsides 
+                                            like tongues of flame. The road was rugged, but still we seemed to fly over it with a feverish haste.
+                        I could not understand then what the haste meant, but the driver 
+                                            was evidently bent on losing no time in reaching Borgo Prund. I was told that this road is in
+                                            </span><div style="display:inline" class="apparatus apparatus_92" data-app-id="apparatus_92">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">summertime</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">summer time</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">summer-time</span></div>
+                                            
+                     </div><span class="textcontent">excellent, but that it had not yet been put in order after the winter snows. In this respect it is different from the general
+                        run of roads in the Carpathians, for 
+                                            it is an old tradition that they are not to be kept in too good order. Of old the Hospadars would not
+                        repair them, lest the Turk should think that they were preparing to 
+                                            bring in foreign troops, and so hasten the war which was always really at loading point.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Beyond the green swelling hills of the Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_93" data-app-id="apparatus_93">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Land</span></div>
+                                            
+                     </div><span class="textcontent">rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves. Right and left of us they towered, with
+                        the afternoon sun falling full upon them 
+                                            and bringing out all the glorious
+                                            </span><div style="display:inline" class="apparatus apparatus_94" data-app-id="apparatus_94">
+                                                
+                        <div class="reading novel buffalo" data-reading-wits="novel buffalo"><span class="textcontent">colours</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean" data-reading-wits="charlotte times ocean"><span class="textcontent">colors</span></div>
+                                            
+                     </div><span class="textcontent">of this beautiful range, deep blue and purple in the shadows of the peaks, green and brown where grass and rock mingled, and
+                        an endless perspective of jagged rock 
+                                            and pointed crags, till these were themselves lost in the distance, where the snowy peaks rose grandly.
+                        Here and there seemed mighty rifts in the mountains, through which, 
+                                            as the sun began to sink, we saw now and again the white gleam of falling water. One of my companions
+                        touched my arm
+                                            </span><div style="display:inline" class="apparatus apparatus_95" data-app-id="apparatus_95">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo novel" data-reading-wits="ocean charlotte buffalo novel"><span class="textcontent">as</span></div>
+                                            
+                     </div><span class="textcontent">we swept round the base of a hill and opened up the lofty, snow-covered peak of
+                                            </span><div style="display:inline" class="apparatus apparatus_96" data-app-id="apparatus_96">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">a</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel buffalo charlotte ocean" data-reading-wits="novel buffalo charlotte ocean"><span class="textcontent">a</span></div>
+                                            
+                     </div><span class="textcontent">mountain, which seemed, as we wound on our serpentine way, to be right before us:
+                                            </span><div class="apparatus apparatus_97" data-app-id="apparatus_97">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">MEN AND WOMEN</span><div class="linebreak"></div><span class="textcontent">KNEEL BEFORE SHRINE.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            &#8220;Look! Isten szek!"&#8212;"God's seat!"&#8212;and he crossed himself reverently.
+                                            </span><div style="display:inline" class="apparatus apparatus_98" data-app-id="apparatus_98">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">we wound on our endless way, and the sun sank lower and lower behind us, the shadows of the evening began to creep round us.
+                        This was emphasised by the fact that 
+                                            the snowy
+                                            </span><div style="display:inline" class="apparatus apparatus_99" data-app-id="apparatus_99">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">mountain-top</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean"><span class="textcontent">mountain top</span></div>
+                                            
+                     </div><span class="textcontent">still held the sunset, and seemed to glow out with a delicate cool pink. Here and there we passed Cszeks and Slovaks, all
+                        in picturesque attire, but I noticed that 
+                                            goitre was painfully prevalent. By the roadside were many crosses, and as we swept by,
+                                            </span><div style="display:inline" class="apparatus apparatus_100" data-app-id="apparatus_100">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">all my companions</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo times novel" data-reading-wits="charlotte buffalo times novel"><span class="textcontent">my companions all</span></div>
+                                            
+                     </div><span class="textcontent">crossed themselves. Here and there was a peasant man or woman kneeling before a shrine, who did not even turn
+                                            </span><div style="display:inline" class="apparatus apparatus_101" data-app-id="apparatus_101">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times buffalo charlotte" data-reading-wits="novel times buffalo charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">as we approached, but seemed in the self-surrender of devotion to have neither eyes nor ears for the outer world. There were
+                        many things new to me: for instance,
+                                            </span><div style="display:inline" class="apparatus apparatus_102" data-app-id="apparatus_102">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">hay ricks</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">hay </span><span class="sic"><span class="textcontent">racks</span></span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">hay-ricks</span></div>
+                                            
+                     </div><span class="textcontent">in the trees, and here and there very beautiful masses of weeping birch, their white stems shining like silver through the
+                        delicate green of the leaves. Now and 
+                                            again we passed a
+                                            </span><div style="display:inline" class="apparatus apparatus_103" data-app-id="apparatus_103">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">leiter wagon</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times charlotte novel" data-reading-wits="buffalo times charlotte novel"><span class="textcontent">leiter-wagon</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;the ordinary peasant's cart&#8212;with its long, snake-like vertebra, calculated to suit the inequalities of the road. On this
+                                            </span><div style="display:inline" class="apparatus apparatus_104" data-app-id="apparatus_104">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">sure to be seated quite a group of home-coming peasants, the Cszeks with their white, and the Slovaks with their
+                                            </span><div style="display:inline" class="apparatus apparatus_105" data-app-id="apparatus_105">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">coloured,</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte times buffalo" data-reading-wits="ocean charlotte times buffalo"><span class="textcontent">colored,</span></div>
+                                            
+                     </div><span class="textcontent">sheepskins, the latter carrying
+                                            </span><div style="display:inline" class="apparatus apparatus_106" data-app-id="apparatus_106">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">lance fashion</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">lance-fashion</span></div>
+                                            
+                     </div><span class="textcontent">their long staves,
+                                            </span><div style="display:inline" class="apparatus apparatus_107" data-app-id="apparatus_107">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">with axe</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">with ax</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and axes</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">at end. As the evening fell it began to get very cold, and the growing twilight seemed to merge into one dark mistiness the
+                        gloom of the trees, oak, beech, and pine, 
+                                            though in the valleys which ran deep between the spurs of the
+                                            </span><div style="display:inline" class="apparatus apparatus_108" data-app-id="apparatus_108">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">hill. As</span></div>
+                                                
+                        <div class="reading times ocean buffalo novel" data-reading-wits="times ocean buffalo novel"><span class="textcontent">hills, as</span></div>
+                                            
+                     </div><span class="textcontent">we ascended through the
+                                            </span><div style="display:inline" class="apparatus apparatus_109" data-app-id="apparatus_109">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">the dark firs stood out here and there against the background of late-lying snow. Sometimes, as the road was cut through the
+                        pine woods that seemed in the darkness 
+                                            to be closing down upon us, great masses of
+                                            </span><div style="display:inline" class="apparatus apparatus_110" data-app-id="apparatus_110">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">greyness,</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean buffalo" data-reading-wits="charlotte times ocean buffalo"><span class="textcontent">grayness,</span></div>
+                                            
+                     </div><span class="textcontent">which here and there bestrewed the trees, produced a peculiarly weird and solemn effect, which carried on the thoughts and
+                        grim fancies engendered earlier in the evening, when the falling sunset threw into strange relief 
+                                            </span><div class="apparatus apparatus_111" data-app-id="apparatus_111">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <div class="linebreak"></div>
+                           <div class="stanzabreak"></div>
+                           <ins class="add"><span class="textcontent">(To be continued tomorrow.)</span></ins>
+                           <div class="linebreak"></div>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div><span class="textcontent">the ghost-like clouds which
+                                            </span><div style="display:inline" class="apparatus apparatus_112" data-app-id="apparatus_112">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the Carpathians seem to wind ceaselessly through the valleys. Sometimes the hills were so steep that, despite our driver's
+                        haste, the horses could only go slowly. I wished 
+                                            to get down and walk up them, as we do at home, but the driver would not hear of it. "No, no," he said;
+                        "you must not walk here; the dogs are too fierce"; and then he added, 
+                                            with what he evidently meant
+                                            </span><div style="display:inline" class="apparatus apparatus_113" data-app-id="apparatus_113">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">for</span></del>
+                           <ins class="add"><span class="textcontent">to be</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">for</span></div>
+                                            
+                     </div><span class="textcontent">grim pleasantry&#8212;for he looked
+                                            </span><div style="display:inline" class="apparatus apparatus_114" data-app-id="apparatus_114">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">to catch the approving smile of the rest&#8212;"and you may have enough of such matters before you go to sleep." The only stop he
+                        would make was a moment's pause to light his lamps.
+                                            </span><div class="apparatus apparatus_115" data-app-id="apparatus_115">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PASSENGERS' EXCITEMENT</span><div class="linebreak"></div><span class="textcontent">CAUSE FOR SPEED.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When it grew dark there seemed to be some excitement
+                                            </span><div style="display:inline" class="apparatus apparatus_116" data-app-id="apparatus_116">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">amongst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the passengers, and they kept speaking to him, one after the other, as though urging him to further speed. He lashed the
+                                            </span><div style="display:inline" class="apparatus apparatus_117" data-app-id="apparatus_117">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">horse</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">horses</span></div>
+                                            
+                     </div><span class="textcontent">unmercifully with his long whip, and with wild cries of encouragement urged them on to further exertions. Then through the
+                        darkness I could see a sort of patch of
+                                            </span><div style="display:inline" class="apparatus apparatus_118" data-app-id="apparatus_118">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean times" data-reading-wits="charlotte ocean times"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">light ahead of us, as though there were a cleft in the hills. The excitement of the passengers grew greater; the crazy coach
+                        rocked on its great leather springs, and swayed like a boat 
+                                            tossed on a stormy sea. I had to hold on. The road grew more level, and we appeared to fly along. Then
+                        the mountains seemed to come nearer to us on each side and to frown down upon us; we were 
+                                            entering on the
+                                            </span><div style="display:inline" class="apparatus apparatus_119" data-app-id="apparatus_119">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">Bergo</span></span><span class="textcontent"> pass.</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Borgo Pass.</span></div>
+                                            
+                     </div><span class="textcontent">One by one several of the passengers offered me gifts, which they pressed upon me with an
+                                            </span><div style="display:inline" class="apparatus apparatus_120" data-app-id="apparatus_120">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">earnestness</span></del>
+                           <ins class="add"><span class="textcontent">eagerness</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">earnestness</span></div>
+                                            
+                     </div><span class="textcontent">which would take no denial; these were certainly of an odd and varied kind, but each was given in simple good faith, with
+                        a kindly word, and a blessing, and that strange mixture of 
+                                            fear-meaning movements which I had seen outside the hotel at Bistritz&#8212;the sign of the cross and the guard
+                        against the evil eye. Then, as we flew along, the driver leaned forward, and on each 
+                                            side the passengers, craning over the edge of the coach, peered eagerly into the darkness. It was evident
+                        that something very exciting was either happening or expected, but though I asked 
+                                            each passenger, no one would give me the slightest explanation. This state of excitement kept on for some
+                        little time; and at last we saw before us the 
+                                            </span><div style="display:inline" class="apparatus apparatus_121" data-app-id="apparatus_121">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">opening out on the eastern side.
+                                            </span><div style="display:inline" class="apparatus apparatus_122" data-app-id="apparatus_122">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">There</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">There</span></div>
+                                            
+                     </div><span class="textcontent">were dark, rolling clouds overhead, and in the air the heavy, oppressive sense of thunder. It seemed as though the mountain
+                        range had separated 
+                                            two atmospheres, and that now we had got into the thunderous one. I was now myself looking out for the
+                        conveyance which was to take me to the Count. Each moment I expected to see the glare 
+                                            of lamps through the blackness; but all was dark. The only light was the flickering rays of our own lamps,
+                        in which the steam from our
+                                            </span><div style="display:inline" class="apparatus apparatus_123" data-app-id="apparatus_123">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">hard-driven</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">hard driven</span></div>
+                                            
+                     </div><span class="textcontent">horses rose in a white cloud.
+                                            </span><div class="apparatus apparatus_124" data-app-id="apparatus_124">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Don't miss the second installment which will appear in tomorrow's Times.</span></ins>
+                           <hr class="pagebreak"></hr>
+                                                   
+                           <ins class="add"><span class="textcontent">DRACULA</span><div class="linebreak"></div><span class="textcontent">OR</span><div class="linebreak"></div><span class="textcontent">THE VAMPIRE</span><div class="linebreak"></div><span class="textcontent">By BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">One of the most thrilling novels of the age, with love, intrigue, and adventure mingled in a gripping serial.</span><div class="linebreak"></div>
+                                                      <span class="emph"><span class="textcontent">Read It In THE TIMES Every Day</span></span><div class="linebreak"></div><span class="textcontent">PART I.-Continued.</span></ins>
+                           <div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_125" data-app-id="apparatus_125">
+                                                
+                        <div class="reading times" data-reading-wits="times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">We</span></div>
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">We</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_126" data-app-id="apparatus_126">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">We could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_127" data-app-id="apparatus_127">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">The</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">The</span></div>
+                                            
+                     </div><span class="textcontent">passengers drew back with a sigh of gladness, which seemed to mock my own disappointment. I was already thinking what I had
+                        best do, when the driver, looking at his watch, 
+                                            said to the others something which I could hardly hear, it was spoken so quietly and in so low a tone;
+                        I thought it was
+                                            </span><div style="display:inline" class="apparatus apparatus_128" data-app-id="apparatus_128">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"an</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">"An</span></div>
+                                            
+                     </div><span class="textcontent">hour less than the time." Then turning to me he said in German worse than my own:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "There is no
+                                            </span><div style="display:inline" class="apparatus apparatus_129" data-app-id="apparatus_129">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">carriages</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">carriage</span></div>
+                                            
+                     </div><span class="textcontent">here. The Herr is not expected after all. He will now come on to Bukovina, and return tomorrow or the next day
+                                            </span><div style="display:inline" class="apparatus apparatus_130" data-app-id="apparatus_130">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">; better the next day.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">; better the next day.</span></div>
+                                            
+                     </div><span class="textcontent">"
+                                            </span><div style="display:inline" class="apparatus apparatus_131" data-app-id="apparatus_131">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Whilst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">While</span></div>
+                                            
+                     </div><span class="textcontent">he was speaking
+                                            </span><div style="display:inline" class="apparatus apparatus_132" data-app-id="apparatus_132">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">the</span></del>
+                           <ins class="add"><span class="textcontent">his</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel" data-reading-wits="charlotte times novel"><span class="textcontent">the</span></div>
+                                            
+                     </div><span class="textcontent">horses began to neigh and snort and plunge wildly, so that the driver had to hold them up. Then,
+                                            </span><div style="display:inline" class="apparatus apparatus_133" data-app-id="apparatus_133">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">among</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">a chorus of screams from the peasants and a universal crossing of themselves, a caleche, with four horses,
+                                            </span><div style="display:inline" class="apparatus apparatus_134" data-app-id="apparatus_134">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">drove up behind us,</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">drove up behind us,</span></div>
+                                            
+                     </div><span class="textcontent">overtook us, and drew up beside the coach. I could see from the flash of our lamps, as the rays fell on them, that the horses
+                        were
+                                            </span><div style="display:inline" class="apparatus apparatus_135" data-app-id="apparatus_135">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">coal black</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">coal-black</span></div>
+                                            
+                     </div><span class="textcontent">and splendid animals. They were driven by a tall man, with a long brown beard and a great black hat, which seemed to hide
+                        his face from us. I could only see the gleam 
+                                            of a pair of very bright eyes, which seemed red in the lamplight, as he turned to us. He said to the driver:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "You are early
+                                            </span><div style="display:inline" class="apparatus apparatus_136" data-app-id="apparatus_136">
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">my friend." The man stammered in reply:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The English Herr was in a hurry," to which the stranger replied:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "That is why, I suppose, you wished him to go on to Bukovina. You cannot deceive me, my friend ; I know
+                        too much, and my horses are swift." As he spoke he smiled, 
+                                            and the lamplight fell on a hard-looking mouth, with very red lips and sharp-looking teeth, as white as
+                        ivory. One of my companions whispered to another the line from Burger's
+                                            </span><div style="display:inline" class="apparatus apparatus_137" data-app-id="apparatus_137">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"Lenoro:"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">"Lenore:"</span></div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_138" data-app-id="apparatus_138">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">"Denn die Todten reiten schnell"&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">("For the dead travel fast.")</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Denn die Todten reiten schnell&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">(For the dead travel fast.)</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_139" data-app-id="apparatus_139">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE STRANGE JOURNEY</span><div class="linebreak"></div><span class="textcontent">INTO</span><span class="sic"><span class="textcontent"> BUKOWINA </span></span><span class="textcontent">BEGINS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            The strange driver evidently heard the words, for he looked up with a gleaming smile. The passenger turned
+                        his face away, at the same time putting out his two fingers and 
+                                            crossing himself. "Give me the Herr's luggage," said the driver; and with
+                                            </span><div style="display:inline" class="apparatus apparatus_140" data-app-id="apparatus_140">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">exceedingly</span></span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">exceeding</span></div>
+                                            
+                     </div><span class="textcontent">alacrity my bags were handed out and put in the caleche. Then I descended from the side of the coach, as the caleche was close
+                        alongside, the driver helping me with a 
+                                            hand which caught my arm in a grip of steel; his strength must have been prodigious. Without a word he
+                        shook his reins, the horses turned, and we swept into the darkness of the 
+                                            </span><div style="display:inline" class="apparatus apparatus_141" data-app-id="apparatus_141">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass.</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">Pass.</span></div>
+                                            
+                     </div><span class="textcontent">As I looked back I saw the steam from the horses of the coach by the light of the lamps, and projected against it the figures
+                        of my late companions crossing themselves. 
+                                            Then the driver cracked his whip and called to
+                                            </span><div style="display:inline" class="apparatus apparatus_142" data-app-id="apparatus_142">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">his</span></del>
+                           <ins class="add"><span class="textcontent">the</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">his</span></div>
+                                            
+                     </div><span class="textcontent">horses, and off they swept on their way to Bukovina.
+                                            </span><div style="display:inline" class="apparatus apparatus_143" data-app-id="apparatus_143">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">they sank into the darkness I felt a strange chill, and a lonely feeling came over me; but a cloak was thrown over my shoulders,
+                        and a rug
+                                            </span><div style="display:inline" class="apparatus apparatus_144" data-app-id="apparatus_144">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">across</span></del>
+                           <ins class="add"><span class="textcontent">over</span></ins>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">across</span></div>
+                                            
+                     </div><span class="textcontent">my knees, and the driver said in excellent German:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The night is chill,
+                                            </span><div style="display:inline" class="apparatus apparatus_145" data-app-id="apparatus_145">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">Mein</span></div>
+                                                
+                        <div class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">mein</span></div>
+                                            
+                     </div><span class="textcontent">Herr, and my master the Count bade me take all care of you. There is a flask of slivovitz (the plum brandy of the country)
+                        underneath the seat, if you should 
+                                            require it." I did not take any, but it was a comfort to know it was there all the same. I felt a little
+                        strangely, and not a little frightened. I think had there been 
+                                            any alternative I should have taken it, instead of prosecuting that unknown night journey. The carriage
+                        went at a hard pace straight along, then we made a complete turn 
+                                            and went along another straight road. It seemed to me that we were simply going over and over the same
+                        ground again; and so I took note of some salient point, and found 
+                                            that this was so. I would have liked to have asked the driver what this all meant, but I really feared
+                        to do so, for I thought that, placed as I was, any protest would 
+                                            have had no effect in case there had been an intention to delay.
+                                            </span><div style="display:inline" class="apparatus apparatus_146" data-app-id="apparatus_146">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">By and by,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">By-and-by,</span></div>
+                                            
+                     </div><span class="textcontent">however, as I was curious to know how time was passing, I struck a match, and by its flame looked at my watch; it was
+                                            </span><div style="display:inline" class="apparatus apparatus_147" data-app-id="apparatus_147">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">within</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">within</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes of midnight.
+                                            </span><div style="display:inline" class="apparatus apparatus_148" data-app-id="apparatus_148">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                                 
+                                                             I waited with a sick feeling of suspense.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                              
+                                                          I waited with a sick feeling of suspense.</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_149" data-app-id="apparatus_149">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">HOWLING WOLVES ADD</span><div class="linebreak"></div><span class="textcontent">TO THE TRAVELER'S PERIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Then a dog began to howl somewhere in a
+                                            </span><div style="display:inline" class="apparatus apparatus_150" data-app-id="apparatus_150">
+                                                
+                        <div class="reading novel ocean" data-reading-wits="novel ocean"><span class="textcontent">farmhouse</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte" data-reading-wits="times charlotte"><span class="textcontent">farm house</span></div>
+                                            
+                     </div><span class="textcontent">far down the road&#8212;a long, agonised wailing, as if from fear. The sound was taken up by
+                                            </span><div style="display:inline" class="apparatus apparatus_151" data-app-id="apparatus_151">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">another dog, and then</span></del>
+                        </div>
+                                                
+                        <div class="reading times ocean novel" data-reading-wits="times ocean novel"><span class="textcontent">another dog, and then</span></div>
+                                            
+                     </div><span class="textcontent">another and another, till, borne on the wind which now sighed softly through the
+                                            </span><div style="display:inline" class="apparatus apparatus_152" data-app-id="apparatus_152">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">a wild howling began, which seemed to come from all over the country, 
+                                            </span><div style="display:inline" class="apparatus apparatus_153" data-app-id="apparatus_153">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                                 rear, but 
+                                                             the driver spoke to them soothingly, and they quieted down, but shivered and sweated as though
+                                 after a run-away from sudden fright.</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                              rear, but the driver 
+                                                          spoke to them soothingly, and they quieted down, but shivered and sweated as though after a run-away
+                              from sudden fright.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_154" data-app-id="apparatus_154">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Then,</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">Then,</span></div>
+                                            
+                     </div><span class="textcontent">far off in the distance, from the mountains on each side of us began a louder and a sharper howling-that of wolves-which affected
+                        both the horses and myself in the 
+                                            same way-for I was minded to jump from the caleche and run,
+                                            </span><div style="display:inline" class="apparatus apparatus_155" data-app-id="apparatus_155">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">whilst</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">while</span></div>
+                                            
+                     </div><span class="textcontent">they reared
+                                            </span><div style="display:inline" class="apparatus apparatus_156" data-app-id="apparatus_156">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">again</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">again</span></div>
+                                            
+                     </div><span class="textcontent">and plunged madly, so that the driver had to use all his great strength to keep them from bolting.
+                                            </span><div style="display:inline" class="apparatus apparatus_157" data-app-id="apparatus_157">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">In</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">In</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes
+                                            </span><div style="display:inline" class="apparatus apparatus_158" data-app-id="apparatus_158">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">, however,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">, however,</span></div>
+                                            
+                     </div><span class="textcontent">my
+                                            </span><div style="display:inline" class="apparatus apparatus_159" data-app-id="apparatus_159">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">own</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">own</span></div>
+                                            
+                     </div><span class="textcontent">ears got accustomed to the sound, and the horses so far became quiet that the driver was able to descend and to stand before
+                        them. He
+                                            </span><div style="display:inline" class="apparatus apparatus_160" data-app-id="apparatus_160">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">patted</span></span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">petted</span></div>
+                                            
+                     </div><span class="textcontent">and soothed them,
+                                            </span><div style="display:inline" class="apparatus apparatus_161" data-app-id="apparatus_161">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel ocean" data-reading-wits="times novel ocean"><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></div>
+                                            
+                     </div><span class="textcontent">and with extraordinary effect, for under his caresses they became quite manageable again, though they still trembled. The
+                        driver again took his seat, and shaking his 
+                                            reins, started off at a great pace. This time, after going to the far side of the
+                                            </span><div style="display:inline" class="apparatus apparatus_162" data-app-id="apparatus_162">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">he suddenly turned down a narrow roadway which ran sharply to the right.
+                                            </span><div class="apparatus apparatus_163" data-app-id="apparatus_163">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">(To Be Continued.)</span></ins>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_164" data-app-id="apparatus_164">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <ins class="add"><span class="textcontent">THE STRANGE STORY OF DRACULA</span><div class="linebreak"></div><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">
+                                                             (Copyright, 1897, by the Author.)</span><div class="linebreak"></div><span class="textcontent">CHAPTER I.-(Continued.)</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Soon we were hemmed in with trees, which in places arched right over the roadway till we passed as through
+                        a tunnel; and again great frowning rocks guarded us boldly on 
+                                            either side. Though we were in shelter, we could hear the rising wind, for it moaned and whistled through
+                        the rocks, and the branches of the trees crashed together as we 
+                                            swept along. It grew colder and colder still, and fine powdery snow began to fall, so that soon we and
+                        all around us were covered with a white blanket. The keen wind still 
+                                            carried the howling of the dogs, though this grew fainter as we went on our way. The baying of the wolves
+                        sounded nearer and nearer, as though they were closing round on us 
+                                            from every side. I grew dreadfully afraid, and the horses shared my
+                                            </span><div style="display:inline" class="apparatus apparatus_165" data-app-id="apparatus_165">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <ins class="add"><span class="textcontent">; but the</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">. The</span></div>
+                                            
+                     </div><span class="textcontent">driver
+                                            </span><div style="display:inline" class="apparatus apparatus_166" data-app-id="apparatus_166">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">however</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">however</span></div>
+                                            
+                     </div><span class="textcontent">was not in the least
+                                            </span><div style="display:inline" class="apparatus apparatus_167" data-app-id="apparatus_167">
+                                                
+                        <div style="display:inline" class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">disturbed. He</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">disturbed; he</span></div>
+                                            
+                     </div><span class="textcontent">kept turning his head to left and right, but I could not see anything through the darkness.
+                                            </span><div class="apparatus apparatus_168" data-app-id="apparatus_168">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE DRIVES FIGURES</span><div class="linebreak"></div><span class="textcontent">IN A WEIRD DREAM.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Suddenly, away on our left, I saw a faint flickering blue flame. The driver saw it at the same moment;
+                        he at once checked the horses, and, jumping to the ground, disappeared 
+                                            into the darkness. I did not know what to do, the less as the howling of the wolves grew closer ; but
+                        while I wondered the driver suddenly appeared again, and without a word 
+                                            took his seat, and we resumed our journey. I think I must have fallen asleep and kept dreaming of the
+                        incident, for it seemed to be repeated endlessly, and now looking back, 
+                                            it is like a sort of awful nightmare. Once the flame appeared so near the road, that even in the darkness
+                        around us I could watch the driver's motions. He went rapidly to where 
+                                            the blue flame arose&#8212;it must have been very faint, for it did not seem to illumine the place around it
+                        at all&#8212;and gathering a few stones, formed them into some device. Once there 
+                                            appeared a strange optical effect: when he stood between me and the flame he did not obstruct it, for
+                        I could see its ghostly flicker all the same. This startled me, but as the 
+                                            effect was only momentary, I took it that my eyes deceived me straining through the darkness. Then for
+                        a time there
+                                            </span><div style="display:inline" class="apparatus apparatus_169" data-app-id="apparatus_169">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">were</span></del>
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">no blue flames, and we sped
+                                            </span><div style="display:inline" class="apparatus apparatus_170" data-app-id="apparatus_170">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">onward</span></div>
+                                                
+                        <div class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">onwards</span></div>
+                                            
+                     </div><span class="textcontent">onwards through the gloom, with the howling of the wolves around us, as though they were following in a moving circle.
+                                            </span><div class="apparatus apparatus_171" data-app-id="apparatus_171">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">RING OF WOLVES</span><div class="linebreak"></div><span class="textcontent">SURROUND THE CARRIAGE</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            At last there came a time when the driver went further afield than he had yet gone, and during his absence,
+                        the horses began to tremble worse than ever and to snort and scream 
+                                            with fright. I could not see any cause for it, for the howling of the wolves had ceased altogether; but
+                        just then the moon, sailing through the black clouds, appeared behind the 
+                                            jagged crest of a beetling, pine-clad rock, and by its light I saw around us a ring of wolves, with white
+                        teeth and lolling red tongues, with long, sinewy limbs and shaggy hair. 
+                                            They were a hundred times more terrible in the grim silence which held them than even when they howled.
+                        For myself, I felt a sort of paralysis of fear. It is only when a man 
+                                            feels himself face to face with such horrors that he can understand their true import.
+                                            </span><div class="apparatus apparatus_172" data-app-id="apparatus_172">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <ins class="add"><span class="textcontent">Don't miss the third installment which will appear in tomorrow's Times.</span><hr class="pagebreak"></hr><span class="textcontent">DRACULA or The Vampire
+                                                         By Bram Stoker</span><div class="linebreak"></div><span class="textcontent">One of the Most Thrilling Novels of the Age-Love, Mystery, Intrigue, Adventure, Mingled in a</span><div class="linebreak"></div><span class="textcontent">Gripping Serial. Read It In THE TIMES Every Day.</span><div class="linebreak"></div><span class="textcontent">
+                                                         PART I-Continued.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All at once the wolves began to howl as though the moonlight had had some peculiar effect on them. The
+                        horses jumped about and reared, and looked helplessly round with eyes 
+                                            that rolled in a way painful to see; but the living ring of terror encompassed them on every side; and
+                        they had perforce to remain within it. I called to the coachman to come, 
+                                            for it seemed to me that our only chance was to try to break out through the ring and to aid his approach.
+                        I shouted and beat the side of the cal&egrave;che, hoping by the noise to 
+                                            scare the wolves from that side, so as to give him a chance of reaching the trap. How he came there, I
+                        know not, but I heard his voice raised in a tone of imperious command, 
+                                            and looking
+                                            </span><div style="display:inline" class="apparatus apparatus_173" data-app-id="apparatus_173">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">toward</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">the sound, saw him stand in the roadway. As he swept his long arms, as though brushing
+                                            </span><div style="display:inline" class="apparatus apparatus_174" data-app-id="apparatus_174">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">aside</span></del>
+                           <ins class="add"><span class="textcontent">away</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">aside</span></div>
+                                            
+                     </div><span class="textcontent">some impalpable obstacle, the wolves fell back and back further still. Just then a heavy cloud passed across the face of the
+                        moon, so that we were again in darkness.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I could see again the driver was climbing into the caleche, and the wolves had disappeared. This
+                        was all so strange and uncanny that a dreadful fear came upon me, and I was 
+                                            afraid to speak or move. The time seemed interminable as we swept on our way, now in almost complete darkness,
+                        for the rolling clouds obscured the moon. We kept on ascending, 
+                                            with occasional periods of quick descent, but in the main always ascending. Suddenly, I became conscious
+                        of the fact that the driver was in the act of pulling up the horses in 
+                                            the courtyard of a vast ruined castle, from whose tall black windows came no ray of light, and whose broken
+                        battlements showed a jagged line against the moonlit sky.
+                                            </span><div style="display:inline" class="apparatus apparatus_175" data-app-id="apparatus_175">
+                                                
+                        <div style="display:inline" class="reading charlotte" data-reading-wits="charlotte">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">[TO BE CONTINUED.]</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                              
+               </div>
+                       
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="buffalo">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img><a title="Version buffalo: The Buffalo Courier">Version buffalo: The Buffalo Courier</a></div>
+            <div class="mssContent">
+                           
+               <div class="div">
+                                  
+                  <div class="head rend-center">
+                                         
+                     <div class="apparatus apparatus_1" data-app-id="apparatus_1">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">TO</span><div class="linebreak"></div><span class="textcontent">MY DEAR FRIEND</span><div class="linebreak"></div><span class="textcontent">HOMMY-BEG</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_2" data-app-id="apparatus_2">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">How these papers have been placed in sequence will be made manifest in the reading 
+                                                          of them. All needless matters have been eliminated, so that a history almost at variance with
+                              the 
+                                                          possibilities of later-day belief may stand forth as simple fact. There is throughout no statement
+                              
+                                                          of past things wherein memory may err, for all the records chosen are exactly contemporary, given
+                              
+                                                          from the standpoints and within the range of knowledge of those who made them.</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_3" data-app-id="apparatus_3">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">THE STRANGE STORY OF </span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">Begin Today the Fascinating Story of Mystery</span><div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo ocean times" data-reading-wits="novel charlotte buffalo ocean times">
+                           <div class="linebreak"></div><span class="textcontent">DRACULA
+                                                          </span><div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                              
+                              <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">!</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent"> or The Vampire By Bram Stoker</span></div>
+                                                          
+                           </div>
+                                                   
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.
+                                                          </span><div class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                              
+                              <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">(Copyright, 1897, by the Author.)</span></div>
+                                                          
+                           </div>
+                                                   
+                        </div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">A STRONG STORY OF THE VAMPIRE.</span><div class="linebreak"></div><span class="textcontent">By Bram Stoker, the Dramatic Critic,</span><div class="linebreak"></div><span class="textcontent">
+                                                      Theatrical Manager and Author of "Miss</span><div class="linebreak"></div><span class="textcontent">Betty," "Under the Sunset," and Other</span><div class="linebreak"></div><span class="textcontent">Books.</span><div class="linebreak"></div><span class="textcontent">
+                                                      Copyright, 1897, by Bram Stoker.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Extraordinary Story of a Count Who Became</span><div class="linebreak"></div><span class="textcontent">A Vampire--One of the Literary Sen-</span><div class="linebreak"></div><span class="textcontent">
+                                                      sations of the Present Day.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">Copyright by Bram Stoker.</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">One of the most thrilling novels of the age--love, finance, mystery, intrigue, adventure, mingled</span><div class="linebreak"></div><span class="textcontent">
+                                                      in a gripping serial. Read it in THE TIMES Every Day.</span></div>
+                                            
+                        <hr class="pagebreak"></hr>
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_8" data-app-id="apparatus_8">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo" data-reading-wits="novel ocean charlotte buffalo"><span class="textcontent">CHAPTER I.</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">PART I.</span><div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times" data-reading-wits="novel ocean charlotte buffalo times"><span class="textcontent">
+                                                      JONATHAN 
+                                                      </span><div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                                          
+                              <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">HARPER'S</span></span></div>
+                                                          
+                              <div class="reading charlotte novel ocean times" data-reading-wits="charlotte novel ocean times"><span class="textcontent">HARKER'S</span></div>
+                                                      
+                           </div><span class="textcontent">JOURNAL</span><div class="linebreak"></div>
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_11" data-app-id="apparatus_11">
+                                               
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Kept in shorthand.)</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div style="display:inline" class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <del><span class="textcontent">(Kept in shorthand.)</span></del>
+                           <div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_12" data-app-id="apparatus_12">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="emph"><span class="textcontent">3 May. Bistritz.</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">3 May. Bistritz.</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            &#8212;Left Munich at 8:35 
+                                                </span><div style="display:inline" class="apparatus apparatus_13" data-app-id="apparatus_13">
+                                                    
+                        <div style="display:inline" class="reading ocean charlotte buffalo times" data-reading-wits="ocean charlotte buffalo times"><span class="textcontent">p.m.</span></div>
+                                                    
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">P.M.</span></div>
+                                                
+                     </div><span class="textcontent">, on 1st May, arriving at Vienna early next morning
+                                                </span><div style="display:inline" class="apparatus apparatus_14" data-app-id="apparatus_14">
+                                                    
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></div>
+                                                    
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte">
+                           <del><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></del>
+                        </div>
+                                                
+                     </div><span class="textcontent">. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the 
+                                            little I could walk through the streets. I feared to go very far from the station, as we arrived late
+                        and would start as near 
+                                            the correct time as possible. The impression I had was that we were leaving the West and entering the
+                        East; the most 
+                                                </span><div style="display:inline" class="apparatus apparatus_15" data-app-id="apparatus_15">
+                                                    
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">western</span></div>
+                                                    
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Western</span></div>
+                                                
+                     </div><span class="textcontent">
+                                            of splendid bridges over the Danube, which is here of noble width and depth, took us among the traditions
+                        of Turkish rule.
+                                           </span><div style="display:inline" class="apparatus apparatus_16" data-app-id="apparatus_16">
+                                               
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times emptyReading" data-reading-wits="novel ocean charlotte buffalo times">
+                                                   
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at
+                        the Hotel Royale. I 
+                                            had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but
+                        thirsty. 
+                                            (Mem., get recipe for Mina.) I asked the waiter, and he said it was called "paprika hendl," and that,
+                        as it was a national 
+                                            dish, I should be able to get it anywhere along the Carpathians. I found my smattering of German very
+                        useful here; indeed, 
+                                            I don't know how I should be able to get on without it.
+                                            </span><div class="apparatus apparatus_17" data-app-id="apparatus_17">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">ATTEMPTS TO LOCATE</span><div class="linebreak"></div><span class="textcontent">THE CASTLE DRACULA.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Having had some time at my disposal when in London, I had visited the British 
+                                            </span><div style="display:inline" class="apparatus apparatus_18" data-app-id="apparatus_18">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">museum</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel buffalo charlotte" data-reading-wits="times novel buffalo charlotte"><span class="textcontent">Museum</span></div>
+                                            
+                     </div><span class="textcontent">, and made search among the books and maps 
+                                            in the library regarding Transylvania; it had struck me that some foreknowledge of the country could hardly
+                        fail to have some 
+                                            importance in dealing with a
+                                            </span><div style="display:inline" class="apparatus apparatus_19" data-app-id="apparatus_19">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">noble</span></div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">nobleman</span></div>
+                                            
+                     </div><span class="textcontent"> of that country. I find that the district he named is in the extreme east of the country, 
+                                            just on the borders of three states, Transylvania, Moldavia and Bukovina, in the midst of the Carpathian
+                        mountains ; one of the 
+                                            wildest and least known portions of Europe. I was not able to light on any map or work giving the exact
+                        locality of
+                                            </span><div style="display:inline" class="apparatus apparatus_20" data-app-id="apparatus_20">
+                                                
+                        <div class="reading times novel charlotte ocean" data-reading-wits="times novel charlotte ocean"><span class="textcontent">the</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">the</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">Castle 
+                                            Dracula, as there are no maps of this country as yet to compare with our own
+                                            </span><div style="display:inline" class="apparatus apparatus_21" data-app-id="apparatus_21">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Ordnance Survey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean buffalo times" data-reading-wits="charlotte ocean buffalo times"><span class="textcontent">ordnance survey</span></div>
+                                            
+                     </div><span class="textcontent">maps; but I found that Bistritz, 
+                                            the post town named by Count Dracula, is a fairly well-known place. I shall enter here some of my notes,
+                        as they may refresh my 
+                                            memory when I talk over my travels with Mina.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            In the population of Transylvania there are four distinct nationalities: Saxons in the 
+                                            </span><div style="display:inline" class="apparatus apparatus_22" data-app-id="apparatus_22">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">South</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">south</span></div>
+                                            
+                     </div><span class="textcontent">, and mixed with them the Wallachs, who are the descendants of the Dacians; Magyars in the
+                                            </span><div style="display:inline" class="apparatus apparatus_23" data-app-id="apparatus_23">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">West</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">west</span></div>
+                                            
+                     </div><span class="textcontent">and Szekelys in the
+                                            </span><div style="display:inline" class="apparatus apparatus_24" data-app-id="apparatus_24">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">East</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">and
+                                            </span><div style="display:inline" class="apparatus apparatus_25" data-app-id="apparatus_25">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">North</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">north</span></div>
+                                            
+                     </div><span class="textcontent">I am going among the latter, who claim to be descended from Attila and the Huns. This may be so, 
+                                            for when the Magyars conquered the country in the eleventh century they found the Huns settled in it.
+                        I read that every known superstition 
+                                            in the world is gathered into the horseshoe of the Carpathians, as if it were the
+                                            </span><div style="display:inline" class="apparatus apparatus_26" data-app-id="apparatus_26">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean buffalo times" data-reading-wits="ocean buffalo times"><span class="textcontent">center</span></div>
+                                            
+                     </div><span class="textcontent">of some sort of imaginative whirlpool; if so my stay may be very interesting.
+                                            </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the 
+                                                          </span><div class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                              
+                              <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Count</span></div>
+                                                              
+                              <div class="reading times" data-reading-wits="times"><span class="textcontent">count</span></div>
+                                                          
+                           </div><span class="textcontent">all about them.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count all about them.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_29" data-app-id="apparatus_29">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">BEGINS LONG JOURNEY</span><div class="linebreak"></div><span class="textcontent">ON A SLOW TRAIN.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I did not sleep well, though my bed was comfortable enough, for I had all sorts of queer dreams. There
+                        was a dog howling all night under my window, 
+                                            which may have had something to do with it; or it may have been the paprika, for I had to drink up all
+                        the water in my carafe, and was still thirsty.
+                                            </span><div style="display:inline" class="apparatus apparatus_30" data-app-id="apparatus_30">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Towards</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">Toward</span></div>
+                                            
+                     </div><span class="textcontent">morning I slept and was wakened by the continuous knocking at my door, so I guess I must have been sleeping soundly then.
+                        I had for breakfast 
+                                            more paprika, and a sort of porridge of maize flour which they said was "mamaliga," and egg-plant stuffed
+                        with forcemeat, a very excellent dish, which 
+                                            they call &#8220;impletata."
+                                            </span><div style="display:inline" class="apparatus apparatus_31" data-app-id="apparatus_31">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., get recipe for this also.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., get recipe for this also.)</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to hurry breakfast, for the train started a little before
+                                            </span><div style="display:inline" class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">eight</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">8
+                                                          </span><div style="display:inline" class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                              
+                              <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo">
+                                 <ins class="add"><span class="textcontent">o'clock</span></ins>
+                              </div>
+                                                          
+                           </div>
+                        </div>
+                                            
+                     </div><span class="textcontent">, or rather it ought to have done so, for after rushing to the station at 7 : 30
+                                            </span><div style="display:inline" class="apparatus apparatus_34" data-app-id="apparatus_34">
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">o' clock</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to sit in the carriage for more than an hour before we began to move. It seems to me that the further
+                                            </span><div style="display:inline" class="apparatus apparatus_35" data-app-id="apparatus_35">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">East</span></div>
+                                                
+                        <div class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">you go the more unpunctual are the trains. What ought they to be in China?
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All day long we seemed to dawdle through a country which was full of beauty 
+                                            </span><div style="display:inline" class="apparatus apparatus_36" data-app-id="apparatus_36">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">of every kind</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">of every kind</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">. 
+                                            </span><div style="display:inline" class="apparatus apparatus_37" data-app-id="apparatus_37">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">Some times</span></div>
+                                                
+                        <div class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">Sometimes</span></div>
+                                            
+                     </div><span class="textcontent">we saw little towns or castles on the top of steep hills such as we see in old missals ; sometimes we ran by rivers and streams
+                        which seemed from 
+                                            the wide stony margin on each side of them to be subject to great floods. It takes a lot of water, and
+                        running strong, to sweep the outside edge of a 
+                                            river clear. At every station there were groups of people, sometimes crowds
+                                            </span><div style="display:inline" class="apparatus apparatus_38" data-app-id="apparatus_38">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">, and in all sorts of attire.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">, and in all sorts of attire.</span><div class="linebreak"></div>
+                           </del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_39" data-app-id="apparatus_39">
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Some</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Some</span></div>
+                                            
+                     </div><span class="textcontent">of them were just like the peasants at home or those I saw coming through France and Germany, with short jackets and round
+                        
+                                            hats and home-made trousers; but others were very picturesque. The women looked pretty, except when you
+                        got near them, but they were very clumsy 
+                                            about the waist. They had all full white sleeves of some kind or other, and the most of them had big belts
+                        with a
+                                            </span><div style="display:inline" class="apparatus apparatus_40" data-app-id="apparatus_40">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">lit</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">lot</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            of strips of something fluttering 
+                                            from them like the dresses in a ballet, but of course
+                                            </span><div style="display:inline" class="apparatus apparatus_41" data-app-id="apparatus_41">
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">there were</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">there were</span></div>
+                                            
+                     </div><span class="textcontent">petticoats under them. The strangest figures we saw were the Slovaks, who 
+                                            </span><div style="display:inline" class="apparatus apparatus_42" data-app-id="apparatus_42">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">are</span></div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">more 
+                                            barbarian than the rest, with their big
+                                            </span><div style="display:inline" class="apparatus apparatus_43" data-app-id="apparatus_43">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">cow-boy</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo ocean" data-reading-wits="charlotte times buffalo ocean"><span class="textcontent">cowboy</span></div>
+                                            
+                     </div><span class="textcontent">hats, great baggy dirty-white trousers, white linen shirts, and enormous heavy leather belts, nearly a 
+                                            foot wide, all studded over with brass nails. They wore high boots, with their trousers tucked into them,
+                        and had long black hair and heavy black
+                                            </span><div style="display:inline" class="apparatus apparatus_44" data-app-id="apparatus_44">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">mustaches.</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">moustaches</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            They are very picturesque, but do not look prepossessing.
+                                            </span><div style="display:inline" class="apparatus apparatus_45" data-app-id="apparatus_45">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                          They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo ocean" data-reading-wits="charlotte buffalo ocean">
+                           <del><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                             They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_46" data-app-id="apparatus_46">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">FINDS LETTER FROM</span><div class="linebreak"></div><span class="textcontent">COUNT AT HOTEL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            It was on the dark side of twilight when we got to Bistritz, which is a very interesting old place. Being
+                        practically on the frontier&#8212;for the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_47" data-app-id="apparatus_47">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">leads from it into Bukovina&#8212;it has had a very stormy existence, and it certainly shows marks of it. Fifty years ago a series
+                        of great fires took 
+                                            place, which made terrible havoc on five separate occasions. At the very beginning of the seven-teenth
+                        century it underwent a siege of three weeks and lost 
+                                            13,000 people, the casualties of war proper being assisted by famine and disease.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Count Dracula had directed me to go to the Golden Krone 
+                                            </span><div style="display:inline" class="apparatus apparatus_48" data-app-id="apparatus_48">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">hotel</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">Hotel</span></div>
+                                            
+                     </div><span class="textcontent">which I found, to my great delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways
+                        of the country. I was evidently 
+                                            expected, for when I got near the door I faced a cheery- looking elderly woman in the usual peasant dress&#8212;white
+                        undergarment with long double apron, front, and back, of
+                                            </span><div style="display:inline" class="apparatus apparatus_49" data-app-id="apparatus_49">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">colored</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">coloured</span></div>
+                                            
+                     </div><span class="textcontent">stuff fitting almost too tight for modesty. When I came close she bowed and said, &#8220;The Herr 
+                                            </span><div style="display:inline" class="apparatus apparatus_50" data-app-id="apparatus_50">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">English-Man</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Englishman</span></div>
+                                            
+                     </div><span class="textcontent">?&#8221; &#8220;Yes,&#8221; I said, "Jonathan Harker." She smiled, and gave some message to an elderly man in white
+                                            </span><div style="display:inline" class="apparatus apparatus_51" data-app-id="apparatus_51">
+                                                
+                        <div class="reading novel ocean charlotte times" data-reading-wits="novel ocean charlotte times"><span class="textcontent">shirtsleeves</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">shirt sleeves</span></div>
+                                            
+                     </div><span class="textcontent">, who had followed her to the door. He went, but immediately returned with a letter:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "My Friend.&#8212;Welcome to the Carpathians. I am anxiously expecting you. Sleep well
+                                            </span><div style="display:inline" class="apparatus apparatus_52" data-app-id="apparatus_52">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">tonight.</span></div>
+                                            
+                     </div><span class="textcontent">At
+                                            </span><div style="display:inline" class="apparatus apparatus_53" data-app-id="apparatus_53">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">three</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">3</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_54" data-app-id="apparatus_54">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-morrow</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">tomorrow</span></div>
+                                            
+                     </div><span class="textcontent">the diligence will start for Bukovina; a place on it is kept for you. At the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_55" data-app-id="apparatus_55">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo times" data-reading-wits="charlotte novel buffalo times"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">my carriage will await you and will bring you to me. I trust that your journey from London has been a happy one, and that
+                        you will enjoy your stay in my beautiful land. 
+                                            </span><div style="display:inline" class="apparatus apparatus_56" data-app-id="apparatus_56">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"Dracula."</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Your friend. DRACULA."</span></div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">"Your friend, DRACULA."</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_57" data-app-id="apparatus_57">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">REFUSED INFORMATION</span><div class="linebreak"></div><span class="textcontent">OF COUNT OR CASTLE.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            4 May.&#8212;l found that my landlord had got a letter from the Count, directing him to secure the best place
+                        on the coach for me; but on making inquiries as to details 
+                                            he seemed somewhat reticent, and pretended that he could not understand my German. 
+                                            </span><div style="display:inline" class="apparatus apparatus_58" data-app-id="apparatus_58">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                              he did.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                                 he did.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">He and his wife, the old lady who had received me, looked at each other in a frightened sort of way. He mumbled out that the
+                        money had been sent in a letter, 
+                                            and that was all he knew. When I asked him if he knew Count Dracula, and could tell me anything of his
+                        castle, both he and his wife crossed themselves, and, saying that 
+                                            they knew nothing at all, simply refused to speak further. It was so near the time of starting that I
+                        had no time to ask any one else, for it was all very mysterious and 
+                                            not by any means comforting.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Just before I was leaving, the old lady came up to my room and said in a very hysterical way:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Must you go? Oh! young Herr, must you go?" She was in such an excited state that she seemed to have lost
+                        her grip of what German she knew, and mixed it all up with some 
+                                            other language which I did not know
+                                            </span><div style="display:inline" class="apparatus apparatus_59" data-app-id="apparatus_59">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">at all.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">at all.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I was just able to follow her by asking many questions. When I told her that I must go at once, and that I was engaged on
+                        important business, she asked again:
+                                            </span><div class="apparatus apparatus_60" data-app-id="apparatus_60">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CONTINUES JOURNEY</span><div class="linebreak"></div><span class="textcontent">DESPITE WARNINGS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_61" data-app-id="apparatus_61">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">"Dou</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo novel charlotte times" data-reading-wits="buffalo novel charlotte times"><span class="textcontent">"Do</span></div>
+                                            
+                     </div><span class="textcontent">you know what day it is?" I answered that it was the 
+                                            </span><div style="display:inline" class="apparatus apparatus_62" data-app-id="apparatus_62">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">fourth</span></div>
+                                                
+                        <div class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">4th</span></div>
+                                            
+                     </div><span class="textcontent">of May. She shook her head as she said again:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Oh, yes!
+                                            </span><div style="display:inline" class="apparatus apparatus_63" data-app-id="apparatus_63">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">I know that! I know that, but</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">I know that, I know that! But</span></div>
+                                            
+                     </div><span class="textcontent">do you know what day it is?" On my saying that I did not understand, she went on:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "It is the eve of St. George's Day. Do you not know that
+                                            </span><div style="display:inline" class="apparatus apparatus_64" data-app-id="apparatus_64">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean" data-reading-wits="times buffalo ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">when the clock strikes midnight, all the evil things in the world will have full sway? Do you know where you are going, and
+                        what you are going to?"
+                                            </span><div style="display:inline" class="apparatus apparatus_65" data-app-id="apparatus_65">
+                                                
+                        <div style="display:inline" class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">She</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">She</span></div>
+                                            
+                     </div><span class="textcontent">was in such evident distress that I tried to comfort her, but without effect. Finally she went down on her knees and implored
+                        me not to go; at least 
+                                            to wait a day or two before starting. It was all very ridiculous but I did not feel comfortable. However,
+                        there was business to be done, and I could allow nothing 
+                                            to interfere with it. I therefore tried to raise her up, and said, as gravely as I could, that I thanked
+                        her, but my duty was imperative, and that I must go. 
+                                            She then rose and dried her eyes, and taking a crucifix from her neck offered it to me. I did not know
+                        what to do, for, as an English 
+                                            </span><div style="display:inline" class="apparatus apparatus_66" data-app-id="apparatus_66">
+                                                
+                        <div class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Churchman,</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">churchman,</span></div>
+                                            
+                     </div><span class="textcontent">I have been taught to regard such things as in some measure idolatrous, and yet it seemed so ungracious to refuse an old lady
+                        meaning so well and in such a 
+                                            state of mind. She saw, I suppose, the doubt in my face, for she put the rosary 
+                                            </span><div style="display:inline" class="apparatus apparatus_67" data-app-id="apparatus_67">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times charlotte" data-reading-wits="novel buffalo times charlotte"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck, and said, "For your mother's sake," and went out of the room. I am writing up this part of the diary whilst I am
+                        waiting for the coach, which is, 
+                                            of course, late; and the crucifix is still 
+                                            </span><div style="display:inline" class="apparatus apparatus_68" data-app-id="apparatus_68">
+                                                
+                        <div style="display:inline" class="reading novel times buffalo" data-reading-wits="novel times buffalo"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck. Whether it is the old lady's fear, or the many ghostly traditions of this place, or the crucifix itself, I do not
+                        know, but I am not feeling nearly 
+                                            as easy in my mind as usual. If this book should ever reach Mina before I do, let it bring my
+                                            </span><div style="display:inline" class="apparatus apparatus_69" data-app-id="apparatus_69">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">good-bye.</span></div>
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">good-by.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">goodby.</span></div>
+                                            
+                     </div><span class="textcontent">Here comes the coach!
+                                            </span><div class="apparatus apparatus_70" data-app-id="apparatus_70">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PEASANT SUPERSTITIONS</span><div class="linebreak"></div><span class="textcontent">CAUSE OF WORRY.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            5 May. The Castle.&#8212;The
+                                            </span><div style="display:inline" class="apparatus apparatus_71" data-app-id="apparatus_71">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean charlotte" data-reading-wits="times buffalo ocean charlotte"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">of the morning has passed, and the sun is high over the distant horizon, which seems jagged, whether with trees or hills I
+                        know not, for it is so far off that 
+                                            big things and little are mixed. I am not sleepy, and, as I am not to be called till I awake naturally
+                        I write till sleep comes. There are many odd things to put down, 
+                                            and, lest who reads them may fancy that I dined too well before I left Bistritz, let me put down my dinner
+                        exactly. I dined on what they
+                                            </span><div style="display:inline" class="apparatus apparatus_72" data-app-id="apparatus_72">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">call</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean buffalo" data-reading-wits="times novel ocean buffalo"><span class="textcontent">called</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_73" data-app-id="apparatus_73">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">"robber steak"</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">robber steak</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;bits of bacon, onion, and beef, seasoned with red pepper, and strung on sticks and roasted over the fire, in the simple style
+                        of the London
+                                            </span><div style="display:inline" class="apparatus apparatus_74" data-app-id="apparatus_74">
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">cat's meat!</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">cats' meat.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">cat's meat.</span></div>
+                                            
+                     </div><span class="textcontent">The wine was Golden Mediasch, which produces a queer sting on the tongue, which is, however, not disagreeable. I had only
+                        a couple of glasses of this, and nothing else.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I got on the coach the driver had not taken his seat, and I saw him talking with the landlady. They
+                        were evidently talking of me, for every now and then they looked at me, 
+                                            and some of the people who were sitting on the bench outside the door&#8212;which they call by a name meaning
+                        
+                                            </span><div style="display:inline" class="apparatus apparatus_75" data-app-id="apparatus_75">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">&#8220;word-bearer"</span></div>
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">word bearer</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">word-bearer</span></div>
+                                            
+                     </div><span class="textcontent">-came and listened, and then looked at me, most of them pityingly. I could hear a lot of words often repeated, queer words,
+                        for there were many nationalities in the crowd;
+                                            so I quietly got my polyglot dictionary from my bag and looked them out. I must say they were not cheering
+                        to me, for amongst them were &#8220;Ordog&#8221;-Satan, &#8220;pokol&#8221;-hell, 
+                                            </span><div style="display:inline" class="apparatus apparatus_76" data-app-id="apparatus_76">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">"stregoica"</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"stregoico"</span></div>
+                                            
+                     </div><span class="textcontent">-witch, &#8220;vrolok&#8221; and &#8220;vlkoslak"-both of which mean the same thing, one being Slovak and the other Servian for something that
+                        is either
+                                            </span><div style="display:inline" class="apparatus apparatus_77" data-app-id="apparatus_77">
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">wers-wolf</span></span></div>
+                                                
+                        <div class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">were-wolf</span></div>
+                                            
+                     </div><span class="textcontent">or vampire.
+                                            </span><div style="display:inline" class="apparatus apparatus_78" data-app-id="apparatus_78">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_79" data-app-id="apparatus_79">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CROWD GIVES CHARM</span><div class="linebreak"></div><span class="textcontent">AGAINST ALL EVIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When we started, the crowd round the inn door, which had by this time swelled to a considerable size,
+                        all made the sign of the cross and pointed two fingers
+                                            </span><div style="display:inline" class="apparatus apparatus_80" data-app-id="apparatus_80">
+                                                
+                        <div class="reading times charlotte ocean" data-reading-wits="times charlotte ocean"><span class="textcontent">toward</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo novel" data-reading-wits="buffalo novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">me. With some difficulty I got a
+                                            </span><div style="display:inline" class="apparatus apparatus_81" data-app-id="apparatus_81">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">fellow-passenger</span></div>
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">fellow passenger</span></div>
+                                            
+                     </div><span class="textcontent">to tell me what they meant; he would not answer at first, but on learning that I was English, he explained that it was a charm
+                        or guard against the evil eye. 
+                                            This was not very pleasant for me, just starting for an unknown place to meet an unknown man; but every
+                        one seemed so kind-hearted, and so sorrowful, and so sympathetic 
+                                            that I could not
+                                            </span><div style="display:inline" class="apparatus apparatus_82" data-app-id="apparatus_82">
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">but</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">but</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_83" data-app-id="apparatus_83">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">be</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo novel" data-reading-wits="charlotte times buffalo novel"><span class="textcontent">be</span></div>
+                                            
+                     </div><span class="textcontent">touched. I shall never forget the last glimpse which I had of the
+                                            </span><div style="display:inline" class="apparatus apparatus_84" data-app-id="apparatus_84">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">innyard</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel buffalo" data-reading-wits="charlotte times novel buffalo"><span class="textcontent">inn-yard</span></div>
+                                            
+                     </div><span class="textcontent">and its crowd of picturesque figures, all crossing themselves, as they stood round the wide archway, with its background of
+                        rich foliage of oleander and orange 
+                                            trees in green tubs clustered in the
+                                            </span><div style="display:inline" class="apparatus apparatus_85" data-app-id="apparatus_85">
+                                                
+                        <div style="display:inline" class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">center</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                            
+                     </div><span class="textcontent">of the yard. Then our driver, whose wide linen drawers covered the whole front of the
+                                            </span><div style="display:inline" class="apparatus apparatus_86" data-app-id="apparatus_86">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">box seat</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo" data-reading-wits="charlotte novel buffalo"><span class="textcontent">box-seat</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;&#8221;gotza" they call them&#8212;cracked his big whip over his four small horses, which ran abreast, and we set off on our journey.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I soon lost sight and recollection of ghostly fears in the beauty of the scene as we drove along, although
+                        had I known the language, or rather languages, which my
+                                            </span><div style="display:inline" class="apparatus apparatus_87" data-app-id="apparatus_87">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">fellow passengers</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">fellow-passengers</span></div>
+                                            
+                     </div><span class="textcontent">were speaking, I might not have been able to throw them off so easily. Before us lay a green sloping land full of forests
+                        and woods, with here and there steep 
+                                            hills, crowned with clumps of trees or with
+                                            </span><div style="display:inline" class="apparatus apparatus_88" data-app-id="apparatus_88">
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">farm houses,</span></div>
+                                                
+                        <div class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">farmhouses,</span></div>
+                                            
+                     </div><span class="textcontent">the blank gable end
+                                            </span><div style="display:inline" class="apparatus apparatus_89" data-app-id="apparatus_89">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">of</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte novel buffalo" data-reading-wits="ocean charlotte novel buffalo"><span class="textcontent">to</span></div>
+                                            
+                     </div><span class="textcontent">the road. There was everywhere a bewildering mass of fruit blossom&#8212;apple, plum, pear, cherry; and as we drove by I could see
+                        the green grass under the trees 
+                                            spangled with the fallen petals. In and out
+                                            </span><div style="display:inline" class="apparatus apparatus_90" data-app-id="apparatus_90">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">among</span></div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">these green hills of what they call here the &#8220;Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_91" data-app-id="apparatus_91">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel buffalo" data-reading-wits="times charlotte novel buffalo"><span class="textcontent">Land"</span></div>
+                                            
+                     </div><span class="textcontent">ran the road, losing itself as it swept round the grassy curve, or was shut out by the straggling ends of pine woods, which
+                        here and there ran down the hillsides 
+                                            like tongues of flame. The road was rugged, but still we seemed to fly over it with a feverish haste.
+                        I could not understand then what the haste meant, but the driver 
+                                            was evidently bent on losing no time in reaching Borgo Prund. I was told that this road is in
+                                            </span><div style="display:inline" class="apparatus apparatus_92" data-app-id="apparatus_92">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">summertime</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">summer time</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">summer-time</span></div>
+                                            
+                     </div><span class="textcontent">excellent, but that it had not yet been put in order after the winter snows. In this respect it is different from the general
+                        run of roads in the Carpathians, for 
+                                            it is an old tradition that they are not to be kept in too good order. Of old the Hospadars would not
+                        repair them, lest the Turk should think that they were preparing to 
+                                            bring in foreign troops, and so hasten the war which was always really at loading point.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Beyond the green swelling hills of the Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_93" data-app-id="apparatus_93">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Land</span></div>
+                                            
+                     </div><span class="textcontent">rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves. Right and left of us they towered, with
+                        the afternoon sun falling full upon them 
+                                            and bringing out all the glorious
+                                            </span><div style="display:inline" class="apparatus apparatus_94" data-app-id="apparatus_94">
+                                                
+                        <div style="display:inline" class="reading novel buffalo" data-reading-wits="novel buffalo"><span class="textcontent">colours</span></div>
+                                                
+                        <div class="reading charlotte times ocean" data-reading-wits="charlotte times ocean"><span class="textcontent">colors</span></div>
+                                            
+                     </div><span class="textcontent">of this beautiful range, deep blue and purple in the shadows of the peaks, green and brown where grass and rock mingled, and
+                        an endless perspective of jagged rock 
+                                            and pointed crags, till these were themselves lost in the distance, where the snowy peaks rose grandly.
+                        Here and there seemed mighty rifts in the mountains, through which, 
+                                            as the sun began to sink, we saw now and again the white gleam of falling water. One of my companions
+                        touched my arm
+                                            </span><div style="display:inline" class="apparatus apparatus_95" data-app-id="apparatus_95">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo novel" data-reading-wits="ocean charlotte buffalo novel"><span class="textcontent">as</span></div>
+                                            
+                     </div><span class="textcontent">we swept round the base of a hill and opened up the lofty, snow-covered peak of
+                                            </span><div style="display:inline" class="apparatus apparatus_96" data-app-id="apparatus_96">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">a</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel buffalo charlotte ocean" data-reading-wits="novel buffalo charlotte ocean"><span class="textcontent">a</span></div>
+                                            
+                     </div><span class="textcontent">mountain, which seemed, as we wound on our serpentine way, to be right before us:
+                                            </span><div class="apparatus apparatus_97" data-app-id="apparatus_97">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">MEN AND WOMEN</span><div class="linebreak"></div><span class="textcontent">KNEEL BEFORE SHRINE.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            &#8220;Look! Isten szek!"&#8212;"God's seat!"&#8212;and he crossed himself reverently.
+                                            </span><div style="display:inline" class="apparatus apparatus_98" data-app-id="apparatus_98">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">we wound on our endless way, and the sun sank lower and lower behind us, the shadows of the evening began to creep round us.
+                        This was emphasised by the fact that 
+                                            the snowy
+                                            </span><div style="display:inline" class="apparatus apparatus_99" data-app-id="apparatus_99">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">mountain-top</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean"><span class="textcontent">mountain top</span></div>
+                                            
+                     </div><span class="textcontent">still held the sunset, and seemed to glow out with a delicate cool pink. Here and there we passed Cszeks and Slovaks, all
+                        in picturesque attire, but I noticed that 
+                                            goitre was painfully prevalent. By the roadside were many crosses, and as we swept by,
+                                            </span><div style="display:inline" class="apparatus apparatus_100" data-app-id="apparatus_100">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">all my companions</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo times novel" data-reading-wits="charlotte buffalo times novel"><span class="textcontent">my companions all</span></div>
+                                            
+                     </div><span class="textcontent">crossed themselves. Here and there was a peasant man or woman kneeling before a shrine, who did not even turn
+                                            </span><div style="display:inline" class="apparatus apparatus_101" data-app-id="apparatus_101">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times buffalo charlotte" data-reading-wits="novel times buffalo charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">as we approached, but seemed in the self-surrender of devotion to have neither eyes nor ears for the outer world. There were
+                        many things new to me: for instance,
+                                            </span><div style="display:inline" class="apparatus apparatus_102" data-app-id="apparatus_102">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">hay ricks</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">hay </span><span class="sic"><span class="textcontent">racks</span></span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">hay-ricks</span></div>
+                                            
+                     </div><span class="textcontent">in the trees, and here and there very beautiful masses of weeping birch, their white stems shining like silver through the
+                        delicate green of the leaves. Now and 
+                                            again we passed a
+                                            </span><div style="display:inline" class="apparatus apparatus_103" data-app-id="apparatus_103">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">leiter wagon</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times charlotte novel" data-reading-wits="buffalo times charlotte novel"><span class="textcontent">leiter-wagon</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;the ordinary peasant's cart&#8212;with its long, snake-like vertebra, calculated to suit the inequalities of the road. On this
+                                            </span><div style="display:inline" class="apparatus apparatus_104" data-app-id="apparatus_104">
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">sure to be seated quite a group of home-coming peasants, the Cszeks with their white, and the Slovaks with their
+                                            </span><div style="display:inline" class="apparatus apparatus_105" data-app-id="apparatus_105">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">coloured,</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte times buffalo" data-reading-wits="ocean charlotte times buffalo"><span class="textcontent">colored,</span></div>
+                                            
+                     </div><span class="textcontent">sheepskins, the latter carrying
+                                            </span><div style="display:inline" class="apparatus apparatus_106" data-app-id="apparatus_106">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">lance fashion</span></div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">lance-fashion</span></div>
+                                            
+                     </div><span class="textcontent">their long staves,
+                                            </span><div style="display:inline" class="apparatus apparatus_107" data-app-id="apparatus_107">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">with axe</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">with ax</span></div>
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and axes</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">at end. As the evening fell it began to get very cold, and the growing twilight seemed to merge into one dark mistiness the
+                        gloom of the trees, oak, beech, and pine, 
+                                            though in the valleys which ran deep between the spurs of the
+                                            </span><div style="display:inline" class="apparatus apparatus_108" data-app-id="apparatus_108">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">hill. As</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean buffalo novel" data-reading-wits="times ocean buffalo novel"><span class="textcontent">hills, as</span></div>
+                                            
+                     </div><span class="textcontent">we ascended through the
+                                            </span><div style="display:inline" class="apparatus apparatus_109" data-app-id="apparatus_109">
+                                                
+                        <div style="display:inline" class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">the dark firs stood out here and there against the background of late-lying snow. Sometimes, as the road was cut through the
+                        pine woods that seemed in the darkness 
+                                            to be closing down upon us, great masses of
+                                            </span><div style="display:inline" class="apparatus apparatus_110" data-app-id="apparatus_110">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">greyness,</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean buffalo" data-reading-wits="charlotte times ocean buffalo"><span class="textcontent">grayness,</span></div>
+                                            
+                     </div><span class="textcontent">which here and there bestrewed the trees, produced a peculiarly weird and solemn effect, which carried on the thoughts and
+                        grim fancies engendered earlier in the evening, when the falling sunset threw into strange relief 
+                                            </span><div style="display:inline" class="apparatus apparatus_111" data-app-id="apparatus_111">
+                                                
+                        <div style="display:inline" class="reading buffalo" data-reading-wits="buffalo">
+                           <div class="linebreak"></div>
+                           <div class="stanzabreak"></div>
+                           <ins class="add"><span class="textcontent">(To be continued tomorrow.)</span></ins>
+                           <div class="linebreak"></div>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div><span class="textcontent">the ghost-like clouds which
+                                            </span><div class="apparatus apparatus_112" data-app-id="apparatus_112">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the Carpathians seem to wind ceaselessly through the valleys. Sometimes the hills were so steep that, despite our driver's
+                        haste, the horses could only go slowly. I wished 
+                                            to get down and walk up them, as we do at home, but the driver would not hear of it. "No, no," he said;
+                        "you must not walk here; the dogs are too fierce"; and then he added, 
+                                            with what he evidently meant
+                                            </span><div class="apparatus apparatus_113" data-app-id="apparatus_113">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">for</span></del>
+                           <ins class="add"><span class="textcontent">to be</span></ins>
+                        </div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">for</span></div>
+                                            
+                     </div><span class="textcontent">grim pleasantry&#8212;for he looked
+                                            </span><div class="apparatus apparatus_114" data-app-id="apparatus_114">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">to catch the approving smile of the rest&#8212;"and you may have enough of such matters before you go to sleep." The only stop he
+                        would make was a moment's pause to light his lamps.
+                                            </span><div class="apparatus apparatus_115" data-app-id="apparatus_115">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PASSENGERS' EXCITEMENT</span><div class="linebreak"></div><span class="textcontent">CAUSE FOR SPEED.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When it grew dark there seemed to be some excitement
+                                            </span><div class="apparatus apparatus_116" data-app-id="apparatus_116">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">amongst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the passengers, and they kept speaking to him, one after the other, as though urging him to further speed. He lashed the
+                                            </span><div class="apparatus apparatus_117" data-app-id="apparatus_117">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">horse</span></div>
+                                                
+                        <div class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">horses</span></div>
+                                            
+                     </div><span class="textcontent">unmercifully with his long whip, and with wild cries of encouragement urged them on to further exertions. Then through the
+                        darkness I could see a sort of patch of
+                                            </span><div class="apparatus apparatus_118" data-app-id="apparatus_118">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div class="reading charlotte ocean times" data-reading-wits="charlotte ocean times"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">light ahead of us, as though there were a cleft in the hills. The excitement of the passengers grew greater; the crazy coach
+                        rocked on its great leather springs, and swayed like a boat 
+                                            tossed on a stormy sea. I had to hold on. The road grew more level, and we appeared to fly along. Then
+                        the mountains seemed to come nearer to us on each side and to frown down upon us; we were 
+                                            entering on the
+                                            </span><div class="apparatus apparatus_119" data-app-id="apparatus_119">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">Bergo</span></span><span class="textcontent"> pass.</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Borgo Pass.</span></div>
+                                            
+                     </div><span class="textcontent">One by one several of the passengers offered me gifts, which they pressed upon me with an
+                                            </span><div class="apparatus apparatus_120" data-app-id="apparatus_120">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">earnestness</span></del>
+                           <ins class="add"><span class="textcontent">eagerness</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">earnestness</span></div>
+                                            
+                     </div><span class="textcontent">which would take no denial; these were certainly of an odd and varied kind, but each was given in simple good faith, with
+                        a kindly word, and a blessing, and that strange mixture of 
+                                            fear-meaning movements which I had seen outside the hotel at Bistritz&#8212;the sign of the cross and the guard
+                        against the evil eye. Then, as we flew along, the driver leaned forward, and on each 
+                                            side the passengers, craning over the edge of the coach, peered eagerly into the darkness. It was evident
+                        that something very exciting was either happening or expected, but though I asked 
+                                            each passenger, no one would give me the slightest explanation. This state of excitement kept on for some
+                        little time; and at last we saw before us the 
+                                            </span><div class="apparatus apparatus_121" data-app-id="apparatus_121">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">opening out on the eastern side.
+                                            </span><div class="apparatus apparatus_122" data-app-id="apparatus_122">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">There</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">There</span></div>
+                                            
+                     </div><span class="textcontent">were dark, rolling clouds overhead, and in the air the heavy, oppressive sense of thunder. It seemed as though the mountain
+                        range had separated 
+                                            two atmospheres, and that now we had got into the thunderous one. I was now myself looking out for the
+                        conveyance which was to take me to the Count. Each moment I expected to see the glare 
+                                            of lamps through the blackness; but all was dark. The only light was the flickering rays of our own lamps,
+                        in which the steam from our
+                                            </span><div class="apparatus apparatus_123" data-app-id="apparatus_123">
+                                                
+                        <div class="reading times" data-reading-wits="times"><span class="textcontent">hard-driven</span></div>
+                                                
+                        <div class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">hard driven</span></div>
+                                            
+                     </div><span class="textcontent">horses rose in a white cloud.
+                                            </span><div class="apparatus apparatus_124" data-app-id="apparatus_124">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <ins class="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Don't miss the second installment which will appear in tomorrow's Times.</span></ins>
+                           <hr class="pagebreak"></hr>
+                                                   
+                           <ins class="add"><span class="textcontent">DRACULA</span><div class="linebreak"></div><span class="textcontent">OR</span><div class="linebreak"></div><span class="textcontent">THE VAMPIRE</span><div class="linebreak"></div><span class="textcontent">By BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">One of the most thrilling novels of the age, with love, intrigue, and adventure mingled in a gripping serial.</span><div class="linebreak"></div>
+                                                      <span class="emph"><span class="textcontent">Read It In THE TIMES Every Day</span></span><div class="linebreak"></div><span class="textcontent">PART I.-Continued.</span></ins>
+                           <div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_125" data-app-id="apparatus_125">
+                                                
+                        <div class="reading times" data-reading-wits="times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">We</span></div>
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">We</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_126" data-app-id="apparatus_126">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">We could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_127" data-app-id="apparatus_127">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">The</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">The</span></div>
+                                            
+                     </div><span class="textcontent">passengers drew back with a sigh of gladness, which seemed to mock my own disappointment. I was already thinking what I had
+                        best do, when the driver, looking at his watch, 
+                                            said to the others something which I could hardly hear, it was spoken so quietly and in so low a tone;
+                        I thought it was
+                                            </span><div class="apparatus apparatus_128" data-app-id="apparatus_128">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"an</span></div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">"An</span></div>
+                                            
+                     </div><span class="textcontent">hour less than the time." Then turning to me he said in German worse than my own:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "There is no
+                                            </span><div class="apparatus apparatus_129" data-app-id="apparatus_129">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">carriages</span></div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">carriage</span></div>
+                                            
+                     </div><span class="textcontent">here. The Herr is not expected after all. He will now come on to Bukovina, and return tomorrow or the next day
+                                            </span><div class="apparatus apparatus_130" data-app-id="apparatus_130">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">; better the next day.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">; better the next day.</span></div>
+                                            
+                     </div><span class="textcontent">"
+                                            </span><div class="apparatus apparatus_131" data-app-id="apparatus_131">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Whilst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">While</span></div>
+                                            
+                     </div><span class="textcontent">he was speaking
+                                            </span><div class="apparatus apparatus_132" data-app-id="apparatus_132">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">the</span></del>
+                           <ins class="add"><span class="textcontent">his</span></ins>
+                        </div>
+                                                
+                        <div class="reading charlotte times novel" data-reading-wits="charlotte times novel"><span class="textcontent">the</span></div>
+                                            
+                     </div><span class="textcontent">horses began to neigh and snort and plunge wildly, so that the driver had to hold them up. Then,
+                                            </span><div class="apparatus apparatus_133" data-app-id="apparatus_133">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">among</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">a chorus of screams from the peasants and a universal crossing of themselves, a caleche, with four horses,
+                                            </span><div class="apparatus apparatus_134" data-app-id="apparatus_134">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">drove up behind us,</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">drove up behind us,</span></div>
+                                            
+                     </div><span class="textcontent">overtook us, and drew up beside the coach. I could see from the flash of our lamps, as the rays fell on them, that the horses
+                        were
+                                            </span><div class="apparatus apparatus_135" data-app-id="apparatus_135">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">coal black</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">coal-black</span></div>
+                                            
+                     </div><span class="textcontent">and splendid animals. They were driven by a tall man, with a long brown beard and a great black hat, which seemed to hide
+                        his face from us. I could only see the gleam 
+                                            of a pair of very bright eyes, which seemed red in the lamplight, as he turned to us. He said to the driver:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "You are early
+                                            </span><div class="apparatus apparatus_136" data-app-id="apparatus_136">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">my friend." The man stammered in reply:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The English Herr was in a hurry," to which the stranger replied:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "That is why, I suppose, you wished him to go on to Bukovina. You cannot deceive me, my friend ; I know
+                        too much, and my horses are swift." As he spoke he smiled, 
+                                            and the lamplight fell on a hard-looking mouth, with very red lips and sharp-looking teeth, as white as
+                        ivory. One of my companions whispered to another the line from Burger's
+                                            </span><div class="apparatus apparatus_137" data-app-id="apparatus_137">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"Lenoro:"</span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">"Lenore:"</span></div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div class="apparatus apparatus_138" data-app-id="apparatus_138">
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">"Denn die Todten reiten schnell"&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">("For the dead travel fast.")</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Denn die Todten reiten schnell&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">(For the dead travel fast.)</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_139" data-app-id="apparatus_139">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE STRANGE JOURNEY</span><div class="linebreak"></div><span class="textcontent">INTO</span><span class="sic"><span class="textcontent"> BUKOWINA </span></span><span class="textcontent">BEGINS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            The strange driver evidently heard the words, for he looked up with a gleaming smile. The passenger turned
+                        his face away, at the same time putting out his two fingers and 
+                                            crossing himself. "Give me the Herr's luggage," said the driver; and with
+                                            </span><div class="apparatus apparatus_140" data-app-id="apparatus_140">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">exceedingly</span></span></div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">exceeding</span></div>
+                                            
+                     </div><span class="textcontent">alacrity my bags were handed out and put in the caleche. Then I descended from the side of the coach, as the caleche was close
+                        alongside, the driver helping me with a 
+                                            hand which caught my arm in a grip of steel; his strength must have been prodigious. Without a word he
+                        shook his reins, the horses turned, and we swept into the darkness of the 
+                                            </span><div class="apparatus apparatus_141" data-app-id="apparatus_141">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass.</span></div>
+                                                
+                        <div class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">Pass.</span></div>
+                                            
+                     </div><span class="textcontent">As I looked back I saw the steam from the horses of the coach by the light of the lamps, and projected against it the figures
+                        of my late companions crossing themselves. 
+                                            Then the driver cracked his whip and called to
+                                            </span><div class="apparatus apparatus_142" data-app-id="apparatus_142">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">his</span></del>
+                           <ins class="add"><span class="textcontent">the</span></ins>
+                        </div>
+                                                
+                        <div class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">his</span></div>
+                                            
+                     </div><span class="textcontent">horses, and off they swept on their way to Bukovina.
+                                            </span><div class="apparatus apparatus_143" data-app-id="apparatus_143">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">they sank into the darkness I felt a strange chill, and a lonely feeling came over me; but a cloak was thrown over my shoulders,
+                        and a rug
+                                            </span><div class="apparatus apparatus_144" data-app-id="apparatus_144">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">across</span></del>
+                           <ins class="add"><span class="textcontent">over</span></ins>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">across</span></div>
+                                            
+                     </div><span class="textcontent">my knees, and the driver said in excellent German:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The night is chill,
+                                            </span><div class="apparatus apparatus_145" data-app-id="apparatus_145">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">Mein</span></div>
+                                                
+                        <div class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">mein</span></div>
+                                            
+                     </div><span class="textcontent">Herr, and my master the Count bade me take all care of you. There is a flask of slivovitz (the plum brandy of the country)
+                        underneath the seat, if you should 
+                                            require it." I did not take any, but it was a comfort to know it was there all the same. I felt a little
+                        strangely, and not a little frightened. I think had there been 
+                                            any alternative I should have taken it, instead of prosecuting that unknown night journey. The carriage
+                        went at a hard pace straight along, then we made a complete turn 
+                                            and went along another straight road. It seemed to me that we were simply going over and over the same
+                        ground again; and so I took note of some salient point, and found 
+                                            that this was so. I would have liked to have asked the driver what this all meant, but I really feared
+                        to do so, for I thought that, placed as I was, any protest would 
+                                            have had no effect in case there had been an intention to delay.
+                                            </span><div class="apparatus apparatus_146" data-app-id="apparatus_146">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">By and by,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">By-and-by,</span></div>
+                                            
+                     </div><span class="textcontent">however, as I was curious to know how time was passing, I struck a match, and by its flame looked at my watch; it was
+                                            </span><div class="apparatus apparatus_147" data-app-id="apparatus_147">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">within</span></del>
+                        </div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">within</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes of midnight.
+                                            </span><div class="apparatus apparatus_148" data-app-id="apparatus_148">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                                 
+                                                             I waited with a sick feeling of suspense.</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                              
+                                                          I waited with a sick feeling of suspense.</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_149" data-app-id="apparatus_149">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">HOWLING WOLVES ADD</span><div class="linebreak"></div><span class="textcontent">TO THE TRAVELER'S PERIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Then a dog began to howl somewhere in a
+                                            </span><div class="apparatus apparatus_150" data-app-id="apparatus_150">
+                                                
+                        <div class="reading novel ocean" data-reading-wits="novel ocean"><span class="textcontent">farmhouse</span></div>
+                                                
+                        <div class="reading times charlotte" data-reading-wits="times charlotte"><span class="textcontent">farm house</span></div>
+                                            
+                     </div><span class="textcontent">far down the road&#8212;a long, agonised wailing, as if from fear. The sound was taken up by
+                                            </span><div class="apparatus apparatus_151" data-app-id="apparatus_151">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">another dog, and then</span></del>
+                        </div>
+                                                
+                        <div class="reading times ocean novel" data-reading-wits="times ocean novel"><span class="textcontent">another dog, and then</span></div>
+                                            
+                     </div><span class="textcontent">another and another, till, borne on the wind which now sighed softly through the
+                                            </span><div class="apparatus apparatus_152" data-app-id="apparatus_152">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">a wild howling began, which seemed to come from all over the country, 
+                                            </span><div class="apparatus apparatus_153" data-app-id="apparatus_153">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                                 rear, but 
+                                                             the driver spoke to them soothingly, and they quieted down, but shivered and sweated as though
+                                 after a run-away from sudden fright.</span></del>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                              rear, but the driver 
+                                                          spoke to them soothingly, and they quieted down, but shivered and sweated as though after a run-away
+                              from sudden fright.</span></div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_154" data-app-id="apparatus_154">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Then,</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">Then,</span></div>
+                                            
+                     </div><span class="textcontent">far off in the distance, from the mountains on each side of us began a louder and a sharper howling-that of wolves-which affected
+                        both the horses and myself in the 
+                                            same way-for I was minded to jump from the caleche and run,
+                                            </span><div class="apparatus apparatus_155" data-app-id="apparatus_155">
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">whilst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">while</span></div>
+                                            
+                     </div><span class="textcontent">they reared
+                                            </span><div class="apparatus apparatus_156" data-app-id="apparatus_156">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">again</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">again</span></div>
+                                            
+                     </div><span class="textcontent">and plunged madly, so that the driver had to use all his great strength to keep them from bolting.
+                                            </span><div class="apparatus apparatus_157" data-app-id="apparatus_157">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">In</span></div>
+                                                
+                        <div class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">In</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes
+                                            </span><div class="apparatus apparatus_158" data-app-id="apparatus_158">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">, however,</span></del>
+                        </div>
+                                                
+                        <div class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">, however,</span></div>
+                                            
+                     </div><span class="textcontent">my
+                                            </span><div class="apparatus apparatus_159" data-app-id="apparatus_159">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">own</span></del>
+                        </div>
+                                                
+                        <div class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">own</span></div>
+                                            
+                     </div><span class="textcontent">ears got accustomed to the sound, and the horses so far became quiet that the driver was able to descend and to stand before
+                        them. He
+                                            </span><div class="apparatus apparatus_160" data-app-id="apparatus_160">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">patted</span></span></div>
+                                                
+                        <div class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">petted</span></div>
+                                            
+                     </div><span class="textcontent">and soothed them,
+                                            </span><div class="apparatus apparatus_161" data-app-id="apparatus_161">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel ocean" data-reading-wits="times novel ocean"><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></div>
+                                            
+                     </div><span class="textcontent">and with extraordinary effect, for under his caresses they became quite manageable again, though they still trembled. The
+                        driver again took his seat, and shaking his 
+                                            reins, started off at a great pace. This time, after going to the far side of the
+                                            </span><div class="apparatus apparatus_162" data-app-id="apparatus_162">
+                                                
+                        <div class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">he suddenly turned down a narrow roadway which ran sharply to the right.
+                                            </span><div class="apparatus apparatus_163" data-app-id="apparatus_163">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">(To Be Continued.)</span></ins>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_164" data-app-id="apparatus_164">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <ins class="add"><span class="textcontent">THE STRANGE STORY OF DRACULA</span><div class="linebreak"></div><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">
+                                                             (Copyright, 1897, by the Author.)</span><div class="linebreak"></div><span class="textcontent">CHAPTER I.-(Continued.)</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Soon we were hemmed in with trees, which in places arched right over the roadway till we passed as through
+                        a tunnel; and again great frowning rocks guarded us boldly on 
+                                            either side. Though we were in shelter, we could hear the rising wind, for it moaned and whistled through
+                        the rocks, and the branches of the trees crashed together as we 
+                                            swept along. It grew colder and colder still, and fine powdery snow began to fall, so that soon we and
+                        all around us were covered with a white blanket. The keen wind still 
+                                            carried the howling of the dogs, though this grew fainter as we went on our way. The baying of the wolves
+                        sounded nearer and nearer, as though they were closing round on us 
+                                            from every side. I grew dreadfully afraid, and the horses shared my
+                                            </span><div class="apparatus apparatus_165" data-app-id="apparatus_165">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <ins class="add"><span class="textcontent">; but the</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">. The</span></div>
+                                            
+                     </div><span class="textcontent">driver
+                                            </span><div class="apparatus apparatus_166" data-app-id="apparatus_166">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">however</span></del>
+                        </div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">however</span></div>
+                                            
+                     </div><span class="textcontent">was not in the least
+                                            </span><div class="apparatus apparatus_167" data-app-id="apparatus_167">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">disturbed. He</span></div>
+                                                
+                        <div class="reading novel times" data-reading-wits="novel times"><span class="textcontent">disturbed; he</span></div>
+                                            
+                     </div><span class="textcontent">kept turning his head to left and right, but I could not see anything through the darkness.
+                                            </span><div class="apparatus apparatus_168" data-app-id="apparatus_168">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE DRIVES FIGURES</span><div class="linebreak"></div><span class="textcontent">IN A WEIRD DREAM.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Suddenly, away on our left, I saw a faint flickering blue flame. The driver saw it at the same moment;
+                        he at once checked the horses, and, jumping to the ground, disappeared 
+                                            into the darkness. I did not know what to do, the less as the howling of the wolves grew closer ; but
+                        while I wondered the driver suddenly appeared again, and without a word 
+                                            took his seat, and we resumed our journey. I think I must have fallen asleep and kept dreaming of the
+                        incident, for it seemed to be repeated endlessly, and now looking back, 
+                                            it is like a sort of awful nightmare. Once the flame appeared so near the road, that even in the darkness
+                        around us I could watch the driver's motions. He went rapidly to where 
+                                            the blue flame arose&#8212;it must have been very faint, for it did not seem to illumine the place around it
+                        at all&#8212;and gathering a few stones, formed them into some device. Once there 
+                                            appeared a strange optical effect: when he stood between me and the flame he did not obstruct it, for
+                        I could see its ghostly flicker all the same. This startled me, but as the 
+                                            effect was only momentary, I took it that my eyes deceived me straining through the darkness. Then for
+                        a time there
+                                            </span><div class="apparatus apparatus_169" data-app-id="apparatus_169">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">were</span></del>
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">no blue flames, and we sped
+                                            </span><div class="apparatus apparatus_170" data-app-id="apparatus_170">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">onward</span></div>
+                                                
+                        <div class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">onwards</span></div>
+                                            
+                     </div><span class="textcontent">onwards through the gloom, with the howling of the wolves around us, as though they were following in a moving circle.
+                                            </span><div class="apparatus apparatus_171" data-app-id="apparatus_171">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">RING OF WOLVES</span><div class="linebreak"></div><span class="textcontent">SURROUND THE CARRIAGE</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            At last there came a time when the driver went further afield than he had yet gone, and during his absence,
+                        the horses began to tremble worse than ever and to snort and scream 
+                                            with fright. I could not see any cause for it, for the howling of the wolves had ceased altogether; but
+                        just then the moon, sailing through the black clouds, appeared behind the 
+                                            jagged crest of a beetling, pine-clad rock, and by its light I saw around us a ring of wolves, with white
+                        teeth and lolling red tongues, with long, sinewy limbs and shaggy hair. 
+                                            They were a hundred times more terrible in the grim silence which held them than even when they howled.
+                        For myself, I felt a sort of paralysis of fear. It is only when a man 
+                                            feels himself face to face with such horrors that he can understand their true import.
+                                            </span><div class="apparatus apparatus_172" data-app-id="apparatus_172">
+                                                
+                        <div class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <ins class="add"><span class="textcontent">Don't miss the third installment which will appear in tomorrow's Times.</span><hr class="pagebreak"></hr><span class="textcontent">DRACULA or The Vampire
+                                                         By Bram Stoker</span><div class="linebreak"></div><span class="textcontent">One of the Most Thrilling Novels of the Age-Love, Mystery, Intrigue, Adventure, Mingled in a</span><div class="linebreak"></div><span class="textcontent">Gripping Serial. Read It In THE TIMES Every Day.</span><div class="linebreak"></div><span class="textcontent">
+                                                         PART I-Continued.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All at once the wolves began to howl as though the moonlight had had some peculiar effect on them. The
+                        horses jumped about and reared, and looked helplessly round with eyes 
+                                            that rolled in a way painful to see; but the living ring of terror encompassed them on every side; and
+                        they had perforce to remain within it. I called to the coachman to come, 
+                                            for it seemed to me that our only chance was to try to break out through the ring and to aid his approach.
+                        I shouted and beat the side of the cal&egrave;che, hoping by the noise to 
+                                            scare the wolves from that side, so as to give him a chance of reaching the trap. How he came there, I
+                        know not, but I heard his voice raised in a tone of imperious command, 
+                                            and looking
+                                            </span><div class="apparatus apparatus_173" data-app-id="apparatus_173">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">toward</span></div>
+                                                
+                        <div class="reading times novel" data-reading-wits="times novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">the sound, saw him stand in the roadway. As he swept his long arms, as though brushing
+                                            </span><div class="apparatus apparatus_174" data-app-id="apparatus_174">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">aside</span></del>
+                           <ins class="add"><span class="textcontent">away</span></ins>
+                        </div>
+                                                
+                        <div class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">aside</span></div>
+                                            
+                     </div><span class="textcontent">some impalpable obstacle, the wolves fell back and back further still. Just then a heavy cloud passed across the face of the
+                        moon, so that we were again in darkness.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I could see again the driver was climbing into the caleche, and the wolves had disappeared. This
+                        was all so strange and uncanny that a dreadful fear came upon me, and I was 
+                                            afraid to speak or move. The time seemed interminable as we swept on our way, now in almost complete darkness,
+                        for the rolling clouds obscured the moon. We kept on ascending, 
+                                            with occasional periods of quick descent, but in the main always ascending. Suddenly, I became conscious
+                        of the fact that the driver was in the act of pulling up the horses in 
+                                            the courtyard of a vast ruined castle, from whose tall black windows came no ray of light, and whose broken
+                        battlements showed a jagged line against the moonlit sky.
+                                            </span><div class="apparatus apparatus_175" data-app-id="apparatus_175">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">[TO BE CONTINUED.]</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                              
+               </div>
+                       
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="times">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img><a title="Version times: The Washington Times">Version times: The Washington Times</a></div>
+            <div class="mssContent">
+                           
+               <div class="div">
+                                  
+                  <div class="head rend-center">
+                                         
+                     <div class="apparatus apparatus_1" data-app-id="apparatus_1">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">TO</span><div class="linebreak"></div><span class="textcontent">MY DEAR FRIEND</span><div class="linebreak"></div><span class="textcontent">HOMMY-BEG</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_2" data-app-id="apparatus_2">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">How these papers have been placed in sequence will be made manifest in the reading 
+                                                          of them. All needless matters have been eliminated, so that a history almost at variance with
+                              the 
+                                                          possibilities of later-day belief may stand forth as simple fact. There is throughout no statement
+                              
+                                                          of past things wherein memory may err, for all the records chosen are exactly contemporary, given
+                              
+                                                          from the standpoints and within the range of knowledge of those who made them.</span><hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_3" data-app-id="apparatus_3">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">THE STRANGE STORY OF </span></div>
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">Begin Today the Fascinating Story of Mystery</span><div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo ocean times" data-reading-wits="novel charlotte buffalo ocean times">
+                           <div class="linebreak"></div><span class="textcontent">DRACULA
+                                                          </span><div style="display:inline" class="apparatus apparatus_4" data-app-id="apparatus_4">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">!</span></div>
+                                                              
+                              <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent"> or The Vampire By Bram Stoker</span></div>
+                                                          
+                           </div>
+                                                   
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.
+                                                          </span><div class="apparatus apparatus_6" data-app-id="apparatus_6">
+                                                              
+                              <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">(Copyright, 1897, by the Author.)</span></div>
+                                                          
+                           </div>
+                                                   
+                        </div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">A STRONG STORY OF THE VAMPIRE.</span><div class="linebreak"></div><span class="textcontent">By Bram Stoker, the Dramatic Critic,</span><div class="linebreak"></div><span class="textcontent">
+                                                      Theatrical Manager and Author of "Miss</span><div class="linebreak"></div><span class="textcontent">Betty," "Under the Sunset," and Other</span><div class="linebreak"></div><span class="textcontent">Books.</span><div class="linebreak"></div><span class="textcontent">
+                                                      Copyright, 1897, by Bram Stoker.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Extraordinary Story of a Count Who Became</span><div class="linebreak"></div><span class="textcontent">A Vampire--One of the Literary Sen-</span><div class="linebreak"></div><span class="textcontent">
+                                                      sations of the Present Day.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">Copyright by Bram Stoker.</span></div>
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">One of the most thrilling novels of the age--love, finance, mystery, intrigue, adventure, mingled</span><div class="linebreak"></div><span class="textcontent">
+                                                      in a gripping serial. Read it in THE TIMES Every Day.</span></div>
+                                            
+                        <hr class="pagebreak"></hr>
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_8" data-app-id="apparatus_8">
+                                               
+                        <div class="reading novel ocean charlotte buffalo" data-reading-wits="novel ocean charlotte buffalo"><span class="textcontent">CHAPTER I.</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">PART I.</span><div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times" data-reading-wits="novel ocean charlotte buffalo times"><span class="textcontent">
+                                                      JONATHAN 
+                                                      </span><div style="display:inline" class="apparatus apparatus_9" data-app-id="apparatus_9">
+                                                          
+                              <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">HARPER'S</span></span></div>
+                                                          
+                              <div style="display:inline" class="reading charlotte novel ocean times" data-reading-wits="charlotte novel ocean times"><span class="textcontent">HARKER'S</span></div>
+                                                      
+                           </div><span class="textcontent">JOURNAL</span><div class="linebreak"></div>
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                        
+                     <div style="display:inline" class="apparatus apparatus_11" data-app-id="apparatus_11">
+                                               
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Kept in shorthand.)</span><div class="linebreak"></div>
+                        </div>
+                                               
+                        <div class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <del><span class="textcontent">(Kept in shorthand.)</span></del>
+                           <div class="linebreak"></div>
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_12" data-app-id="apparatus_12">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="emph"><span class="textcontent">3 May. Bistritz.</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">3 May. Bistritz.</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            &#8212;Left Munich at 8:35 
+                                                </span><div style="display:inline" class="apparatus apparatus_13" data-app-id="apparatus_13">
+                                                    
+                        <div style="display:inline" class="reading ocean charlotte buffalo times" data-reading-wits="ocean charlotte buffalo times"><span class="textcontent">p.m.</span></div>
+                                                    
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">P.M.</span></div>
+                                                
+                     </div><span class="textcontent">, on 1st May, arriving at Vienna early next morning
+                                                </span><div style="display:inline" class="apparatus apparatus_14" data-app-id="apparatus_14">
+                                                    
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></div>
+                                                    
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte">
+                           <del><span class="textcontent">; should have arrived at 6:46, but train was an hour late</span></del>
+                        </div>
+                                                
+                     </div><span class="textcontent">. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the 
+                                            little I could walk through the streets. I feared to go very far from the station, as we arrived late
+                        and would start as near 
+                                            the correct time as possible. The impression I had was that we were leaving the West and entering the
+                        East; the most 
+                                                </span><div style="display:inline" class="apparatus apparatus_15" data-app-id="apparatus_15">
+                                                    
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">western</span></div>
+                                                    
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Western</span></div>
+                                                
+                     </div><span class="textcontent">
+                                            of splendid bridges over the Danube, which is here of noble width and depth, took us among the traditions
+                        of Turkish rule.
+                                           </span><div style="display:inline" class="apparatus apparatus_16" data-app-id="apparatus_16">
+                                               
+                                               
+                        <div style="display:inline" class="reading novel ocean charlotte buffalo times emptyReading" data-reading-wits="novel ocean charlotte buffalo times">
+                                                   
+                                                  
+                        </div>
+                                           
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at
+                        the Hotel Royale. I 
+                                            had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but
+                        thirsty. 
+                                            (Mem., get recipe for Mina.) I asked the waiter, and he said it was called "paprika hendl," and that,
+                        as it was a national 
+                                            dish, I should be able to get it anywhere along the Carpathians. I found my smattering of German very
+                        useful here; indeed, 
+                                            I don't know how I should be able to get on without it.
+                                            </span><div style="display:inline" class="apparatus apparatus_17" data-app-id="apparatus_17">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">ATTEMPTS TO LOCATE</span><div class="linebreak"></div><span class="textcontent">THE CASTLE DRACULA.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Having had some time at my disposal when in London, I had visited the British 
+                                            </span><div style="display:inline" class="apparatus apparatus_18" data-app-id="apparatus_18">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">museum</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel buffalo charlotte" data-reading-wits="times novel buffalo charlotte"><span class="textcontent">Museum</span></div>
+                                            
+                     </div><span class="textcontent">, and made search among the books and maps 
+                                            in the library regarding Transylvania; it had struck me that some foreknowledge of the country could hardly
+                        fail to have some 
+                                            importance in dealing with a
+                                            </span><div style="display:inline" class="apparatus apparatus_19" data-app-id="apparatus_19">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">noble</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">nobleman</span></div>
+                                            
+                     </div><span class="textcontent"> of that country. I find that the district he named is in the extreme east of the country, 
+                                            just on the borders of three states, Transylvania, Moldavia and Bukovina, in the midst of the Carpathian
+                        mountains ; one of the 
+                                            wildest and least known portions of Europe. I was not able to light on any map or work giving the exact
+                        locality of
+                                            </span><div style="display:inline" class="apparatus apparatus_20" data-app-id="apparatus_20">
+                                                
+                        <div style="display:inline" class="reading times novel charlotte ocean" data-reading-wits="times novel charlotte ocean"><span class="textcontent">the</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">the</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">Castle 
+                                            Dracula, as there are no maps of this country as yet to compare with our own
+                                            </span><div style="display:inline" class="apparatus apparatus_21" data-app-id="apparatus_21">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Ordnance Survey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean buffalo times" data-reading-wits="charlotte ocean buffalo times"><span class="textcontent">ordnance survey</span></div>
+                                            
+                     </div><span class="textcontent">maps; but I found that Bistritz, 
+                                            the post town named by Count Dracula, is a fairly well-known place. I shall enter here some of my notes,
+                        as they may refresh my 
+                                            memory when I talk over my travels with Mina.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            In the population of Transylvania there are four distinct nationalities: Saxons in the 
+                                            </span><div style="display:inline" class="apparatus apparatus_22" data-app-id="apparatus_22">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">South</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">south</span></div>
+                                            
+                     </div><span class="textcontent">, and mixed with them the Wallachs, who are the descendants of the Dacians; Magyars in the
+                                            </span><div style="display:inline" class="apparatus apparatus_23" data-app-id="apparatus_23">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">West</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">west</span></div>
+                                            
+                     </div><span class="textcontent">and Szekelys in the
+                                            </span><div style="display:inline" class="apparatus apparatus_24" data-app-id="apparatus_24">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">East</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">and
+                                            </span><div style="display:inline" class="apparatus apparatus_25" data-app-id="apparatus_25">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">North</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">north</span></div>
+                                            
+                     </div><span class="textcontent">I am going among the latter, who claim to be descended from Attila and the Huns. This may be so, 
+                                            for when the Magyars conquered the country in the eleventh century they found the Huns settled in it.
+                        I read that every known superstition 
+                                            in the world is gathered into the horseshoe of the Carpathians, as if it were the
+                                            </span><div style="display:inline" class="apparatus apparatus_26" data-app-id="apparatus_26">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean buffalo times" data-reading-wits="ocean buffalo times"><span class="textcontent">center</span></div>
+                                            
+                     </div><span class="textcontent">of some sort of imaginative whirlpool; if so my stay may be very interesting.
+                                            </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the 
+                                                          </span><div style="display:inline" class="apparatus apparatus_27" data-app-id="apparatus_27">
+                                                              
+                              <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Count</span></div>
+                                                              
+                              <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">count</span></div>
+                                                          
+                           </div><span class="textcontent">all about them.)</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count all about them.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_29" data-app-id="apparatus_29">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">BEGINS LONG JOURNEY</span><div class="linebreak"></div><span class="textcontent">ON A SLOW TRAIN.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I did not sleep well, though my bed was comfortable enough, for I had all sorts of queer dreams. There
+                        was a dog howling all night under my window, 
+                                            which may have had something to do with it; or it may have been the paprika, for I had to drink up all
+                        the water in my carafe, and was still thirsty.
+                                            </span><div style="display:inline" class="apparatus apparatus_30" data-app-id="apparatus_30">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">Towards</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo charlotte ocean times" data-reading-wits="buffalo charlotte ocean times"><span class="textcontent">Toward</span></div>
+                                            
+                     </div><span class="textcontent">morning I slept and was wakened by the continuous knocking at my door, so I guess I must have been sleeping soundly then.
+                        I had for breakfast 
+                                            more paprika, and a sort of porridge of maize flour which they said was "mamaliga," and egg-plant stuffed
+                        with forcemeat, a very excellent dish, which 
+                                            they call &#8220;impletata."
+                                            </span><div style="display:inline" class="apparatus apparatus_31" data-app-id="apparatus_31">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., get recipe for this also.)</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., get recipe for this also.)</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to hurry breakfast, for the train started a little before
+                                            </span><div style="display:inline" class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">eight</span></div>
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">8
+                                                          </span><div class="apparatus apparatus_32" data-app-id="apparatus_32">
+                                                              
+                              <div class="reading buffalo" data-reading-wits="buffalo">
+                                 <ins class="add"><span class="textcontent">o'clock</span></ins>
+                              </div>
+                                                          
+                           </div>
+                        </div>
+                                            
+                     </div><span class="textcontent">, or rather it ought to have done so, for after rushing to the station at 7 : 30
+                                            </span><div class="apparatus apparatus_34" data-app-id="apparatus_34">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">o' clock</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">I had to sit in the carriage for more than an hour before we began to move. It seems to me that the further
+                                            </span><div style="display:inline" class="apparatus apparatus_35" data-app-id="apparatus_35">
+                                                
+                        <div class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">East</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">east</span></div>
+                                            
+                     </div><span class="textcontent">you go the more unpunctual are the trains. What ought they to be in China?
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All day long we seemed to dawdle through a country which was full of beauty 
+                                            </span><div style="display:inline" class="apparatus apparatus_36" data-app-id="apparatus_36">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">of every kind</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">of every kind</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">. 
+                                            </span><div style="display:inline" class="apparatus apparatus_37" data-app-id="apparatus_37">
+                                                
+                        <div class="reading buffalo charlotte" data-reading-wits="buffalo charlotte"><span class="textcontent">Some times</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times novel" data-reading-wits="ocean times novel"><span class="textcontent">Sometimes</span></div>
+                                            
+                     </div><span class="textcontent">we saw little towns or castles on the top of steep hills such as we see in old missals ; sometimes we ran by rivers and streams
+                        which seemed from 
+                                            the wide stony margin on each side of them to be subject to great floods. It takes a lot of water, and
+                        running strong, to sweep the outside edge of a 
+                                            river clear. At every station there were groups of people, sometimes crowds
+                                            </span><div style="display:inline" class="apparatus apparatus_38" data-app-id="apparatus_38">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">, and in all sorts of attire.</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">, and in all sorts of attire.</span><div class="linebreak"></div>
+                           </del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_39" data-app-id="apparatus_39">
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Some</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Some</span></div>
+                                            
+                     </div><span class="textcontent">of them were just like the peasants at home or those I saw coming through France and Germany, with short jackets and round
+                        
+                                            hats and home-made trousers; but others were very picturesque. The women looked pretty, except when you
+                        got near them, but they were very clumsy 
+                                            about the waist. They had all full white sleeves of some kind or other, and the most of them had big belts
+                        with a
+                                            </span><div style="display:inline" class="apparatus apparatus_40" data-app-id="apparatus_40">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">lit</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">lot</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            of strips of something fluttering 
+                                            from them like the dresses in a ballet, but of course
+                                            </span><div style="display:inline" class="apparatus apparatus_41" data-app-id="apparatus_41">
+                                                
+                        <div class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">there were</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">there were</span></div>
+                                            
+                     </div><span class="textcontent">petticoats under them. The strangest figures we saw were the Slovaks, who 
+                                            </span><div style="display:inline" class="apparatus apparatus_42" data-app-id="apparatus_42">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">are</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">more 
+                                            barbarian than the rest, with their big
+                                            </span><div style="display:inline" class="apparatus apparatus_43" data-app-id="apparatus_43">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">cow-boy</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo ocean" data-reading-wits="charlotte times buffalo ocean"><span class="textcontent">cowboy</span></div>
+                                            
+                     </div><span class="textcontent">hats, great baggy dirty-white trousers, white linen shirts, and enormous heavy leather belts, nearly a 
+                                            foot wide, all studded over with brass nails. They wore high boots, with their trousers tucked into them,
+                        and had long black hair and heavy black
+                                            </span><div style="display:inline" class="apparatus apparatus_44" data-app-id="apparatus_44">
+                                                
+                        <div class="reading ocean buffalo" data-reading-wits="ocean buffalo"><span class="textcontent">mustaches.</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">moustaches</span></div>
+                                            
+                     </div><span class="textcontent">
+                                            They are very picturesque, but do not look prepossessing.
+                                            </span><div style="display:inline" class="apparatus apparatus_45" data-app-id="apparatus_45">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                          They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></div>
+                                                
+                        <div class="reading charlotte buffalo ocean" data-reading-wits="charlotte buffalo ocean">
+                           <del><span class="textcontent">On the stage they would be set down at once as some old Oriental band of brigands. 
+                                                             They are, however, I am told, very harmless and rather wanting in natural self-assertion.</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_46" data-app-id="apparatus_46">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">FINDS LETTER FROM</span><div class="linebreak"></div><span class="textcontent">COUNT AT HOTEL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            It was on the dark side of twilight when we got to Bistritz, which is a very interesting old place. Being
+                        practically on the frontier&#8212;for the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_47" data-app-id="apparatus_47">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">leads from it into Bukovina&#8212;it has had a very stormy existence, and it certainly shows marks of it. Fifty years ago a series
+                        of great fires took 
+                                            place, which made terrible havoc on five separate occasions. At the very beginning of the seven-teenth
+                        century it underwent a siege of three weeks and lost 
+                                            13,000 people, the casualties of war proper being assisted by famine and disease.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Count Dracula had directed me to go to the Golden Krone 
+                                            </span><div style="display:inline" class="apparatus apparatus_48" data-app-id="apparatus_48">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">hotel</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">Hotel</span></div>
+                                            
+                     </div><span class="textcontent">which I found, to my great delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways
+                        of the country. I was evidently 
+                                            expected, for when I got near the door I faced a cheery- looking elderly woman in the usual peasant dress&#8212;white
+                        undergarment with long double apron, front, and back, of
+                                            </span><div style="display:inline" class="apparatus apparatus_49" data-app-id="apparatus_49">
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">colored</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">coloured</span></div>
+                                            
+                     </div><span class="textcontent">stuff fitting almost too tight for modesty. When I came close she bowed and said, &#8220;The Herr 
+                                            </span><div style="display:inline" class="apparatus apparatus_50" data-app-id="apparatus_50">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">English-Man</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Englishman</span></div>
+                                            
+                     </div><span class="textcontent">?&#8221; &#8220;Yes,&#8221; I said, "Jonathan Harker." She smiled, and gave some message to an elderly man in white
+                                            </span><div style="display:inline" class="apparatus apparatus_51" data-app-id="apparatus_51">
+                                                
+                        <div style="display:inline" class="reading novel ocean charlotte times" data-reading-wits="novel ocean charlotte times"><span class="textcontent">shirtsleeves</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">shirt sleeves</span></div>
+                                            
+                     </div><span class="textcontent">, who had followed her to the door. He went, but immediately returned with a letter:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "My Friend.&#8212;Welcome to the Carpathians. I am anxiously expecting you. Sleep well
+                                            </span><div style="display:inline" class="apparatus apparatus_52" data-app-id="apparatus_52">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night.</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">tonight.</span></div>
+                                            
+                     </div><span class="textcontent">At
+                                            </span><div style="display:inline" class="apparatus apparatus_53" data-app-id="apparatus_53">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">three</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">3</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_54" data-app-id="apparatus_54">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-morrow</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times buffalo" data-reading-wits="ocean times buffalo"><span class="textcontent">tomorrow</span></div>
+                                            
+                     </div><span class="textcontent">the diligence will start for Bukovina; a place on it is kept for you. At the Borgo
+                                            </span><div style="display:inline" class="apparatus apparatus_55" data-app-id="apparatus_55">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel buffalo times" data-reading-wits="charlotte novel buffalo times"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">my carriage will await you and will bring you to me. I trust that your journey from London has been a happy one, and that
+                        you will enjoy your stay in my beautiful land. 
+                                            </span><div style="display:inline" class="apparatus apparatus_56" data-app-id="apparatus_56">
+                                                
+                        <div class="reading novel" data-reading-wits="novel">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"Dracula."</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">Your friend. DRACULA."</span></div>
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">"Your friend, DRACULA."</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div><span class="textcontent">"Your friend,</span><div class="linebreak"></div><span class="textcontent">"DRACULA."</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_57" data-app-id="apparatus_57">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">REFUSED INFORMATION</span><div class="linebreak"></div><span class="textcontent">OF COUNT OR CASTLE.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            4 May.&#8212;l found that my landlord had got a letter from the Count, directing him to secure the best place
+                        on the coach for me; but on making inquiries as to details 
+                                            he seemed somewhat reticent, and pretended that he could not understand my German. 
+                                            </span><div style="display:inline" class="apparatus apparatus_58" data-app-id="apparatus_58">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                              he did.</span></div>
+                                                
+                        <div class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean">
+                           <del><span class="textcontent">This could not be true, because up to then he had understood it perfectly; at least, he answered my questions exactly as if
+                                 he did.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">He and his wife, the old lady who had received me, looked at each other in a frightened sort of way. He mumbled out that the
+                        money had been sent in a letter, 
+                                            and that was all he knew. When I asked him if he knew Count Dracula, and could tell me anything of his
+                        castle, both he and his wife crossed themselves, and, saying that 
+                                            they knew nothing at all, simply refused to speak further. It was so near the time of starting that I
+                        had no time to ask any one else, for it was all very mysterious and 
+                                            not by any means comforting.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Just before I was leaving, the old lady came up to my room and said in a very hysterical way:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Must you go? Oh! young Herr, must you go?" She was in such an excited state that she seemed to have lost
+                        her grip of what German she knew, and mixed it all up with some 
+                                            other language which I did not know
+                                            </span><div style="display:inline" class="apparatus apparatus_59" data-app-id="apparatus_59">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">at all.</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">at all.</span></del>
+                        </div>
+                                            
+                     </div><span class="textcontent">I was just able to follow her by asking many questions. When I told her that I must go at once, and that I was engaged on
+                        important business, she asked again:
+                                            </span><div style="display:inline" class="apparatus apparatus_60" data-app-id="apparatus_60">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CONTINUES JOURNEY</span><div class="linebreak"></div><span class="textcontent">DESPITE WARNINGS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_61" data-app-id="apparatus_61">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">"Dou</span></span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo novel charlotte times" data-reading-wits="buffalo novel charlotte times"><span class="textcontent">"Do</span></div>
+                                            
+                     </div><span class="textcontent">you know what day it is?" I answered that it was the 
+                                            </span><div style="display:inline" class="apparatus apparatus_62" data-app-id="apparatus_62">
+                                                
+                        <div class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">fourth</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">4th</span></div>
+                                            
+                     </div><span class="textcontent">of May. She shook her head as she said again:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "Oh, yes!
+                                            </span><div style="display:inline" class="apparatus apparatus_63" data-app-id="apparatus_63">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">I know that! I know that, but</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">I know that, I know that! But</span></div>
+                                            
+                     </div><span class="textcontent">do you know what day it is?" On my saying that I did not understand, she went on:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "It is the eve of St. George's Day. Do you not know that
+                                            </span><div style="display:inline" class="apparatus apparatus_64" data-app-id="apparatus_64">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean" data-reading-wits="times buffalo ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">when the clock strikes midnight, all the evil things in the world will have full sway? Do you know where you are going, and
+                        what you are going to?"
+                                            </span><div style="display:inline" class="apparatus apparatus_65" data-app-id="apparatus_65">
+                                                
+                        <div class="reading ocean buffalo charlotte" data-reading-wits="ocean buffalo charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">She</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">She</span></div>
+                                            
+                     </div><span class="textcontent">was in such evident distress that I tried to comfort her, but without effect. Finally she went down on her knees and implored
+                        me not to go; at least 
+                                            to wait a day or two before starting. It was all very ridiculous but I did not feel comfortable. However,
+                        there was business to be done, and I could allow nothing 
+                                            to interfere with it. I therefore tried to raise her up, and said, as gravely as I could, that I thanked
+                        her, but my duty was imperative, and that I must go. 
+                                            She then rose and dried her eyes, and taking a crucifix from her neck offered it to me. I did not know
+                        what to do, for, as an English 
+                                            </span><div style="display:inline" class="apparatus apparatus_66" data-app-id="apparatus_66">
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Churchman,</span></div>
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">churchman,</span></div>
+                                            
+                     </div><span class="textcontent">I have been taught to regard such things as in some measure idolatrous, and yet it seemed so ungracious to refuse an old lady
+                        meaning so well and in such a 
+                                            state of mind. She saw, I suppose, the doubt in my face, for she put the rosary 
+                                            </span><div style="display:inline" class="apparatus apparatus_67" data-app-id="apparatus_67">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times charlotte" data-reading-wits="novel buffalo times charlotte"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck, and said, "For your mother's sake," and went out of the room. I am writing up this part of the diary whilst I am
+                        waiting for the coach, which is, 
+                                            of course, late; and the crucifix is still 
+                                            </span><div style="display:inline" class="apparatus apparatus_68" data-app-id="apparatus_68">
+                                                
+                        <div style="display:inline" class="reading novel times buffalo" data-reading-wits="novel times buffalo"><span class="textcontent">round</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">around</span></div>
+                                            
+                     </div><span class="textcontent">my neck. Whether it is the old lady's fear, or the many ghostly traditions of this place, or the crucifix itself, I do not
+                        know, but I am not feeling nearly 
+                                            as easy in my mind as usual. If this book should ever reach Mina before I do, let it bring my
+                                            </span><div style="display:inline" class="apparatus apparatus_69" data-app-id="apparatus_69">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">good-bye.</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">good-by.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">goodby.</span></div>
+                                            
+                     </div><span class="textcontent">Here comes the coach!
+                                            </span><div style="display:inline" class="apparatus apparatus_70" data-app-id="apparatus_70">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PEASANT SUPERSTITIONS</span><div class="linebreak"></div><span class="textcontent">CAUSE OF WORRY.</span></ins>
+                        </div>
+                                            
+                     </div>    
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            5 May. The Castle.&#8212;The
+                                            </span><div style="display:inline" class="apparatus apparatus_71" data-app-id="apparatus_71">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo ocean charlotte" data-reading-wits="times buffalo ocean charlotte"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">of the morning has passed, and the sun is high over the distant horizon, which seems jagged, whether with trees or hills I
+                        know not, for it is so far off that 
+                                            big things and little are mixed. I am not sleepy, and, as I am not to be called till I awake naturally
+                        I write till sleep comes. There are many odd things to put down, 
+                                            and, lest who reads them may fancy that I dined too well before I left Bistritz, let me put down my dinner
+                        exactly. I dined on what they
+                                            </span><div style="display:inline" class="apparatus apparatus_72" data-app-id="apparatus_72">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">call</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean buffalo" data-reading-wits="times novel ocean buffalo"><span class="textcontent">called</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_73" data-app-id="apparatus_73">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">"robber steak"</span></div>
+                                                
+                        <div class="reading buffalo ocean charlotte" data-reading-wits="buffalo ocean charlotte"><span class="textcontent">robber steak</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;bits of bacon, onion, and beef, seasoned with red pepper, and strung on sticks and roasted over the fire, in the simple style
+                        of the London
+                                            </span><div style="display:inline" class="apparatus apparatus_74" data-app-id="apparatus_74">
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">cat's meat!</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">cats' meat.</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">cat's meat.</span></div>
+                                            
+                     </div><span class="textcontent">The wine was Golden Mediasch, which produces a queer sting on the tongue, which is, however, not disagreeable. I had only
+                        a couple of glasses of this, and nothing else.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I got on the coach the driver had not taken his seat, and I saw him talking with the landlady. They
+                        were evidently talking of me, for every now and then they looked at me, 
+                                            and some of the people who were sitting on the bench outside the door&#8212;which they call by a name meaning
+                        
+                                            </span><div style="display:inline" class="apparatus apparatus_75" data-app-id="apparatus_75">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">&#8220;word-bearer"</span></div>
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">word bearer</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">word-bearer</span></div>
+                                            
+                     </div><span class="textcontent">-came and listened, and then looked at me, most of them pityingly. I could hear a lot of words often repeated, queer words,
+                        for there were many nationalities in the crowd;
+                                            so I quietly got my polyglot dictionary from my bag and looked them out. I must say they were not cheering
+                        to me, for amongst them were &#8220;Ordog&#8221;-Satan, &#8220;pokol&#8221;-hell, 
+                                            </span><div style="display:inline" class="apparatus apparatus_76" data-app-id="apparatus_76">
+                                                
+                        <div style="display:inline" class="reading novel charlotte buffalo times" data-reading-wits="novel charlotte buffalo times"><span class="textcontent">"stregoica"</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"stregoico"</span></div>
+                                            
+                     </div><span class="textcontent">-witch, &#8220;vrolok&#8221; and &#8220;vlkoslak"-both of which mean the same thing, one being Slovak and the other Servian for something that
+                        is either
+                                            </span><div style="display:inline" class="apparatus apparatus_77" data-app-id="apparatus_77">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="sic"><span class="textcontent">wers-wolf</span></span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">were-wolf</span></div>
+                                            
+                     </div><span class="textcontent">or vampire.
+                                            </span><div style="display:inline" class="apparatus apparatus_78" data-app-id="apparatus_78">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo">
+                           <del><span class="textcontent">(Mem., I must ask the Count about these superstitions.)</span></del>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_79" data-app-id="apparatus_79">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">CROWD GIVES CHARM</span><div class="linebreak"></div><span class="textcontent">AGAINST ALL EVIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When we started, the crowd round the inn door, which had by this time swelled to a considerable size,
+                        all made the sign of the cross and pointed two fingers
+                                            </span><div style="display:inline" class="apparatus apparatus_80" data-app-id="apparatus_80">
+                                                
+                        <div style="display:inline" class="reading times charlotte ocean" data-reading-wits="times charlotte ocean"><span class="textcontent">toward</span></div>
+                                                
+                        <div class="reading buffalo novel" data-reading-wits="buffalo novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">me. With some difficulty I got a
+                                            </span><div style="display:inline" class="apparatus apparatus_81" data-app-id="apparatus_81">
+                                                
+                        <div style="display:inline" class="reading novel buffalo times" data-reading-wits="novel buffalo times"><span class="textcontent">fellow-passenger</span></div>
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">fellow passenger</span></div>
+                                            
+                     </div><span class="textcontent">to tell me what they meant; he would not answer at first, but on learning that I was English, he explained that it was a charm
+                        or guard against the evil eye. 
+                                            This was not very pleasant for me, just starting for an unknown place to meet an unknown man; but every
+                        one seemed so kind-hearted, and so sorrowful, and so sympathetic 
+                                            that I could not
+                                            </span><div style="display:inline" class="apparatus apparatus_82" data-app-id="apparatus_82">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <del><span class="textcontent">but</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">but</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_83" data-app-id="apparatus_83">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">be</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times buffalo novel" data-reading-wits="charlotte times buffalo novel"><span class="textcontent">be</span></div>
+                                            
+                     </div><span class="textcontent">touched. I shall never forget the last glimpse which I had of the
+                                            </span><div style="display:inline" class="apparatus apparatus_84" data-app-id="apparatus_84">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">innyard</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel buffalo" data-reading-wits="charlotte times novel buffalo"><span class="textcontent">inn-yard</span></div>
+                                            
+                     </div><span class="textcontent">and its crowd of picturesque figures, all crossing themselves, as they stood round the wide archway, with its background of
+                        rich foliage of oleander and orange 
+                                            trees in green tubs clustered in the
+                                            </span><div style="display:inline" class="apparatus apparatus_85" data-app-id="apparatus_85">
+                                                
+                        <div style="display:inline" class="reading buffalo times ocean" data-reading-wits="buffalo times ocean"><span class="textcontent">center</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">centre</span></div>
+                                            
+                     </div><span class="textcontent">of the yard. Then our driver, whose wide linen drawers covered the whole front of the
+                                            </span><div style="display:inline" class="apparatus apparatus_86" data-app-id="apparatus_86">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">box seat</span></div>
+                                                
+                        <div class="reading charlotte novel buffalo" data-reading-wits="charlotte novel buffalo"><span class="textcontent">box-seat</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;&#8221;gotza" they call them&#8212;cracked his big whip over his four small horses, which ran abreast, and we set off on our journey.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            I soon lost sight and recollection of ghostly fears in the beauty of the scene as we drove along, although
+                        had I known the language, or rather languages, which my
+                                            </span><div style="display:inline" class="apparatus apparatus_87" data-app-id="apparatus_87">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">fellow passengers</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">fellow-passengers</span></div>
+                                            
+                     </div><span class="textcontent">were speaking, I might not have been able to throw them off so easily. Before us lay a green sloping land full of forests
+                        and woods, with here and there steep 
+                                            hills, crowned with clumps of trees or with
+                                            </span><div style="display:inline" class="apparatus apparatus_88" data-app-id="apparatus_88">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">farm houses,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times ocean" data-reading-wits="novel charlotte times ocean"><span class="textcontent">farmhouses,</span></div>
+                                            
+                     </div><span class="textcontent">the blank gable end
+                                            </span><div style="display:inline" class="apparatus apparatus_89" data-app-id="apparatus_89">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">of</span></ins>
+                        </div>
+                                                
+                        <div class="reading ocean charlotte novel buffalo" data-reading-wits="ocean charlotte novel buffalo"><span class="textcontent">to</span></div>
+                                            
+                     </div><span class="textcontent">the road. There was everywhere a bewildering mass of fruit blossom&#8212;apple, plum, pear, cherry; and as we drove by I could see
+                        the green grass under the trees 
+                                            spangled with the fallen petals. In and out
+                                            </span><div style="display:inline" class="apparatus apparatus_90" data-app-id="apparatus_90">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">among</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">these green hills of what they call here the &#8220;Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_91" data-app-id="apparatus_91">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel buffalo" data-reading-wits="times charlotte novel buffalo"><span class="textcontent">Land"</span></div>
+                                            
+                     </div><span class="textcontent">ran the road, losing itself as it swept round the grassy curve, or was shut out by the straggling ends of pine woods, which
+                        here and there ran down the hillsides 
+                                            like tongues of flame. The road was rugged, but still we seemed to fly over it with a feverish haste.
+                        I could not understand then what the haste meant, but the driver 
+                                            was evidently bent on losing no time in reaching Borgo Prund. I was told that this road is in
+                                            </span><div style="display:inline" class="apparatus apparatus_92" data-app-id="apparatus_92">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">summertime</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">summer time</span></div>
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">summer-time</span></div>
+                                            
+                     </div><span class="textcontent">excellent, but that it had not yet been put in order after the winter snows. In this respect it is different from the general
+                        run of roads in the Carpathians, for 
+                                            it is an old tradition that they are not to be kept in too good order. Of old the Hospadars would not
+                        repair them, lest the Turk should think that they were preparing to 
+                                            bring in foreign troops, and so hasten the war which was always really at loading point.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Beyond the green swelling hills of the Mittel
+                                            </span><div style="display:inline" class="apparatus apparatus_93" data-app-id="apparatus_93">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">land</span></div>
+                                                
+                        <div style="display:inline" class="reading times buffalo charlotte novel" data-reading-wits="times buffalo charlotte novel"><span class="textcontent">Land</span></div>
+                                            
+                     </div><span class="textcontent">rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves. Right and left of us they towered, with
+                        the afternoon sun falling full upon them 
+                                            and bringing out all the glorious
+                                            </span><div style="display:inline" class="apparatus apparatus_94" data-app-id="apparatus_94">
+                                                
+                        <div class="reading novel buffalo" data-reading-wits="novel buffalo"><span class="textcontent">colours</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean" data-reading-wits="charlotte times ocean"><span class="textcontent">colors</span></div>
+                                            
+                     </div><span class="textcontent">of this beautiful range, deep blue and purple in the shadows of the peaks, green and brown where grass and rock mingled, and
+                        an endless perspective of jagged rock 
+                                            and pointed crags, till these were themselves lost in the distance, where the snowy peaks rose grandly.
+                        Here and there seemed mighty rifts in the mountains, through which, 
+                                            as the sun began to sink, we saw now and again the white gleam of falling water. One of my companions
+                        touched my arm
+                                            </span><div style="display:inline" class="apparatus apparatus_95" data-app-id="apparatus_95">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and</span></ins>
+                        </div>
+                                                
+                        <div class="reading ocean charlotte buffalo novel" data-reading-wits="ocean charlotte buffalo novel"><span class="textcontent">as</span></div>
+                                            
+                     </div><span class="textcontent">we swept round the base of a hill and opened up the lofty, snow-covered peak of
+                                            </span><div style="display:inline" class="apparatus apparatus_96" data-app-id="apparatus_96">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">a</span></del>
+                        </div>
+                                                
+                        <div class="reading novel buffalo charlotte ocean" data-reading-wits="novel buffalo charlotte ocean"><span class="textcontent">a</span></div>
+                                            
+                     </div><span class="textcontent">mountain, which seemed, as we wound on our serpentine way, to be right before us:
+                                            </span><div style="display:inline" class="apparatus apparatus_97" data-app-id="apparatus_97">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">MEN AND WOMEN</span><div class="linebreak"></div><span class="textcontent">KNEEL BEFORE SHRINE.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            &#8220;Look! Isten szek!"&#8212;"God's seat!"&#8212;and he crossed himself reverently.
+                                            </span><div style="display:inline" class="apparatus apparatus_98" data-app-id="apparatus_98">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div class="reading ocean charlotte buffalo" data-reading-wits="ocean charlotte buffalo"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">we wound on our endless way, and the sun sank lower and lower behind us, the shadows of the evening began to creep round us.
+                        This was emphasised by the fact that 
+                                            the snowy
+                                            </span><div style="display:inline" class="apparatus apparatus_99" data-app-id="apparatus_99">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">mountain-top</span></div>
+                                                
+                        <div class="reading buffalo charlotte ocean" data-reading-wits="buffalo charlotte ocean"><span class="textcontent">mountain top</span></div>
+                                            
+                     </div><span class="textcontent">still held the sunset, and seemed to glow out with a delicate cool pink. Here and there we passed Cszeks and Slovaks, all
+                        in picturesque attire, but I noticed that 
+                                            goitre was painfully prevalent. By the roadside were many crosses, and as we swept by,
+                                            </span><div style="display:inline" class="apparatus apparatus_100" data-app-id="apparatus_100">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">all my companions</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte buffalo times novel" data-reading-wits="charlotte buffalo times novel"><span class="textcontent">my companions all</span></div>
+                                            
+                     </div><span class="textcontent">crossed themselves. Here and there was a peasant man or woman kneeling before a shrine, who did not even turn
+                                            </span><div style="display:inline" class="apparatus apparatus_101" data-app-id="apparatus_101">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times buffalo charlotte" data-reading-wits="novel times buffalo charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">as we approached, but seemed in the self-surrender of devotion to have neither eyes nor ears for the outer world. There were
+                        many things new to me: for instance,
+                                            </span><div style="display:inline" class="apparatus apparatus_102" data-app-id="apparatus_102">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">hay ricks</span></div>
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo"><span class="textcontent">hay </span><span class="sic"><span class="textcontent">racks</span></span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">hay-ricks</span></div>
+                                            
+                     </div><span class="textcontent">in the trees, and here and there very beautiful masses of weeping birch, their white stems shining like silver through the
+                        delicate green of the leaves. Now and 
+                                            again we passed a
+                                            </span><div style="display:inline" class="apparatus apparatus_103" data-app-id="apparatus_103">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">leiter wagon</span></div>
+                                                
+                        <div style="display:inline" class="reading buffalo times charlotte novel" data-reading-wits="buffalo times charlotte novel"><span class="textcontent">leiter-wagon</span></div>
+                                            
+                     </div><span class="textcontent">&#8212;the ordinary peasant's cart&#8212;with its long, snake-like vertebra, calculated to suit the inequalities of the road. On this
+                                            </span><div style="display:inline" class="apparatus apparatus_104" data-app-id="apparatus_104">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte ocean" data-reading-wits="novel times charlotte ocean"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">sure to be seated quite a group of home-coming peasants, the Cszeks with their white, and the Slovaks with their
+                                            </span><div style="display:inline" class="apparatus apparatus_105" data-app-id="apparatus_105">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">coloured,</span></div>
+                                                
+                        <div style="display:inline" class="reading ocean charlotte times buffalo" data-reading-wits="ocean charlotte times buffalo"><span class="textcontent">colored,</span></div>
+                                            
+                     </div><span class="textcontent">sheepskins, the latter carrying
+                                            </span><div style="display:inline" class="apparatus apparatus_106" data-app-id="apparatus_106">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">lance fashion</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">lance-fashion</span></div>
+                                            
+                     </div><span class="textcontent">their long staves,
+                                            </span><div style="display:inline" class="apparatus apparatus_107" data-app-id="apparatus_107">
+                                                
+                        <div class="reading novel charlotte buffalo" data-reading-wits="novel charlotte buffalo"><span class="textcontent">with axe</span></div>
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">with ax</span></div>
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <ins class="add"><span class="textcontent">and axes</span></ins>
+                        </div>
+                                            
+                     </div><span class="textcontent">at end. As the evening fell it began to get very cold, and the growing twilight seemed to merge into one dark mistiness the
+                        gloom of the trees, oak, beech, and pine, 
+                                            though in the valleys which ran deep between the spurs of the
+                                            </span><div style="display:inline" class="apparatus apparatus_108" data-app-id="apparatus_108">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">hill. As</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean buffalo novel" data-reading-wits="times ocean buffalo novel"><span class="textcontent">hills, as</span></div>
+                                            
+                     </div><span class="textcontent">we ascended through the
+                                            </span><div style="display:inline" class="apparatus apparatus_109" data-app-id="apparatus_109">
+                                                
+                        <div class="reading buffalo ocean" data-reading-wits="buffalo ocean"><span class="textcontent">pass,</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">the dark firs stood out here and there against the background of late-lying snow. Sometimes, as the road was cut through the
+                        pine woods that seemed in the darkness 
+                                            to be closing down upon us, great masses of
+                                            </span><div style="display:inline" class="apparatus apparatus_110" data-app-id="apparatus_110">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">greyness,</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte times ocean buffalo" data-reading-wits="charlotte times ocean buffalo"><span class="textcontent">grayness,</span></div>
+                                            
+                     </div><span class="textcontent">which here and there bestrewed the trees, produced a peculiarly weird and solemn effect, which carried on the thoughts and
+                        grim fancies engendered earlier in the evening, when the falling sunset threw into strange relief 
+                                            </span><div class="apparatus apparatus_111" data-app-id="apparatus_111">
+                                                
+                        <div class="reading buffalo" data-reading-wits="buffalo">
+                           <div class="linebreak"></div>
+                           <div class="stanzabreak"></div>
+                           <ins class="add"><span class="textcontent">(To be continued tomorrow.)</span></ins>
+                           <div class="linebreak"></div>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div><span class="textcontent">the ghost-like clouds which
+                                            </span><div style="display:inline" class="apparatus apparatus_112" data-app-id="apparatus_112">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the Carpathians seem to wind ceaselessly through the valleys. Sometimes the hills were so steep that, despite our driver's
+                        haste, the horses could only go slowly. I wished 
+                                            to get down and walk up them, as we do at home, but the driver would not hear of it. "No, no," he said;
+                        "you must not walk here; the dogs are too fierce"; and then he added, 
+                                            with what he evidently meant
+                                            </span><div style="display:inline" class="apparatus apparatus_113" data-app-id="apparatus_113">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">for</span></del>
+                           <ins class="add"><span class="textcontent">to be</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">for</span></div>
+                                            
+                     </div><span class="textcontent">grim pleasantry&#8212;for he looked
+                                            </span><div style="display:inline" class="apparatus apparatus_114" data-app-id="apparatus_114">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">around</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">round</span></div>
+                                            
+                     </div><span class="textcontent">to catch the approving smile of the rest&#8212;"and you may have enough of such matters before you go to sleep." The only stop he
+                        would make was a moment's pause to light his lamps.
+                                            </span><div style="display:inline" class="apparatus apparatus_115" data-app-id="apparatus_115">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">PASSENGERS' EXCITEMENT</span><div class="linebreak"></div><span class="textcontent">CAUSE FOR SPEED.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When it grew dark there seemed to be some excitement
+                                            </span><div style="display:inline" class="apparatus apparatus_116" data-app-id="apparatus_116">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">amongst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">among</span></div>
+                                            
+                     </div><span class="textcontent">the passengers, and they kept speaking to him, one after the other, as though urging him to further speed. He lashed the
+                                            </span><div style="display:inline" class="apparatus apparatus_117" data-app-id="apparatus_117">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">horse</span></div>
+                                                
+                        <div class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">horses</span></div>
+                                            
+                     </div><span class="textcontent">unmercifully with his long whip, and with wild cries of encouragement urged them on to further exertions. Then through the
+                        darkness I could see a sort of patch of
+                                            </span><div style="display:inline" class="apparatus apparatus_118" data-app-id="apparatus_118">
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">grey</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte ocean times" data-reading-wits="charlotte ocean times"><span class="textcontent">gray</span></div>
+                                            
+                     </div><span class="textcontent">light ahead of us, as though there were a cleft in the hills. The excitement of the passengers grew greater; the crazy coach
+                        rocked on its great leather springs, and swayed like a boat 
+                                            tossed on a stormy sea. I had to hold on. The road grew more level, and we appeared to fly along. Then
+                        the mountains seemed to come nearer to us on each side and to frown down upon us; we were 
+                                            entering on the
+                                            </span><div style="display:inline" class="apparatus apparatus_119" data-app-id="apparatus_119">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="sic"><span class="textcontent">Bergo</span></span><span class="textcontent"> pass.</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Borgo Pass.</span></div>
+                                            
+                     </div><span class="textcontent">One by one several of the passengers offered me gifts, which they pressed upon me with an
+                                            </span><div style="display:inline" class="apparatus apparatus_120" data-app-id="apparatus_120">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">earnestness</span></del>
+                           <ins class="add"><span class="textcontent">eagerness</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">earnestness</span></div>
+                                            
+                     </div><span class="textcontent">which would take no denial; these were certainly of an odd and varied kind, but each was given in simple good faith, with
+                        a kindly word, and a blessing, and that strange mixture of 
+                                            fear-meaning movements which I had seen outside the hotel at Bistritz&#8212;the sign of the cross and the guard
+                        against the evil eye. Then, as we flew along, the driver leaned forward, and on each 
+                                            side the passengers, craning over the edge of the coach, peered eagerly into the darkness. It was evident
+                        that something very exciting was either happening or expected, but though I asked 
+                                            each passenger, no one would give me the slightest explanation. This state of excitement kept on for some
+                        little time; and at last we saw before us the 
+                                            </span><div style="display:inline" class="apparatus apparatus_121" data-app-id="apparatus_121">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">Pass</span></div>
+                                            
+                     </div><span class="textcontent">opening out on the eastern side.
+                                            </span><div style="display:inline" class="apparatus apparatus_122" data-app-id="apparatus_122">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">There</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">There</span></div>
+                                            
+                     </div><span class="textcontent">were dark, rolling clouds overhead, and in the air the heavy, oppressive sense of thunder. It seemed as though the mountain
+                        range had separated 
+                                            two atmospheres, and that now we had got into the thunderous one. I was now myself looking out for the
+                        conveyance which was to take me to the Count. Each moment I expected to see the glare 
+                                            of lamps through the blackness; but all was dark. The only light was the flickering rays of our own lamps,
+                        in which the steam from our
+                                            </span><div style="display:inline" class="apparatus apparatus_123" data-app-id="apparatus_123">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times"><span class="textcontent">hard-driven</span></div>
+                                                
+                        <div class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">hard driven</span></div>
+                                            
+                     </div><span class="textcontent">horses rose in a white cloud.
+                                            </span><div style="display:inline" class="apparatus apparatus_124" data-app-id="apparatus_124">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <ins class="add">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Don't miss the second installment which will appear in tomorrow's Times.</span></ins>
+                           <hr class="pagebreak"></hr>
+                                                   
+                           <ins class="add"><span class="textcontent">DRACULA</span><div class="linebreak"></div><span class="textcontent">OR</span><div class="linebreak"></div><span class="textcontent">THE VAMPIRE</span><div class="linebreak"></div><span class="textcontent">By BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">One of the most thrilling novels of the age, with love, intrigue, and adventure mingled in a gripping serial.</span><div class="linebreak"></div>
+                                                      <span class="emph"><span class="textcontent">Read It In THE TIMES Every Day</span></span><div class="linebreak"></div><span class="textcontent">PART I.-Continued.</span></ins>
+                           <div class="linebreak"></div>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_125" data-app-id="apparatus_125">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">We</span></div>
+                                                
+                        <div class="reading novel" data-reading-wits="novel"><span class="textcontent">We</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_126" data-app-id="apparatus_126">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">We could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">could see now the sandy road lying white before us, but there was on it no sign of a vehicle.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_127" data-app-id="apparatus_127">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">The</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">The</span></div>
+                                            
+                     </div><span class="textcontent">passengers drew back with a sigh of gladness, which seemed to mock my own disappointment. I was already thinking what I had
+                        best do, when the driver, looking at his watch, 
+                                            said to the others something which I could hardly hear, it was spoken so quietly and in so low a tone;
+                        I thought it was
+                                            </span><div style="display:inline" class="apparatus apparatus_128" data-app-id="apparatus_128">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"an</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">"An</span></div>
+                                            
+                     </div><span class="textcontent">hour less than the time." Then turning to me he said in German worse than my own:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "There is no
+                                            </span><div style="display:inline" class="apparatus apparatus_129" data-app-id="apparatus_129">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">carriages</span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">carriage</span></div>
+                                            
+                     </div><span class="textcontent">here. The Herr is not expected after all. He will now come on to Bukovina, and return tomorrow or the next day
+                                            </span><div style="display:inline" class="apparatus apparatus_130" data-app-id="apparatus_130">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">; better the next day.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">; better the next day.</span></div>
+                                            
+                     </div><span class="textcontent">"
+                                            </span><div style="display:inline" class="apparatus apparatus_131" data-app-id="apparatus_131">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">Whilst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">While</span></div>
+                                            
+                     </div><span class="textcontent">he was speaking
+                                            </span><div style="display:inline" class="apparatus apparatus_132" data-app-id="apparatus_132">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">the</span></del>
+                           <ins class="add"><span class="textcontent">his</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte times novel" data-reading-wits="charlotte times novel"><span class="textcontent">the</span></div>
+                                            
+                     </div><span class="textcontent">horses began to neigh and snort and plunge wildly, so that the driver had to hold them up. Then,
+                                            </span><div style="display:inline" class="apparatus apparatus_133" data-app-id="apparatus_133">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">among</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">amongst</span></div>
+                                            
+                     </div><span class="textcontent">a chorus of screams from the peasants and a universal crossing of themselves, a caleche, with four horses,
+                                            </span><div style="display:inline" class="apparatus apparatus_134" data-app-id="apparatus_134">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">drove up behind us,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">drove up behind us,</span></div>
+                                            
+                     </div><span class="textcontent">overtook us, and drew up beside the coach. I could see from the flash of our lamps, as the rays fell on them, that the horses
+                        were
+                                            </span><div style="display:inline" class="apparatus apparatus_135" data-app-id="apparatus_135">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">coal black</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">coal-black</span></div>
+                                            
+                     </div><span class="textcontent">and splendid animals. They were driven by a tall man, with a long brown beard and a great black hat, which seemed to hide
+                        his face from us. I could only see the gleam 
+                                            of a pair of very bright eyes, which seemed red in the lamplight, as he turned to us. He said to the driver:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "You are early
+                                            </span><div style="display:inline" class="apparatus apparatus_136" data-app-id="apparatus_136">
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">to-night,</span></div>
+                                                
+                        <div style="display:inline" class="reading times ocean" data-reading-wits="times ocean"><span class="textcontent">tonight,</span></div>
+                                            
+                     </div><span class="textcontent">my friend." The man stammered in reply:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The English Herr was in a hurry," to which the stranger replied:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "That is why, I suppose, you wished him to go on to Bukovina. You cannot deceive me, my friend ; I know
+                        too much, and my horses are swift." As he spoke he smiled, 
+                                            and the lamplight fell on a hard-looking mouth, with very red lips and sharp-looking teeth, as white as
+                        ivory. One of my companions whispered to another the line from Burger's
+                                            </span><div style="display:inline" class="apparatus apparatus_137" data-app-id="apparatus_137">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">"Lenoro:"</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">"Lenore:"</span></div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph">
+                                         
+                     <div style="display:inline" class="apparatus apparatus_138" data-app-id="apparatus_138">
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">"Denn die Todten reiten schnell"&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">("For the dead travel fast.")</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">Denn die Todten reiten schnell&#8212;</span><div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">(For the dead travel fast.)</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_139" data-app-id="apparatus_139">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE STRANGE JOURNEY</span><div class="linebreak"></div><span class="textcontent">INTO</span><span class="sic"><span class="textcontent"> BUKOWINA </span></span><span class="textcontent">BEGINS.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            The strange driver evidently heard the words, for he looked up with a gleaming smile. The passenger turned
+                        his face away, at the same time putting out his two fingers and 
+                                            crossing himself. "Give me the Herr's luggage," said the driver; and with
+                                            </span><div style="display:inline" class="apparatus apparatus_140" data-app-id="apparatus_140">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">exceedingly</span></span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">exceeding</span></div>
+                                            
+                     </div><span class="textcontent">alacrity my bags were handed out and put in the caleche. Then I descended from the side of the coach, as the caleche was close
+                        alongside, the driver helping me with a 
+                                            hand which caught my arm in a grip of steel; his strength must have been prodigious. Without a word he
+                        shook his reins, the horses turned, and we swept into the darkness of the 
+                                            </span><div style="display:inline" class="apparatus apparatus_141" data-app-id="apparatus_141">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="textcontent">pass.</span></div>
+                                                
+                        <div style="display:inline" class="reading novel charlotte times" data-reading-wits="novel charlotte times"><span class="textcontent">Pass.</span></div>
+                                            
+                     </div><span class="textcontent">As I looked back I saw the steam from the horses of the coach by the light of the lamps, and projected against it the figures
+                        of my late companions crossing themselves. 
+                                            Then the driver cracked his whip and called to
+                                            </span><div style="display:inline" class="apparatus apparatus_142" data-app-id="apparatus_142">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">his</span></del>
+                           <ins class="add"><span class="textcontent">the</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times charlotte novel" data-reading-wits="times charlotte novel"><span class="textcontent">his</span></div>
+                                            
+                     </div><span class="textcontent">horses, and off they swept on their way to Bukovina.
+                                            </span><div style="display:inline" class="apparatus apparatus_143" data-app-id="apparatus_143">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">As</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">As</span></div>
+                                            
+                     </div><span class="textcontent">they sank into the darkness I felt a strange chill, and a lonely feeling came over me; but a cloak was thrown over my shoulders,
+                        and a rug
+                                            </span><div style="display:inline" class="apparatus apparatus_144" data-app-id="apparatus_144">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">across</span></del>
+                           <ins class="add"><span class="textcontent">over</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">across</span></div>
+                                            
+                     </div><span class="textcontent">my knees, and the driver said in excellent German:
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            "The night is chill,
+                                            </span><div style="display:inline" class="apparatus apparatus_145" data-app-id="apparatus_145">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">Mein</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">mein</span></div>
+                                            
+                     </div><span class="textcontent">Herr, and my master the Count bade me take all care of you. There is a flask of slivovitz (the plum brandy of the country)
+                        underneath the seat, if you should 
+                                            require it." I did not take any, but it was a comfort to know it was there all the same. I felt a little
+                        strangely, and not a little frightened. I think had there been 
+                                            any alternative I should have taken it, instead of prosecuting that unknown night journey. The carriage
+                        went at a hard pace straight along, then we made a complete turn 
+                                            and went along another straight road. It seemed to me that we were simply going over and over the same
+                        ground again; and so I took note of some salient point, and found 
+                                            that this was so. I would have liked to have asked the driver what this all meant, but I really feared
+                        to do so, for I thought that, placed as I was, any protest would 
+                                            have had no effect in case there had been an intention to delay.
+                                            </span><div style="display:inline" class="apparatus apparatus_146" data-app-id="apparatus_146">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">By and by,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">By-and-by,</span></div>
+                                            
+                     </div><span class="textcontent">however, as I was curious to know how time was passing, I struck a match, and by its flame looked at my watch; it was
+                                            </span><div style="display:inline" class="apparatus apparatus_147" data-app-id="apparatus_147">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">within</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">within</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes of midnight.
+                                            </span><div style="display:inline" class="apparatus apparatus_148" data-app-id="apparatus_148">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                                 
+                                                             I waited with a sick feeling of suspense.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">This gave me a sort of shock, for I suppose the general superstition about midnight was increased by my recent experiences.
+                              
+                                                          I waited with a sick feeling of suspense.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_149" data-app-id="apparatus_149">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">HOWLING WOLVES ADD</span><div class="linebreak"></div><span class="textcontent">TO THE TRAVELER'S PERIL.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Then a dog began to howl somewhere in a
+                                            </span><div style="display:inline" class="apparatus apparatus_150" data-app-id="apparatus_150">
+                                                
+                        <div class="reading novel ocean" data-reading-wits="novel ocean"><span class="textcontent">farmhouse</span></div>
+                                                
+                        <div style="display:inline" class="reading times charlotte" data-reading-wits="times charlotte"><span class="textcontent">farm house</span></div>
+                                            
+                     </div><span class="textcontent">far down the road&#8212;a long, agonised wailing, as if from fear. The sound was taken up by
+                                            </span><div style="display:inline" class="apparatus apparatus_151" data-app-id="apparatus_151">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">another dog, and then</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times ocean novel" data-reading-wits="times ocean novel"><span class="textcontent">another dog, and then</span></div>
+                                            
+                     </div><span class="textcontent">another and another, till, borne on the wind which now sighed softly through the
+                                            </span><div style="display:inline" class="apparatus apparatus_152" data-app-id="apparatus_152">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">a wild howling began, which seemed to come from all over the country, 
+                                            </span><div style="display:inline" class="apparatus apparatus_153" data-app-id="apparatus_153">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean">
+                           <del><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                                 rear, but 
+                                                             the driver spoke to them soothingly, and they quieted down, but shivered and sweated as though
+                                 after a run-away from sudden fright.</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">as far as the imagination could grasp it through the gloom of the night. At the first howl the horses began to strain and
+                              rear, but the driver 
+                                                          spoke to them soothingly, and they quieted down, but shivered and sweated as though after a run-away
+                              from sudden fright.</span></div>
+                                            
+                     </div>
+                                         
+                     <div style="display:inline" class="apparatus apparatus_154" data-app-id="apparatus_154">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">Then,</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">Then,</span></div>
+                                            
+                     </div><span class="textcontent">far off in the distance, from the mountains on each side of us began a louder and a sharper howling-that of wolves-which affected
+                        both the horses and myself in the 
+                                            same way-for I was minded to jump from the caleche and run,
+                                            </span><div style="display:inline" class="apparatus apparatus_155" data-app-id="apparatus_155">
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">whilst</span></div>
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">while</span></div>
+                                            
+                     </div><span class="textcontent">they reared
+                                            </span><div style="display:inline" class="apparatus apparatus_156" data-app-id="apparatus_156">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">again</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">again</span></div>
+                                            
+                     </div><span class="textcontent">and plunged madly, so that the driver had to use all his great strength to keep them from bolting.
+                                            </span><div style="display:inline" class="apparatus apparatus_157" data-app-id="apparatus_157">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="textcontent">In</span></div>
+                                                
+                        <div class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">In</span></div>
+                                            
+                     </div><span class="textcontent">a few minutes
+                                            </span><div style="display:inline" class="apparatus apparatus_158" data-app-id="apparatus_158">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">, however,</span></del>
+                        </div>
+                                                
+                        <div class="reading ocean charlotte novel" data-reading-wits="ocean charlotte novel"><span class="textcontent">, however,</span></div>
+                                            
+                     </div><span class="textcontent">my
+                                            </span><div style="display:inline" class="apparatus apparatus_159" data-app-id="apparatus_159">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <del><span class="textcontent">own</span></del>
+                        </div>
+                                                
+                        <div class="reading novel charlotte ocean" data-reading-wits="novel charlotte ocean"><span class="textcontent">own</span></div>
+                                            
+                     </div><span class="textcontent">ears got accustomed to the sound, and the horses so far became quiet that the driver was able to descend and to stand before
+                        them. He
+                                            </span><div style="display:inline" class="apparatus apparatus_160" data-app-id="apparatus_160">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean"><span class="hi"><span class="textcontent">patted</span></span></div>
+                                                
+                        <div style="display:inline" class="reading charlotte novel times" data-reading-wits="charlotte novel times"><span class="textcontent">petted</span></div>
+                                            
+                     </div><span class="textcontent">and soothed them,
+                                            </span><div style="display:inline" class="apparatus apparatus_161" data-app-id="apparatus_161">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <del><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel ocean" data-reading-wits="times novel ocean"><span class="textcontent">and whispered something in their ears, as I have heard of horse-tamers doing,</span></div>
+                                            
+                     </div><span class="textcontent">and with extraordinary effect, for under his caresses they became quite manageable again, though they still trembled. The
+                        driver again took his seat, and shaking his 
+                                            reins, started off at a great pace. This time, after going to the far side of the
+                                            </span><div style="display:inline" class="apparatus apparatus_162" data-app-id="apparatus_162">
+                                                
+                        <div style="display:inline" class="reading ocean times" data-reading-wits="ocean times"><span class="textcontent">pass,</span></div>
+                                                
+                        <div class="reading novel charlotte" data-reading-wits="novel charlotte"><span class="textcontent">Pass,</span></div>
+                                            
+                     </div><span class="textcontent">he suddenly turned down a narrow roadway which ran sharply to the right.
+                                            </span><div class="apparatus apparatus_163" data-app-id="apparatus_163">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">(To Be Continued.)</span></ins>
+                           <hr class="pagebreak"></hr>
+                        </div>
+                                            
+                     </div>
+                                         
+                     <div class="apparatus apparatus_164" data-app-id="apparatus_164">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <ins class="add"><span class="textcontent">THE STRANGE STORY OF DRACULA</span><div class="linebreak"></div><span class="textcontent">A Tale of Thrilling Adventures, Mys-</span><div class="linebreak"></div><span class="textcontent">tery, and Romance.</span><div class="linebreak"></div><span class="textcontent">BY BRAM STOKER.</span><div class="linebreak"></div><span class="textcontent">
+                                                             (Copyright, 1897, by the Author.)</span><div class="linebreak"></div><span class="textcontent">CHAPTER I.-(Continued.)</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Soon we were hemmed in with trees, which in places arched right over the roadway till we passed as through
+                        a tunnel; and again great frowning rocks guarded us boldly on 
+                                            either side. Though we were in shelter, we could hear the rising wind, for it moaned and whistled through
+                        the rocks, and the branches of the trees crashed together as we 
+                                            swept along. It grew colder and colder still, and fine powdery snow began to fall, so that soon we and
+                        all around us were covered with a white blanket. The keen wind still 
+                                            carried the howling of the dogs, though this grew fainter as we went on our way. The baying of the wolves
+                        sounded nearer and nearer, as though they were closing round on us 
+                                            from every side. I grew dreadfully afraid, and the horses shared my
+                                            </span><div style="display:inline" class="apparatus apparatus_165" data-app-id="apparatus_165">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <ins class="add"><span class="textcontent">; but the</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">. The</span></div>
+                                            
+                     </div><span class="textcontent">driver
+                                            </span><div style="display:inline" class="apparatus apparatus_166" data-app-id="apparatus_166">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte">
+                           <del><span class="textcontent">however</span></del>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">however</span></div>
+                                            
+                     </div><span class="textcontent">was not in the least
+                                            </span><div style="display:inline" class="apparatus apparatus_167" data-app-id="apparatus_167">
+                                                
+                        <div class="reading charlotte ocean" data-reading-wits="charlotte ocean"><span class="textcontent">disturbed. He</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times" data-reading-wits="novel times"><span class="textcontent">disturbed; he</span></div>
+                                            
+                     </div><span class="textcontent">kept turning his head to left and right, but I could not see anything through the darkness.
+                                            </span><div style="display:inline" class="apparatus apparatus_168" data-app-id="apparatus_168">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">THE DRIVES FIGURES</span><div class="linebreak"></div><span class="textcontent">IN A WEIRD DREAM.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            Suddenly, away on our left, I saw a faint flickering blue flame. The driver saw it at the same moment;
+                        he at once checked the horses, and, jumping to the ground, disappeared 
+                                            into the darkness. I did not know what to do, the less as the howling of the wolves grew closer ; but
+                        while I wondered the driver suddenly appeared again, and without a word 
+                                            took his seat, and we resumed our journey. I think I must have fallen asleep and kept dreaming of the
+                        incident, for it seemed to be repeated endlessly, and now looking back, 
+                                            it is like a sort of awful nightmare. Once the flame appeared so near the road, that even in the darkness
+                        around us I could watch the driver's motions. He went rapidly to where 
+                                            the blue flame arose&#8212;it must have been very faint, for it did not seem to illumine the place around it
+                        at all&#8212;and gathering a few stones, formed them into some device. Once there 
+                                            appeared a strange optical effect: when he stood between me and the flame he did not obstruct it, for
+                        I could see its ghostly flicker all the same. This startled me, but as the 
+                                            effect was only momentary, I took it that my eyes deceived me straining through the darkness. Then for
+                        a time there
+                                            </span><div style="display:inline" class="apparatus apparatus_169" data-app-id="apparatus_169">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">were</span></del>
+                           <ins class="add"><span class="textcontent">was</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading times novel charlotte" data-reading-wits="times novel charlotte"><span class="textcontent">were</span></div>
+                                            
+                     </div><span class="textcontent">no blue flames, and we sped
+                                            </span><div style="display:inline" class="apparatus apparatus_170" data-app-id="apparatus_170">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte"><span class="textcontent">onward</span></div>
+                                                
+                        <div style="display:inline" class="reading novel times ocean" data-reading-wits="novel times ocean"><span class="textcontent">onwards</span></div>
+                                            
+                     </div><span class="textcontent">onwards through the gloom, with the howling of the wolves around us, as though they were following in a moving circle.
+                                            </span><div style="display:inline" class="apparatus apparatus_171" data-app-id="apparatus_171">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">RING OF WOLVES</span><div class="linebreak"></div><span class="textcontent">SURROUND THE CARRIAGE</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            At last there came a time when the driver went further afield than he had yet gone, and during his absence,
+                        the horses began to tremble worse than ever and to snort and scream 
+                                            with fright. I could not see any cause for it, for the howling of the wolves had ceased altogether; but
+                        just then the moon, sailing through the black clouds, appeared behind the 
+                                            jagged crest of a beetling, pine-clad rock, and by its light I saw around us a ring of wolves, with white
+                        teeth and lolling red tongues, with long, sinewy limbs and shaggy hair. 
+                                            They were a hundred times more terrible in the grim silence which held them than even when they howled.
+                        For myself, I felt a sort of paralysis of fear. It is only when a man 
+                                            feels himself face to face with such horrors that he can understand their true import.
+                                            </span><div style="display:inline" class="apparatus apparatus_172" data-app-id="apparatus_172">
+                                                
+                        <div style="display:inline" class="reading times" data-reading-wits="times">
+                           <div class="linebreak"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <ins class="add"><span class="textcontent">Don't miss the third installment which will appear in tomorrow's Times.</span><hr class="pagebreak"></hr><span class="textcontent">DRACULA or The Vampire
+                                                         By Bram Stoker</span><div class="linebreak"></div><span class="textcontent">One of the Most Thrilling Novels of the Age-Love, Mystery, Intrigue, Adventure, Mingled in a</span><div class="linebreak"></div><span class="textcontent">Gripping Serial. Read It In THE TIMES Every Day.</span><div class="linebreak"></div><span class="textcontent">
+                                                         PART I-Continued.</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            All at once the wolves began to howl as though the moonlight had had some peculiar effect on them. The
+                        horses jumped about and reared, and looked helplessly round with eyes 
+                                            that rolled in a way painful to see; but the living ring of terror encompassed them on every side; and
+                        they had perforce to remain within it. I called to the coachman to come, 
+                                            for it seemed to me that our only chance was to try to break out through the ring and to aid his approach.
+                        I shouted and beat the side of the cal&egrave;che, hoping by the noise to 
+                                            scare the wolves from that side, so as to give him a chance of reaching the trap. How he came there, I
+                        know not, but I heard his voice raised in a tone of imperious command, 
+                                            and looking
+                                            </span><div style="display:inline" class="apparatus apparatus_173" data-app-id="apparatus_173">
+                                                
+                        <div class="reading ocean charlotte" data-reading-wits="ocean charlotte"><span class="textcontent">toward</span></div>
+                                                
+                        <div style="display:inline" class="reading times novel" data-reading-wits="times novel"><span class="textcontent">towards</span></div>
+                                            
+                     </div><span class="textcontent">the sound, saw him stand in the roadway. As he swept his long arms, as though brushing
+                                            </span><div style="display:inline" class="apparatus apparatus_174" data-app-id="apparatus_174">
+                                                
+                        <div class="reading ocean" data-reading-wits="ocean">
+                           <del><span class="textcontent">aside</span></del>
+                           <ins class="add"><span class="textcontent">away</span></ins>
+                        </div>
+                                                
+                        <div style="display:inline" class="reading novel times charlotte" data-reading-wits="novel times charlotte"><span class="textcontent">aside</span></div>
+                                            
+                     </div><span class="textcontent">some impalpable obstacle, the wolves fell back and back further still. Just then a heavy cloud passed across the face of the
+                        moon, so that we were again in darkness.
+                                        </span></div>
+                                  
+                  <div class="paragraph"><span class="textcontent">
+                                            When I could see again the driver was climbing into the caleche, and the wolves had disappeared. This
+                        was all so strange and uncanny that a dreadful fear came upon me, and I was 
+                                            afraid to speak or move. The time seemed interminable as we swept on our way, now in almost complete darkness,
+                        for the rolling clouds obscured the moon. We kept on ascending, 
+                                            with occasional periods of quick descent, but in the main always ascending. Suddenly, I became conscious
+                        of the fact that the driver was in the act of pulling up the horses in 
+                                            the courtyard of a vast ruined castle, from whose tall black windows came no ray of light, and whose broken
+                        battlements showed a jagged line against the moonlit sky.
+                                            </span><div class="apparatus apparatus_175" data-app-id="apparatus_175">
+                                                
+                        <div class="reading charlotte" data-reading-wits="charlotte">
+                           <div class="linebreak"></div>
+                           <ins class="add"><span class="textcontent">[TO BE CONTINUED.]</span></ins>
+                        </div>
+                                            
+                     </div>
+                                     
+                  </div>
+                              
+               </div>
+                       
+            </div>
+         </div>
+         <div id="notesPanel" class="ui-widget-content ui-resizable panel noDisplay">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="../vm-images/closePanel.png" alt="X (Close panel)"></img> Textual Notes 
+            </div>
+            <div id="noNotesFound" class="noteContent"> Sorry, but there are no notes associated with
+               any currently displayed witness. 
+            </div>
+         </div>
+         <div class="draggable resizable ui-resizable panel imgPanel noDisplay" id="---samples-WashingtonTimesSep13-jpg">
+            <div title="Click to drag panel." class="viewerHandle handle_imgViewer"><span class="viewerHandleLt title_imgViewer"><a title="../samples/WashingtonTimesSep13.jpg">...mples/WashingtonTimesSep13.jpg</a></span><img class="viewerHandleRt closePanel" src="vmachine-Dateien/closePanelButton.htm" title="Close panel" alt="X (Close panel)"></img></div>
+            <div class="viewerContent" id="content_imgViewer">
+               <div class="panzoom-parent" style="overflow:visible">
+                  <div class="panzoom"><img alt="image" width="200" border="1px 2px, 2px, 1px solid #000;" src="../samples/WashingtonTimesSep13.jpg"></img></div>
+               </div>
+               <div class="buttons"><button class="zoom-out">-</button><input min="0" max="100" class="zoom-range" value="50" type="range"></input><button class="zoom-in">+</button></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
