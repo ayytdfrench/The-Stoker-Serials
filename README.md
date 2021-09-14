@@ -1,6 +1,6 @@
 # The-Stoker-Serials
 
-Working space for The Stoker Serials Project
+Work space for The Stoker Serials Project
 
 # The Stoker Serials Project #
 
