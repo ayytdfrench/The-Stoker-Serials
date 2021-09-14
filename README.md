@@ -1,3 +1,3 @@
 # The-Stoker-Serials
 
-Working space for <emph>The Stoker Serials Project</emph>
+Working space for The Stoker Serials Project
